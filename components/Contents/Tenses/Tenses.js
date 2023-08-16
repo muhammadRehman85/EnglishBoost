@@ -8,35 +8,37 @@ const Tenses = (props) => {
     {
       id: 1,
       tile: "Past Tense",
-      name:'PastTense'
+      name: "PastTense",
     },
     {
       id: 2,
       tile: "Present Tense",
-      name:'PresentTense'
+      name: "PresentTense",
     },
     {
       id: 3,
       tile: "Future Tense",
-         name:'FutureTense'
+      name: "FutureTense",
     },
   ];
   return (
     <>
-        <View  style={styles.body}>
-      <FlatList
-        data={Tenses_data} 
-        keyExtractor={(item) => item.id}
-        renderItem={({ item }) => (
-               <Pressable style={styles.container}  onPress={()=>props.navigation.navigate(item.name)} >
-            <Text style={styles.text}>{item.tile}</Text>
+      <View style={styles.body}>
+        <FlatList
+          data={Tenses_data}
+          keyExtractor={(item) => item.id}
+          renderItem={({ item }) => (
+            <Pressable
+              style={styles.container}
+              onPress={() => props.navigation.navigate(item.name)}
+            >
+              <Text style={styles.text}>{item.tile}</Text>
             </Pressable>
-              )}
-      />
-</View>
-</>
+          )}
+        />
+      </View>
+    </>
   );
 };
-
 
 export default Tenses;

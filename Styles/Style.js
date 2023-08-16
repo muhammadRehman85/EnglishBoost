@@ -1,25 +1,25 @@
 import { StyleSheet } from "react-native";
 const styles = StyleSheet.create({
   body: {
-    marginTop: 50,
-    borderTopLeftRadius: 50,
-    paddingTop: 50,
-
+    justifyContent: "center",
+    alignItems: "center",
     flex: 1,
-    backgroundColor: "#8870FF",
+    backgroundColor: "white",
   },
   container: {
-    width: "90%",
+    width: "100%",
     padding: 20,
-    marginLeft: 25,
+    paddingLeft: 70,
+    paddingRight: 70,
     marginTop: 50,
-    backgroundColor: "white",
-    borderRadius: 8,
+    backgroundColor: "#8870FF",
+    borderRadius: 10,
   },
   text: {
+    textAlign: "center",
     fontSize: 18,
     fontWeight: "bold",
-    color: "#8870FF",
+    color: "white",
   },
 });
 export default styles;
