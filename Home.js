@@ -28,16 +28,7 @@ function Home() {
     <>
       <Stack.Navigator screenOptions={{ headerShown: false }}>
         <Stack.Screen name="Navbar" component={Navbar} />
-<<<<<<< HEAD
-   
-      
-=======
-        <Stack.Screen name="PartOfSpeech" component={PartOfSpeech} />
-        <Stack.Screen name="Lesson" component={Lesson} />
-        <Stack.Screen name="Lessons" component={Lessons} />
-        <Stack.Screen name="PartNo1" component={PartNo1} />
-        <Stack.Screen name="PartNo2" component={PartNo2} />
->>>>>>> 9c3af34c12045ea695cd512c9581235451c6d542
+
         {/* ------------------------------------------------------------------------------------------------------------
                               TENSES SCREENS
             -----------------------------------------------------------------------------------------------------------*/}
@@ -62,37 +53,19 @@ function Home() {
           component={PresentPerfectContinues}
         />
         {/* ---------------FUTURE TENSES----------------------------- */}
-<<<<<<< HEAD
-        <Stack.Screen name="FutureIndefinite"component={FutureIndefinite} />
-        <Stack.Screen name="FutureContinues"component={FutureContinues} />
-        <Stack.Screen name="FuturePerfect"component={FuturePerfect} />
-        <Stack.Screen name="FuturePerfectContinues"component={FuturePerfectContinues} />    
-       {/* ----------------------------------------------------------------------------------------------------------
-       -----------------------------------------------JOKES---------------------------------------------------------------
-        */}  
-        <Stack.Screen name="Jokes" component={Jokes} />
-        </Stack.Navigator>
-          
-
-    
-        
-       </>
-=======
         <Stack.Screen name="FutureIndefinite" component={FutureIndefinite} />
         <Stack.Screen name="FutureContinues" component={FutureContinues} />
         <Stack.Screen name="FuturePerfect" component={FuturePerfect} />
-
         <Stack.Screen
           name="FuturePerfectContinues"
           component={FuturePerfectContinues}
         />
-        {/* ------------------------------------------------------------------------------------------------------------
-        ---------------------------------------------------------------------------------------------------------------- */}
+        {/* ----------------------------------------------------------------------------------------------------------
+       -----------------------------------------------JOKES---------------------------------------------------------------
+        */}
+        <Stack.Screen name="Jokes" component={Jokes} />
       </Stack.Navigator>
-      {/* ---------------------------------------------------
-                         Google Ad                       */}
     </>
->>>>>>> 9c3af34c12045ea695cd512c9581235451c6d542
   );
 }
 export default Home;
