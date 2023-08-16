@@ -84,9 +84,6 @@ function Home() {
 }
 export default Home;
 const styles = StyleSheet.create({
-  // // containers: {
-  //   display: "flex",
-  // },
   ad: {
     width: "95%",
     height: 350,
