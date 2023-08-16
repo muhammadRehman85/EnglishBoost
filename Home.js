@@ -33,13 +33,13 @@ import FuturePerfectContinues from "./components/Contents/Tenses/FututreTense/Fu
 const Stack = createNativeStackNavigator();
 
 function Home() {
-  return (<>
-    
-   <Stack.Navigator screenOptions={{ headerShown: false }}>
+  return (
+    <>
+      <Stack.Navigator screenOptions={{ headerShown: false }}>
         <Stack.Screen name="Navbar" component={Navbar} />
         <Stack.Screen name="PartOfSpeech" component={PartOfSpeech} />
-        <Stack.Screen name="Lesson" component={Lesson} /> 
-         <Stack.Screen name="Lessons" component={Lessons} />
+        <Stack.Screen name="Lesson" component={Lesson} />
+        <Stack.Screen name="Lessons" component={Lessons} />
         <Stack.Screen name="PartNo1" component={PartNo1} />
         <Stack.Screen name="PartNo2" component={PartNo2} />
         {/* ------------------------------------------------------------------------------------------------------------
@@ -50,30 +50,36 @@ function Home() {
         <Stack.Screen name="PresentTense" component={PresentTense} />
         <Stack.Screen name="FutureTense" component={FutureTense} />
         {/* --------------PAST TENSES-------------------------------- */}
-        <Stack.Screen name="PastIndifinite"component={PastIndifinite} />
-        <Stack.Screen name="PastContinues"component={PastContinues} />
-        <Stack.Screen name="PastPerfect"component={PastPerfect} />
-        <Stack.Screen name="PastPerfectContinues"component={PastPerfectContinues} />
+        <Stack.Screen name="PastIndifinite" component={PastIndifinite} />
+        <Stack.Screen name="PastContinues" component={PastContinues} />
+        <Stack.Screen name="PastPerfect" component={PastPerfect} />
+        <Stack.Screen
+          name="PastPerfectContinues"
+          component={PastPerfectContinues}
+        />
         {/* ---------------PRESENT TENSES--------------------------- */}
-        <Stack.Screen name="PresentIndifinite"component={PresentIndifinite} />
-        <Stack.Screen name="PresentContinues"component={PresentContinues} />
-        <Stack.Screen name="PresentPerfect"component={PresentPerfect} />
-        <Stack.Screen name="PresentPerfectContinues"component={PresentPerfectContinues} />
+        <Stack.Screen name="PresentIndifinite" component={PresentIndifinite} />
+        <Stack.Screen name="PresentContinues" component={PresentContinues} />
+        <Stack.Screen name="PresentPerfect" component={PresentPerfect} />
+        <Stack.Screen
+          name="PresentPerfectContinues"
+          component={PresentPerfectContinues}
+        />
         {/* ---------------FUTURE TENSES----------------------------- */}
-        <Stack.Screen name="FutureIndefinite"component={FutureIndefinite} />
-        <Stack.Screen name="FutureContinues"component={FutureContinues} />
-        <Stack.Screen name="FuturePerfect"component={FuturePerfect} />
-     
-        <Stack.Screen name="FuturePerfectContinues"component={FuturePerfectContinues} />
+        <Stack.Screen name="FutureIndefinite" component={FutureIndefinite} />
+        <Stack.Screen name="FutureContinues" component={FutureContinues} />
+        <Stack.Screen name="FuturePerfect" component={FuturePerfect} />
+
+        <Stack.Screen
+          name="FuturePerfectContinues"
+          component={FuturePerfectContinues}
+        />
         {/* ------------------------------------------------------------------------------------------------------------
         ---------------------------------------------------------------------------------------------------------------- */}
-            </Stack.Navigator>
-       {/* ---------------------------------------------------
-                         Google Ad                       */}    
-
-    
-        
-       </>
+      </Stack.Navigator>
+      {/* ---------------------------------------------------
+                         Google Ad                       */}
+    </>
   );
 }
 export default Home;
@@ -88,5 +94,4 @@ const styles = StyleSheet.create({
     marginTop: 150,
     marginLeft: 10,
   },
-
 });
