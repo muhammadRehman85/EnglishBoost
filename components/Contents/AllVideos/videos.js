@@ -1,6 +1,7 @@
 import React from "react";
 import { View, Text, StyleSheet, FlatList } from "react-native";
 import { ScrollView } from "react-native-gesture-handler";
+import { FullWindowOverlay } from "react-native-screens";
 import "react-native-webview";
 import YoutubePlayer from "react-native-youtube-iframe";
 const Videos = () => {
@@ -39,7 +40,9 @@ const Videos = () => {
               showinfo={false}
               modestbranding
             />
-            {/* <View style={styles.titleText}><Text style={styles.textStyle}>{item.title}</Text></View> */}
+            <View style={styles.titleText}>
+              <Text style={styles.textStyle}>{item.title}</Text>
+            </View>
           </View>
         ))}
       </ScrollView>
@@ -55,12 +58,19 @@ const styles = StyleSheet.create({
   },
   videoContainer: {
     marginLeft: 10,
+    marginRight: 10,
     // marginTop: 30,
-    width: 300,
+    // width: 300,
     // borderWidth: 10,
+    backgroundColor: "green",
+    width: 300,
+    height: 230,
+    borderTopRightRadius: 10,
+    borderTopLeftRadius: 10,
+    overflow: "hidden",
   },
   youtube: {
-    height: 500,
+    height: 600,
   },
   // videoframe:{
   //   width:'50%',
@@ -80,6 +90,8 @@ const styles = StyleSheet.create({
     paddingTop: 30,
     paddingLeft: 10,
   },
+
+  singleVideo: {},
 });
 
 export default Videos;
