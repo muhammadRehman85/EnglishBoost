@@ -2,7 +2,7 @@ import { FlatList } from "react-native";
 import { View, Text, Pressable } from "react-native";
 import { ScrollView } from "react-native";
 import React from "react";
-import styles from "./TensesStyle";
+import styles from "../../../Styles/Style";
 const Tenses = (props) => {
   const Tenses_data = [
     {

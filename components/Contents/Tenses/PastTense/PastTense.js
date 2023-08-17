@@ -1,7 +1,7 @@
 import { FlatList } from "react-native";
 import { View, Text, Pressable,StyleSheet } from "react-native";
 import { ScrollView } from "react-native";
-import styles from "../TensesStyle";
+import styles from "../../../../Styles/Style";
 import React from "react";
 
 

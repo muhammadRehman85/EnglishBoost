@@ -8,12 +8,11 @@ import { NavigationContainer } from '@react-navigation/native';
 import Dictionary from './menueScreens/Dictionary';
 import Setting from './menueScreens/Setting';
 import CustomDrawer from './CustomDrawer/CustomDrawer';
-import Header from './Header';
+
 const Drawer = createDrawerNavigator();
 export default function App() {
   return (
     <>
-   {/* <View><Header/></View>    */}
        <NavigationContainer>
     <Drawer.Navigator screenOptions={{
       headerStyle:{

@@ -4,17 +4,8 @@ import * as React from "react";
 import { Button, View, Text, StyleSheet } from "react-native";
 import { navigation, NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
-
-// import { createDrawerNavigator } from "@react-navigation/drawer";
-// import Dictionary from "./components/dictionary/Dictionary";
-import Lesson from "./components/Lesson";
-import Lessons from "./components/Lessons";
-import PartNo1 from "./components/PartNo1";
-import PartNo2 from "./components/PartNo2";
 import Navbar from "./components/Navbar/Navbar";
-import PartOfSpeech from "./components/Navbar/NavbarComponents/PartOfSpeech";
 import Tenses from "./components/Contents/Tenses/Tenses";
-import Videos from "./components/VideosSection/videos";
 import PastTense from "./components/Contents/Tenses/PastTense/PastTense";
 import PresentTense from "./components/Contents/Tenses/PresentTense/PresentTense";
 import FutureTense from "./components/Contents/Tenses/FututreTense/FutureTense";
@@ -30,18 +21,15 @@ import FutureIndefinite from "./components/Contents/Tenses/FututreTense/FutureIn
 import FutureContinues from "./components/Contents/Tenses/FututreTense/FutureContinues";
 import FuturePerfect from "./components/Contents/Tenses/FututreTense/FuturePerfect";
 import FuturePerfectContinues from "./components/Contents/Tenses/FututreTense/FuturePerfectContinues";
+import Jokes from "./components/Contents/Jokes/Jokes";
 const Stack = createNativeStackNavigator();
-
 function Home() {
   return (<>
     
    <Stack.Navigator screenOptions={{ headerShown: false }}>
         <Stack.Screen name="Navbar" component={Navbar} />
-        <Stack.Screen name="PartOfSpeech" component={PartOfSpeech} />
-        <Stack.Screen name="Lesson" component={Lesson} /> 
-         <Stack.Screen name="Lessons" component={Lessons} />
-        <Stack.Screen name="PartNo1" component={PartNo1} />
-        <Stack.Screen name="PartNo2" component={PartNo2} />
+   
+      
         {/* ------------------------------------------------------------------------------------------------------------
                               TENSES SCREENS
             -----------------------------------------------------------------------------------------------------------*/}
@@ -63,13 +51,13 @@ function Home() {
         <Stack.Screen name="FutureIndefinite"component={FutureIndefinite} />
         <Stack.Screen name="FutureContinues"component={FutureContinues} />
         <Stack.Screen name="FuturePerfect"component={FuturePerfect} />
-     
-        <Stack.Screen name="FuturePerfectContinues"component={FuturePerfectContinues} />
-        {/* ------------------------------------------------------------------------------------------------------------
-        ---------------------------------------------------------------------------------------------------------------- */}
-            </Stack.Navigator>
-       {/* ---------------------------------------------------
-                         Google Ad                       */}    
+        <Stack.Screen name="FuturePerfectContinues"component={FuturePerfectContinues} />    
+       {/* ----------------------------------------------------------------------------------------------------------
+       -----------------------------------------------JOKES---------------------------------------------------------------
+        */}  
+        <Stack.Screen name="Jokes" component={Jokes} />
+        </Stack.Navigator>
+          
 
     
         

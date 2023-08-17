@@ -6,14 +6,13 @@ import {View,Text, Image,StyleSheet} from 'react-native';
 const CustomDrawer = (props) => {
     return (
         <>
-    <View style={{width:'100%',height:100,paddingTop:25,paddingLeft:20}}><Image style={{width:70,height:70,}} source={require('../assets/Applogo.png')}/></View>
-        <View style={{flex:1}}>
+            <View style={{flex:1}}>
        <DrawerContentScrollView {...props} >
     <Image source={require('../assets/logo.jpg')} style={{width:'100%',height:250}}/>
         <DrawerItemList {...props}  ></DrawerItemList>
        </DrawerContentScrollView>
        </View>
-       <View>
+       <View> 
         {/* <Text> Our Custom Component</Text> */}
        </View>
        </>
