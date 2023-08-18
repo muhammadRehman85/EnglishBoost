@@ -19,7 +19,7 @@ const Videos = () => {
   ];
 
   return (
-    <GestureHandlerScrollView style={styles.videoWrapper}>
+    <ScrollView style={styles.videoWrapper}>
       <View style={styles.titleContainer}>
         <Text style={styles.title}>Recommended Videos</Text>
       </View>
@@ -49,7 +49,7 @@ const Videos = () => {
           </View>
         ))}
       </ScrollView>
-    </GestureHandlerScrollView>
+    </ScrollView>
   );
 };
 

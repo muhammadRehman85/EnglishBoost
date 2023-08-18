@@ -4,25 +4,24 @@ import { ScrollView as GestureHandlerScrollView } from "react-native-gesture-han
 import YoutubePlayer from "react-native-youtube-iframe";
 
 import { useNavigation } from "@react-navigation/native";
-import EnglishWithCartoons from "./EnglishWithCartoons";
-const AllVideos = () => {
+const EnglishWithCartoons = () => {
   const navigation=useNavigation();
-  const EMDATA = [
-    {key: 1,token: true,title: "Learn with Harry Porter|English With Movies",videoId: "joE-ANMPG5k",},
-    { key: 2, token: true, title: "learn with Harry", videoId: "3ZAMTYEjEv8" },
-    { key: 3, token: true, title: "Learn ENGLISH with Netflix Series|WEDNESDAY and Enid", videoId: "hgdwTELjrNI" },
-    { key: 4, token: true, title: "Learn English with Peaky Blinders ", videoId: "Fa4jyM-p8zI" },
-    { key: 5, token: true, title: "Learn English With Iron Man", videoId: "-hWE1DbQ43s" },
+  const DATA = [
+    {key: 1,token: true,title: "Improve Your English with Disney Movies | Frozen 2",videoId: "PL7niJMDu5w",},
+    {key: 2,token: true,title: "Learn English with The Lion King | DISNEY CLASSIC",videoId: "HeQTJE99OXo",},
+    { key: 3, token: true, title: "What Level is Your English? |TEST with ZOOTOPIA", videoId: "kMUcwWWmWug" },
+    { key: 4, token: true, title: "Learn English with RATATOUILLE|Remy Meets Linguini", videoId: "8WRjQAKUlio" },
+    { key: 5, token: true, title: "Learn English with Disney Movies|The Incredibles", videoId: "3xCQrnTYmzY" },
     { key: 6, token: false, source:require('../../../assets/more.png'),name:'AllVideos' },
   ];
 
   return (
-    <GestureHandlerScrollView style={styles.videoWrapper}>
+   <ScrollView>
       <View style={styles.titleContainer}>
-        <Text style={styles.title}>English With Movies </Text>
+        <Text style={styles.title}> English With Cartoons </Text>
       </View>
       <ScrollView horizontal showsHorizontalScrollIndicator={false}>
-        {EMDATA.map((item) => (
+        {DATA.map((item) => (
           <View key={item.key} style={styles.videoContainer}>
             {item.token ? ( // Conditional rendering based on the token value
               <YoutubePlayer
@@ -46,14 +45,8 @@ const AllVideos = () => {
             </View>
           </View>
         ))}
-        {/* ------------------- */}
-      
-     
       </ScrollView>
-      <View>
-          <EnglishWithCartoons/>
-        </View>
-    </GestureHandlerScrollView>
+      </ScrollView>
   );
 };
 
@@ -115,4 +108,4 @@ const styles = StyleSheet.create({
   }
 });
 
-export default AllVideos;
+export default EnglishWithCartoons;
