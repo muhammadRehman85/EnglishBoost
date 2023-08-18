@@ -3,6 +3,7 @@ import { View, Text, Image, Pressable, StyleSheet } from "react-native";
 
 import { FlatList, ScrollView } from "react-native-gesture-handler";
 import Videos from "../Contents/AllVideos/videos";
+import { SafeAreaView } from "react-native-safe-area-context";
 const Navbar = ({ navigation }) => {
   const DATA = [
     {
@@ -30,8 +31,9 @@ const Navbar = ({ navigation }) => {
       image: require("../../assets/logo.jpg"),
     },
   ];
-  return (
+  return (<>
     <ScrollView>
+  
       <View style={{ position: "absolute" }}>
         <FlatList
           horizontal
@@ -65,8 +67,11 @@ const Navbar = ({ navigation }) => {
         />
       </View>
       {/* ---------Videos ---------- */}
-      <Videos />
+     
+       <Videos />
+    
     </ScrollView>
+    </>
   );
 };
 

@@ -3,20 +3,46 @@ const styles = StyleSheet.create({
 
 Wrapper:{
     flex:1,
-    justifyContent:'center',
-    alignItems:'center',
+    backgroundColor:'white'
 },
 JokeBox:{
-    width:'90%',
-    height:'70%',
-    borderWidth:1,
-    justifyContent:'center',
-    alignItems:'center'
-},
-btn:{
-    width:"85%",
+    width:'80%',
     height:'50%',
-    backgroundColor:'#8870FF'
+   position:'absolute',
+   top:'30%',
+   left:'10%',
+paddingTop:80,
+textDecorationColor:'blue'
+},
+// ------------- next button ----------------
+btn:{
+    width:100,
+    height:45,
+    borderRadius:7,
+    backgroundColor:'#8870FF',
+    alignItems:'center',
+    justifyContent:'center',
+    
+    position:'absolute',
+    bottom:40,
+    left:'38%'
+},
+btnText:{
+  color:'white'
+}
+,
+image:{
+  width:180,
+  height:180,
+  marginTop:60
+  ,
+  marginLeft:70
+},
+// ----------joke text -----------
+text:{
+  color:'grey',
+  fontSize:18,
+  lineHeight:30
 }
 });
 export default styles;

@@ -69,12 +69,5 @@ function Home() {
   );
 }
 export default Home;
-const styles = StyleSheet.create({
-  ad: {
-    width: "95%",
-    height: 350,
-    backgroundColor: "grey",
-    marginTop: 150,
-    marginLeft: 10,
-  },
-});
+
+

@@ -8,7 +8,11 @@ const Videos = () => {
   //----------------------------------
   // Youtube Videos Internal api
   const DATA = [
-    { key: 1, title: "learn with Harry", videoId: "joE-ANMPG5k" },
+    {
+      key: 1,
+      title: "Learn with Harry Porter|English With Movies",
+      videoId: "joE-ANMPG5k",
+    },
     { key: 2, title: "learn with Harry", videoId: "3ZAMTYEjEv8" },
     { key: 3, title: "learn with Harry", videoId: "3ZAMTYEjEv8" },
   ];
@@ -40,8 +44,8 @@ const Videos = () => {
               showinfo={false}
               modestbranding
             />
-            <View style={styles.titleText}>
-              <Text style={styles.textStyle}>{item.title}</Text>
+            <View style={styles.titleInfo}>
+              <Text style={styles.text}>{item.title}</Text>
             </View>
           </View>
         ))}
@@ -56,27 +60,11 @@ const styles = StyleSheet.create({
 
     // backgroundColor: "red",
   },
-  videoContainer: {
-    marginLeft: 10,
-    marginRight: 10,
-    // marginTop: 30,
-    // width: 300,
-    // borderWidth: 10,
-    backgroundColor: "green",
-    width: 300,
-    height: 230,
-    borderTopRightRadius: 10,
-    borderTopLeftRadius: 10,
-    overflow: "hidden",
+  // -----------recommend Text style----------
+  titleContainer: {
+    paddingTop: 30,
+    paddingLeft: 10,
   },
-  youtube: {
-    height: 600,
-  },
-  // videoframe:{
-  //   width:'50%',
-  //   height:'50%'
-  // }
-
   title: {
     fontWeight: "bold",
     fontSize: 22,
@@ -84,14 +72,28 @@ const styles = StyleSheet.create({
     marginBottom: 20,
   },
 
-  titleText: { marginBottom: 20 },
-  textStyle: { color: "grey", marginBottom: 30 },
-  titleContainer: {
-    paddingTop: 30,
-    paddingLeft: 10,
-  },
+  // -----------video container style---------
+  videoContainer: {
+    marginLeft: 10,
+    marginRight: 10,
+    elevation: 0.8,
+    width: 300,
+    height: 230,
+    borderRadius: 10,
+    position: "relative",
+    padding: 6,
 
-  singleVideo: {},
+  },
+  // -----------Video Title style--------------
+  titleInfo: {
+    position: "absolute",
+    bottom: 10,
+    left: 20,
+  },
+  text: {
+    fontSize: 18,
+    fontWeight: "bold",
+  },
 });
 
 export default Videos;
