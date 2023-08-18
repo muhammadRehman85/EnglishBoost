@@ -19,7 +19,7 @@ export default function App() {
             headerStyle: {
               shadowOpacity: 0,
               elevation: 0,
-              backgroundColor: "#8870FF",
+              backgroundColor: "rgb(136,112,255)",
               height: 100,
             },
           }}

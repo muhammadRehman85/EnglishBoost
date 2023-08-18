@@ -23,6 +23,8 @@ import FuturePerfect from "./components/Contents/Tenses/FututreTense/FuturePerfe
 import FuturePerfectContinues from "./components/Contents/Tenses/FututreTense/FuturePerfectContinues";
 import Jokes from "./components/Contents/Jokes/Jokes";
 import Quotes from "./components/Contents/Quotes/Quotes";
+import AllVideos from "./components/Contents/AllVideos/AllVideos";
+import Videos from "./components/Contents/AllVideos/Videos";
 const Stack = createNativeStackNavigator();
 function Home() {
   return (
@@ -66,6 +68,9 @@ function Home() {
         */}
         <Stack.Screen name="Jokes" component={Jokes} />
         <Stack.Screen name="Quotes" component={Quotes} />
+        <Stack.Screen name="Videos" component={Videos} />
+
+        <Stack.Screen name="AllVideos" component={AllVideos} />
       </Stack.Navigator>
     </>
   );

@@ -2,7 +2,7 @@ import React from "react";
 import { View, Text, Image, Pressable, StyleSheet } from "react-native";
 
 import { FlatList, ScrollView } from "react-native-gesture-handler";
-import Videos from "../Contents/AllVideos/videos";
+import Videos from "../Contents/AllVideos/Videos";
 import { SafeAreaView } from "react-native-safe-area-context";
 const Navbar = ({ navigation }) => {
   const DATA = [
@@ -86,8 +86,8 @@ const styles = StyleSheet.create({
   boxLayout: {
     width: 110,
     height: 150,
-    backgroundColor: "lightgray",
-    margin: 10,
+    backgroundColor: "rgba(136,112,255,0.1)",
+    margin: 15,
     borderRadius: 10,
     alignItems: "center",
     justifyContent: "center",

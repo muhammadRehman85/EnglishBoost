@@ -1,66 +1,60 @@
 import React from "react";
-import { View, Text, StyleSheet, FlatList } from "react-native";
-import { ScrollView } from "react-native-gesture-handler";
-import { FullWindowOverlay } from "react-native-screens";
-import "react-native-webview";
+import { View, Text, StyleSheet, ScrollView, Pressable,Image } from "react-native";
+import { ScrollView as GestureHandlerScrollView } from "react-native-gesture-handler"; // Renamed to avoid confusion with your imported ScrollView
 import YoutubePlayer from "react-native-youtube-iframe";
-const Videos = () => {
-  //----------------------------------
-  // Youtube Videos Internal api
+import AllVideos from "./AllVideos";
+const Videos = (props) => {
   const DATA = [
     {
       key: 1,
+      token: true,
       title: "Learn with Harry Porter|English With Movies",
       videoId: "joE-ANMPG5k",
     },
-    { key: 2, title: "learn with Harry", videoId: "3ZAMTYEjEv8" },
-    { key: 3, title: "learn with Harry", videoId: "3ZAMTYEjEv8" },
+    { key: 2, token: true, title: "learn with Harry", videoId: "3ZAMTYEjEv8" },
+    { key: 3, token: true, title: "learn with Harry", videoId: "3ZAMTYEjEv8" },
+    { key: 4, token: false, source:require('../../../assets/more.png'),name:'AllVideos' },
   ];
-  // ----------------------------------------
 
   return (
-    <ScrollView style={styles.videoWrapper}>
-      {/* <View
-        style={{
-          width: "95%",
-          backgroundColor: "yellow",
-          height: 300,
-          marginLeft: 10,
-        }}
-      >
-        <Text>Google Ad</Text>
-      </View> */}
+    <GestureHandlerScrollView style={styles.videoWrapper}>
       <View style={styles.titleContainer}>
         <Text style={styles.title}>Recommended Videos</Text>
       </View>
       <ScrollView horizontal showsHorizontalScrollIndicator={false}>
         {DATA.map((item) => (
           <View key={item.key} style={styles.videoContainer}>
-            <YoutubePlayer
-              height={300}
-              videoId={item.videoId}
-              play={false}
-              style={styles.youtube}
-              showinfo={false}
-              modestbranding
-            />
+            {item.token ? ( // Conditional rendering based on the token value
+              <YoutubePlayer
+                height={300}
+                videoId={item.videoId}
+                play={false}
+                style={styles.youtube}
+                showinfo={false}
+                modestbranding
+              />
+            ) : (
+             <Pressable   
+             onPress={() => props.navigation.navigate('AllVideos')}
+             ><View style={styles.otherComponent}>
+              
+              <View style={styles.more}><Image style={styles.image} source={item.source}/></View> 
+              </View></Pressable> 
+            )}
             <View style={styles.titleInfo}>
               <Text style={styles.text}>{item.title}</Text>
             </View>
           </View>
         ))}
       </ScrollView>
-    </ScrollView>
+    </GestureHandlerScrollView>
   );
 };
 
 const styles = StyleSheet.create({
   videoWrapper: {
     marginTop: 180,
-
-    // backgroundColor: "red",
   },
-  // -----------recommend Text style----------
   titleContainer: {
     paddingTop: 30,
     paddingLeft: 10,
@@ -71,8 +65,6 @@ const styles = StyleSheet.create({
     color: "#8870FF",
     marginBottom: 20,
   },
-
-  // -----------video container style---------
   videoContainer: {
     marginLeft: 10,
     marginRight: 10,
@@ -82,9 +74,7 @@ const styles = StyleSheet.create({
     borderRadius: 10,
     position: "relative",
     padding: 6,
-
   },
-  // -----------Video Title style--------------
   titleInfo: {
     position: "absolute",
     bottom: 10,
@@ -94,6 +84,29 @@ const styles = StyleSheet.create({
     fontSize: 18,
     fontWeight: "bold",
   },
+  otherComponent: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  more:{width:250,
+    height:250,
+    // borderRadius:200,
+    // marginTop:'70%',
+    // backgroundColor:'lightgrey',
+    // justifyContent: 'center',
+    // alignItems: 'center',
+    paddingTop:150
+    ,paddingLeft:50
+  },
+  textStyle:{
+    color:'grey',
+    fontSize:50,fontWeight:'bold'
+  },
+  image:{
+    width:150,
+    height:150
+  }
 });
 
 export default Videos;
