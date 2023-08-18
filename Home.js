@@ -22,6 +22,7 @@ import FutureContinues from "./components/Contents/Tenses/FututreTense/FutureCon
 import FuturePerfect from "./components/Contents/Tenses/FututreTense/FuturePerfect";
 import FuturePerfectContinues from "./components/Contents/Tenses/FututreTense/FuturePerfectContinues";
 import Jokes from "./components/Contents/Jokes/Jokes";
+import Quotes from "./components/Contents/Quotes/Quotes";
 const Stack = createNativeStackNavigator();
 function Home() {
   return (
@@ -64,6 +65,7 @@ function Home() {
        -----------------------------------------------JOKES---------------------------------------------------------------
         */}
         <Stack.Screen name="Jokes" component={Jokes} />
+        <Stack.Screen name="Quotes" component={Quotes} />
       </Stack.Navigator>
     </>
   );

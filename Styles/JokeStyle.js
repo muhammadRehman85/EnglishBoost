@@ -40,9 +40,10 @@ image:{
 },
 // ----------joke text -----------
 text:{
-  color:'grey',
+  color:'#8870FF',
   fontSize:18,
-  lineHeight:30
+  lineHeight:30,
+  fontWeight:'bold'
 }
 });
 export default styles;

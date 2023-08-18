@@ -12,22 +12,29 @@ const Navbar = ({ navigation }) => {
       names: "Tenses",
       image: require("../../assets/tense.png"),
     },
+   
     {
       id: 2,
-      title: "Jokes",
-      names: "Jokes",
-      image: require("../../assets/logo.jpg"),
-    },
-    {
-      id: 3,
       title: "Parts Of Speech",
       names: "PartsOfSpeech",
       image: require("../../assets/logo.jpg"),
     },
     {
-      id: 4,
+      id: 3,
       title: "Conversations",
       names: "Conversations",
+      image: require("../../assets/logo.jpg"),
+    },
+    {
+      id: 4,
+      title: "Jokes",
+      names: "Jokes",
+      image: require("../../assets/logo.jpg"),
+    },
+    {
+      id: 5,
+      title: "Quotes",
+      names: "Quotes",
       image: require("../../assets/logo.jpg"),
     },
   ];
