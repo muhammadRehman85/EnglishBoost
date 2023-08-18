@@ -3,7 +3,9 @@ import { View, Text, StyleSheet, ScrollView, Pressable,Image } from "react-nativ
 import { ScrollView as GestureHandlerScrollView } from "react-native-gesture-handler"; // Renamed to avoid confusion with your imported ScrollView
 import YoutubePlayer from "react-native-youtube-iframe";
 import AllVideos from "./AllVideos";
-const Videos = (props) => {
+import { useNavigation } from "@react-navigation/native";
+const Videos = () => {
+  const navigation=useNavigation();
   const DATA = [
     {
       key: 1,
@@ -35,7 +37,7 @@ const Videos = (props) => {
               />
             ) : (
              <Pressable   
-             onPress={() => props.navigation.navigate('AllVideos')}
+             onPress={() => navigation.navigate(item.name)}
              ><View style={styles.otherComponent}>
               
               <View style={styles.more}><Image style={styles.image} source={item.source}/></View> 

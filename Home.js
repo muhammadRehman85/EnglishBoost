@@ -69,7 +69,6 @@ function Home() {
         <Stack.Screen name="Jokes" component={Jokes} />
         <Stack.Screen name="Quotes" component={Quotes} />
         <Stack.Screen name="Videos" component={Videos} />
-
         <Stack.Screen name="AllVideos" component={AllVideos} />
       </Stack.Navigator>
     </>
