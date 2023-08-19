@@ -7,15 +7,13 @@ import { useNavigation } from "@react-navigation/native";
 const Videos = () => {
   const navigation=useNavigation();
   const DATA = [
-    {
-      key: 1,
-      token: true,
-      title: "Learn with Harry Porter|English With Movies",
-      videoId: "joE-ANMPG5k",
-    },
-    { key: 2, token: true, title: "learn with Harry", videoId: "3ZAMTYEjEv8" },
-    { key: 3, token: true, title: "learn with Harry", videoId: "3ZAMTYEjEv8" },
-    { key: 4, token: false, source:require('../../../assets/more.png'),name:'AllVideos' },
+    { key: 1, token: true, title: " You Can Speak Like a Native English Speaker", videoId: "HV6h7MRrRNA" },
+
+    { key: 2, token: true, title: "Learn with Harry Porter|English With Movies",  videoId: "joE-ANMPG5k",},
+    { key: 3, token: true, title: "Improve Your English with Disney Movies | Frozen 2", videoId: "PL7niJMDu5w" },
+    { key: 4, token: true, title: "Improve your English Grammar in One Hour", videoId: "QXVzmzhxWWc" },
+    { key: 5, token: true, title: "Excellent ENGLISH with Slow Practice", videoId: "AgWs56i4GPk" },
+    { key: 6, token: false, source:require('../../../assets/more.png'),name:'AllVideos' },
   ];
 
   return (

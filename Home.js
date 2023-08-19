@@ -25,6 +25,8 @@ import Jokes from "./components/Contents/Jokes/Jokes";
 import Quotes from "./components/Contents/Quotes/Quotes";
 import AllVideos from "./components/Contents/AllVideos/AllVideos";
 import Videos from "./components/Contents/AllVideos/Videos";
+import AllEngMovies from "./components/Contents/AllVideos/AllEngMovies";
+import AllEngCartoons from "./components/Contents/AllVideos/AllEngCartoons";
 const Stack = createNativeStackNavigator();
 function Home() {
   return (
@@ -70,6 +72,8 @@ function Home() {
         <Stack.Screen name="Quotes" component={Quotes} />
         <Stack.Screen name="Videos" component={Videos} />
         <Stack.Screen name="AllVideos" component={AllVideos} />
+        <Stack.Screen name="AllEngMovies" component={AllEngMovies} />
+        <Stack.Screen name="AllEngCartoons" component={AllEngCartoons} />
       </Stack.Navigator>
     </>
   );

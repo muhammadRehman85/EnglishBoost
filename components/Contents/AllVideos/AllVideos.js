@@ -2,7 +2,7 @@ import React from "react";
 import { View, Text, StyleSheet, ScrollView, Pressable,Image } from "react-native";
 import { ScrollView as GestureHandlerScrollView } from "react-native-gesture-handler"; // Renamed to avoid confusion with your imported ScrollView
 import YoutubePlayer from "react-native-youtube-iframe";
-
+import AllEngMovies from "./AllEngMovies";
 import { useNavigation } from "@react-navigation/native";
 import EnglishWithCartoons from "./EnglishWithCartoons";
 const AllVideos = () => {
@@ -13,7 +13,7 @@ const AllVideos = () => {
     { key: 3, token: true, title: "Learn ENGLISH with Netflix Series|WEDNESDAY and Enid", videoId: "hgdwTELjrNI" },
     { key: 4, token: true, title: "Learn English with Peaky Blinders ", videoId: "Fa4jyM-p8zI" },
     { key: 5, token: true, title: "Learn English With Iron Man", videoId: "-hWE1DbQ43s" },
-    { key: 6, token: false, source:require('../../../assets/more.png'),name:'AllVideos' },
+    { key: 6, token: false, source:require('../../../assets/more.png'),name:'AllEngMovies' },
   ];
 
   return (

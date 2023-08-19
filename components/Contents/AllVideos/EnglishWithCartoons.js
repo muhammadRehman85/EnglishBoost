@@ -12,7 +12,7 @@ const EnglishWithCartoons = () => {
     { key: 3, token: true, title: "What Level is Your English? |TEST with ZOOTOPIA", videoId: "kMUcwWWmWug" },
     { key: 4, token: true, title: "Learn English with RATATOUILLE|Remy Meets Linguini", videoId: "8WRjQAKUlio" },
     { key: 5, token: true, title: "Learn English with Disney Movies|The Incredibles", videoId: "3xCQrnTYmzY" },
-    { key: 6, token: false, source:require('../../../assets/more.png'),name:'AllVideos' },
+    { key: 6, token: false, source:require('../../../assets/more.png'),name:'AllEngCartoons' },
   ];
 
   return (
