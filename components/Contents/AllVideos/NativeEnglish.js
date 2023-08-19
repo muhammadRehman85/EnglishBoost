@@ -2,28 +2,26 @@ import React from "react";
 import { View, Text, StyleSheet, ScrollView, Pressable,Image } from "react-native";
 import { ScrollView as GestureHandlerScrollView } from "react-native-gesture-handler"; // Renamed to avoid confusion with your imported ScrollView
 import YoutubePlayer from "react-native-youtube-iframe";
-import AllEngMovies from "./AllEngMovies";
+
 import { useNavigation } from "@react-navigation/native";
-import NativeEnglish from "./NativeEnglish";
-import EnglishWithCartoons from "./EnglishWithCartoons";
-const AllVideos = () => {
+const NativeEnglish = () => {
   const navigation=useNavigation();
-  const EMDATA = [
-    {key: 1,token: true,title: "Learn with Harry Porter|English With Movies",videoId: "joE-ANMPG5k",},
-    { key: 2, token: true, title: "Learn English with Tom Cruise — MISSION IMPOSSIBLE", videoId: "qbJmrCCJKjU" },
-    { key: 3, token: true, title: "Learn ENGLISH with Netflix Series|WEDNESDAY and Enid", videoId: "hgdwTELjrNI" },
-    { key: 4, token: true, title: "Learn English with Peaky Blinders ", videoId: "Fa4jyM-p8zI" },
-    { key: 5, token: true, title: "Learn English With Iron Man", videoId: "-hWE1DbQ43s" },
-    { key: 6, token: false, source:require('../../../assets/more.png'),name:'AllEngMovies' },
+  const DATA = [
+    {key: 1,token: true,title: "You Just Need 3 Hours! To Speak Like a Native English Speaker",videoId: "qiQ2YCo5Ouo",},
+    {key: 2,token: true,title: "Daily Life English Conversation Practice",videoId: "QLn30aZ82iI",},
+    { key: 3, token: true, title: "How to speak English FAST and understand natives", videoId: "ATuiEVOsEis" },
+    { key: 4, token: true, title: "Speak English Like a Native Speaker in 20 Minutes", videoId: "Whetyw1aUyU" },
+    { key: 5, token: true, title: "Speak English Fluently - 5 Steps to Improve Your English Fluency", videoId: "KaA_mxga3PQ" },
+    { key: 6, token: false, source:require('../../../assets/more.png'),name:'AllNativeEnglish' },
   ];
 
   return (
-    <GestureHandlerScrollView style={styles.videoWrapper}>
+   <ScrollView>
       <View style={styles.titleContainer}>
-        <Text style={styles.title}>English With Movies </Text>
+        <Text style={styles.title}> Speak English Like Native </Text>
       </View>
       <ScrollView horizontal showsHorizontalScrollIndicator={false}>
-        {EMDATA.map((item) => (
+        {DATA.map((item) => (
           <View key={item.key} style={styles.videoContainer}>
             {item.token ? ( // Conditional rendering based on the token value
               <YoutubePlayer
@@ -47,17 +45,8 @@ const AllVideos = () => {
             </View>
           </View>
         ))}
-        {/* ------------------- */}
-      
-     
       </ScrollView>
-      <View>
-          <EnglishWithCartoons/>
-        </View>
-        <View>
-         <NativeEnglish/>
-        </View>
-    </GestureHandlerScrollView>
+      </ScrollView>
   );
 };
 
@@ -119,4 +108,4 @@ const styles = StyleSheet.create({
   }
 });
 
-export default AllVideos;
+export default NativeEnglish;
