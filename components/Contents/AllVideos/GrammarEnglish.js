@@ -2,29 +2,26 @@ import React from "react";
 import { View, Text, StyleSheet, ScrollView, Pressable,Image } from "react-native";
 import { ScrollView as GestureHandlerScrollView } from "react-native-gesture-handler"; // Renamed to avoid confusion with your imported ScrollView
 import YoutubePlayer from "react-native-youtube-iframe";
-import AllEngMovies from "./AllEngMovies";
+
 import { useNavigation } from "@react-navigation/native";
-import NativeEnglish from "./NativeEnglish";
-import EnglishWithCartoons from "./EnglishWithCartoons";
-import GrammarEnglish from "./GrammarEnglish";
-const AllVideos = () => {
+const GrammarEnglish = () => {
   const navigation=useNavigation();
-  const EMDATA = [
-    {key: 1,token: true,title: "Learn with Harry Porter|English With Movies",videoId: "joE-ANMPG5k",},
-    { key: 2, token: true, title: "Learn English with Tom Cruise — MISSION IMPOSSIBLE", videoId: "qbJmrCCJKjU" },
-    { key: 3, token: true, title: "Learn ENGLISH with Netflix Series|WEDNESDAY and Enid", videoId: "hgdwTELjrNI" },
-    { key: 4, token: true, title: "Learn English with Peaky Blinders ", videoId: "Fa4jyM-p8zI" },
-    { key: 5, token: true, title: "Learn English With Iron Man", videoId: "-hWE1DbQ43s" },
-    { key: 6, token: false, source:require('../../../assets/more.png'),name:'AllEngMovies' },
+  const DATA = [
+    {key: 1,token: true,title: "Basic English Grammar: Parts of Speech",videoId: "SceDmiBEESI",},
+    {key: 2,token: true,title: "Learn Tenses in English Grammar with Examples",videoId: "pXZtRXpGNck",},
+    { key: 3, token: true, title: "Prepositions of Movement - Visual Vocabulary Lesson", videoId: "Rai_E2EjOBw" },
+    { key: 4, token: true, title: "Improve your English Grammar in One Hour | Basic English Grammar", videoId: "QXVzmzhxWWc" },
+    { key: 5, token: true, title: "Full Active and Passive Voice Trick ", videoId: "VT5kM7Ugpwg" },
+    { key: 6, token: false, source:require('../../../assets/more.png'),name:'AllEngGrammar' },
   ];
 
   return (
-    <GestureHandlerScrollView style={styles.videoWrapper}>
+   <ScrollView>
       <View style={styles.titleContainer}>
-        <Text style={styles.title}>English With Movies </Text>
+        <Text style={styles.title}> English Grammar </Text>
       </View>
       <ScrollView horizontal showsHorizontalScrollIndicator={false}>
-        {EMDATA.map((item) => (
+        {DATA.map((item) => (
           <View key={item.key} style={styles.videoContainer}>
             {item.token ? ( // Conditional rendering based on the token value
               <YoutubePlayer
@@ -48,18 +45,8 @@ const AllVideos = () => {
             </View>
           </View>
         ))}
-        {/* ------------------- */}
-      
-     
       </ScrollView>
-      <View>
-          <EnglishWithCartoons/>
-        </View>
-        <View>
-         <NativeEnglish/>
-        </View>
-        <View><GrammarEnglish/></View>
-    </GestureHandlerScrollView>
+      </ScrollView>
   );
 };
 
@@ -121,4 +108,4 @@ const styles = StyleSheet.create({
   }
 });
 
-export default AllVideos;
+export default GrammarEnglish;
