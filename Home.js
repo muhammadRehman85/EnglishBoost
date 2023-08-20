@@ -29,6 +29,7 @@ import AllEngMovies from "./components/Contents/AllVideos/AllEngMovies";
 import AllEngCartoons from "./components/Contents/AllVideos/AllEngCartoons";
 import AllNativeEnglish from "./components/Contents/AllVideos/AllNativeEnglish";
 import AllEngGrammar from "./components/Contents/AllVideos/AllEngGrammar";
+import Books from "./components/Contents/Books/Books";
 const Stack = createNativeStackNavigator();
 function Home() {
   return (
@@ -72,11 +73,12 @@ function Home() {
         */}
         <Stack.Screen name="Jokes" component={Jokes} />
         <Stack.Screen name="Quotes" component={Quotes} />
+        <Stack.Screen name="Books" component={Books} />
         <Stack.Screen name="Videos" component={Videos} />
         <Stack.Screen name="AllVideos" component={AllVideos} />
         <Stack.Screen name="AllEngMovies" component={AllEngMovies} />
         <Stack.Screen name="AllEngCartoons" component={AllEngCartoons} />
-        
+
         <Stack.Screen name="AllNativeEnglish" component={AllNativeEnglish} />
         <Stack.Screen name="AllEngGrammar" component={AllEngGrammar} />
       </Stack.Navigator>
@@ -84,5 +86,3 @@ function Home() {
   );
 }
 export default Home;
-
-

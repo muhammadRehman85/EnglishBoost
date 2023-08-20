@@ -12,7 +12,7 @@ const Navbar = ({ navigation }) => {
       names: "Tenses",
       image: require("../../assets/tense.png"),
     },
-   
+
     {
       id: 2,
       title: "Parts Of Speech",
@@ -37,47 +37,52 @@ const Navbar = ({ navigation }) => {
       names: "Quotes",
       image: require("../../assets/logo.jpg"),
     },
+    {
+      id: 6,
+      title: "Books",
+      names: "Books",
+      image: require("../../assets/logo.jpg"),
+    },
   ];
-  return (<>
-    <ScrollView>
-  
-      <View style={{ position: "absolute" }}>
-        <FlatList
-          horizontal
-          showsHorizontalScrollIndicator={false}
-          data={DATA}
-          keyExtractor={(item) => item.id}
-          renderItem={({ item }) => (
-            <Pressable
-              style={styles.boxLayout}
-              onPress={() => navigation.navigate(item.names)}
-            >
-              <Image
-                style={{
-                  width: 70,
-                  height: 70,
-                  borderRadius: 50,
-                }}
-                source={item.image}
-              />
-              <Text
-                style={{
-                  color: "black",
-                  fontSize: 14,
-                  marginTop: 10,
-                }}
+  return (
+    <>
+      <ScrollView>
+        <View style={{ position: "absolute" }}>
+          <FlatList
+            horizontal
+            showsHorizontalScrollIndicator={false}
+            data={DATA}
+            keyExtractor={(item) => item.id}
+            renderItem={({ item }) => (
+              <Pressable
+                style={styles.boxLayout}
+                onPress={() => navigation.navigate(item.names)}
               >
-                {item.title}
-              </Text>
-            </Pressable>
-          )}
-        />
-      </View>
-      {/* ---------Videos ---------- */}
-     
-       <Videos />
-    
-    </ScrollView>
+                <Image
+                  style={{
+                    width: 70,
+                    height: 70,
+                    borderRadius: 50,
+                  }}
+                  source={item.image}
+                />
+                <Text
+                  style={{
+                    color: "black",
+                    fontSize: 14,
+                    marginTop: 10,
+                  }}
+                >
+                  {item.title}
+                </Text>
+              </Pressable>
+            )}
+          />
+        </View>
+        {/* ---------Videos ---------- */}
+
+        <Videos />
+      </ScrollView>
     </>
   );
 };
