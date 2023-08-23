@@ -2,30 +2,26 @@ import React from "react";
 import { View, Text, StyleSheet, ScrollView, Pressable,Image } from "react-native";
 import { ScrollView as GestureHandlerScrollView } from "react-native-gesture-handler"; // Renamed to avoid confusion with your imported ScrollView
 import YoutubePlayer from "react-native-youtube-iframe";
-import AllEngMovies from "./AllEngMovies";
+
 import { useNavigation } from "@react-navigation/native";
-import NativeEnglish from "./NativeEnglish";
-import EnglishWithCartoons from "./EnglishWithCartoons";
-import GrammarEnglish from "./GrammarEnglish";
-import EngIdioms from "./EngIdioms";
-const AllVideos = () => {
+const EngIdioms = () => {
   const navigation=useNavigation();
-  const EMDATA = [
-    {key: 1,token: true,title: "Learn with Harry Porter|English With Movies",videoId: "joE-ANMPG5k",},
-    { key: 2, token: true, title: "Learn English with Tom Cruise — MISSION IMPOSSIBLE", videoId: "qbJmrCCJKjU" },
-    { key: 3, token: true, title: "Learn ENGLISH with Netflix Series|WEDNESDAY and Enid", videoId: "hgdwTELjrNI" },
-    { key: 4, token: true, title: "Learn English with Peaky Blinders ", videoId: "Fa4jyM-p8zI" },
-    { key: 5, token: true, title: "Learn English With Iron Man", videoId: "-hWE1DbQ43s" },
-    { key: 6, token: false, source:require('../../../assets/more.png'),name:'AllEngMovies' },
+  const DATA = [
+    {key: 1,token: true,title: "Learn 15 Common English Idioms (With Examples)",videoId: "HclqADvf35Y",},
+    {key: 2,token: true,title: "30 Must-Know Idioms for Fluent English Conversation",videoId: "IexEuK-zkwY",},
+    { key: 3, token: true, title: "Useful IDIOMS for Any Topic in IELTS Speaking", videoId: "6zoe5WQ1c8E" },
+    { key: 4, token: true, title: " English Conversation Practice with idioms", videoId: "RuCvG4PsI8g" },
+    { key: 5, token: true, title: "111 Advanced English Idioms in Context", videoId: "81IED6Vl6GI" },
+    { key: 6, token: false, source:require('../../../assets/more.png'),name:'AllEngIdioms' },
   ];
 
   return (
-    <GestureHandlerScrollView style={styles.videoWrapper}>
+   <ScrollView>
       <View style={styles.titleContainer}>
-        <Text style={styles.title}>English With Movies </Text>
+        <Text style={styles.title}> English Idioms </Text>
       </View>
       <ScrollView horizontal showsHorizontalScrollIndicator={false}>
-        {EMDATA.map((item) => (
+        {DATA.map((item) => (
           <View key={item.key} style={styles.videoContainer}>
             {item.token ? ( // Conditional rendering based on the token value
               <YoutubePlayer
@@ -49,19 +45,8 @@ const AllVideos = () => {
             </View>
           </View>
         ))}
-        {/* ------------------- */}
-      
-     
       </ScrollView>
-      <View>
-          <EnglishWithCartoons/>
-        </View>
-        <View>
-         <NativeEnglish/>
-        </View>
-        <View><GrammarEnglish/></View>
-        <View><EngIdioms/></View>
-    </GestureHandlerScrollView>
+      </ScrollView>
   );
 };
 
@@ -123,4 +108,4 @@ const styles = StyleSheet.create({
   }
 });
 
-export default AllVideos;
+export default EngIdioms;
