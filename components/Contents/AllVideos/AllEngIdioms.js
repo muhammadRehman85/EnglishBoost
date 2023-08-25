@@ -2,7 +2,7 @@ import React from "react";
 import { View, Text, StyleSheet, ScrollView, Pressable,Image } from "react-native";
 import { ScrollView as GestureHandlerScrollView } from "react-native-gesture-handler"; // Renamed to avoid confusion with your imported ScrollView
 import YoutubePlayer from "react-native-youtube-iframe";
-
+import styles from "../../../Styles/AllVideosStyle";
 import { useNavigation } from "@react-navigation/native";
 const EngIdioms = () => {
   const navigation=useNavigation();
@@ -53,62 +53,62 @@ const EngIdioms = () => {
   );
 };
 
-const styles = StyleSheet.create({
-  videoWrapper: {
-    // marginTop: 180,
-  },
-  titleContainer: {
-    paddingTop: 30,
-    paddingLeft: 10,
-  },
-  title: {
-    fontWeight: "bold",
-    fontSize: 22,
-    color: "#8870FF",
-    marginBottom: 20,
-  },
-  videoContainer: {
-    marginTop: 20,
-    marginLeft: 20,
-    elevation: 0.8,
-    width: 330,
-    height: 250,
-    borderRadius: 10,
-    position: "relative",
-    padding: 6,
-  },
-  titleInfo: {
-    position: "absolute",
-    bottom: 10,
-    left: 20,
-  },
-  text: {
-    fontSize: 18,
-    fontWeight: "bold",
-  },
-  otherComponent: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-  more:{width:250,
-    height:250,
-    // borderRadius:200,
-    // marginTop:'70%',
-    // backgroundColor:'lightgrey',
-    // justifyContent: 'center',
-    // alignItems: 'center',
-    paddingTop:150
-    ,paddingLeft:50
-  },
-  textStyle:{
-    color:'grey',
-    fontSize:50,fontWeight:'bold'
-  },
-  image:{
-    width:150,
-    height:150
-  }
-});
+// const styles = StyleSheet.create({
+//   videoWrapper: {
+//     // marginTop: 180,
+//   },
+//   titleContainer: {
+//     paddingTop: 30,
+//     paddingLeft: 10,
+//   },
+//   title: {
+//     fontWeight: "bold",
+//     fontSize: 22,
+//     color: "#8870FF",
+//     marginBottom: 20,
+//   },
+//   videoContainer: {
+//     marginTop: 20,
+//     marginLeft: 15,
+//     elevation: 0.8,
+//     width: 330,
+//     height: 250,
+//     borderRadius: 10,
+//     position: "relative",
+//     padding: 6,
+//   },
+//   titleInfo: {
+//     position: "absolute",
+//     bottom: 10,
+//     left: 20,
+//   },
+//   text: {
+//     fontSize: 18,
+//     fontWeight: "bold",
+//   },
+//   otherComponent: {
+//     flex: 1,
+//     justifyContent: 'center',
+//     alignItems: 'center',
+//   },
+//   more:{width:250,
+//     height:250,
+//     // borderRadius:200,
+//     // marginTop:'70%',
+//     // backgroundColor:'lightgrey',
+//     // justifyContent: 'center',
+//     // alignItems: 'center',
+//     paddingTop:150
+//     ,paddingLeft:50
+//   },
+//   textStyle:{
+//     color:'grey',
+//     fontSize:50,fontWeight:'bold'
+//   },
+//   image:{
+//     width:150,
+//     height:150
+//   }
+// });
 
 export default EngIdioms;
