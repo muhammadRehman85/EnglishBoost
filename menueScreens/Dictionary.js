@@ -24,10 +24,6 @@ return fetch(url).then((data)=>{
   var example=response[0].meanings[0].definitions[0].example
   setExample(example)
   // --------------------synonoms------------------------------
-  var partOfSpeech=response.meanings[0].partOfSpeech
-setPartOfSpeech(syn)
-
-
 })
    }
  //   console.log(meanings);
@@ -60,13 +56,7 @@ setPartOfSpeech(syn)
              {example}
             </Text>
           </View>
-          <View style={styles.definitionView}>
-            <Text style={styles.definitionText}>Synonoms:</Text>
-            <Text style={{ color: "grey" }}>
-             {partOfSpeech}
-            </Text>
-          </View>
-        </ScrollView>
+                 </ScrollView>
       </SafeAreaView>
 }
     </View>
