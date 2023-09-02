@@ -91,7 +91,7 @@ const styles = StyleSheet.create({
   boxLayout: {
     width: 110,
     height: 150,
-    backgroundColor: "rgba(136,112,255,0.1)",
+    backgroundColor: "rgba(254, 198, 6, 0.167)",
     margin: 15,
     borderRadius: 10,
     alignItems: "center",

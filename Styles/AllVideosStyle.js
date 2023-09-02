@@ -11,7 +11,7 @@ const styles = StyleSheet.create({
     title: {
       fontWeight: "bold",
       fontSize: 22,
-      color: "#8870FF",
+      color: "#FEC606",
       marginBottom: 20,
     },
     videoContainer: {

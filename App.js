@@ -19,15 +19,23 @@ export default function App() {
             headerStyle: {
               shadowOpacity: 0,
               elevation: 0,
-              backgroundColor: "rgb(136,112,255)",
+              backgroundColor: "#FEC606",
               height: 100,
+              
             },
+            
+            
+            
           }}
+         
           initialRouteName="Home"
           drawerContent={(props) => <CustomDrawer {...props} />}
         >
           <Drawer.Screen name="Home" component={Home} />
-          <Drawer.Screen name="Dictionary" component={Dictionary} />
+          <Drawer.Screen name="Dictionary"   options={{
+            title: 'Dictionary',
+            headerTitleAlign: 'center' 
+          }} component={Dictionary} />
           <Drawer.Screen name="Setting" component={Setting} />
         </Drawer.Navigator>
       </NavigationContainer>

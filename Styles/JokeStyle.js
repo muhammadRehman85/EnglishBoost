@@ -19,7 +19,7 @@ btn:{
     width:100,
     height:45,
     borderRadius:7,
-    backgroundColor:'#8870FF',
+    backgroundColor:'#FEC606',
     alignItems:'center',
     justifyContent:'center',
     

@@ -12,7 +12,7 @@ const styles = StyleSheet.create({
     paddingLeft: 70,
     paddingRight: 70,
     marginTop: 50,
-    backgroundColor: "rgb(136,112,255)",
+    backgroundColor: "#FEC606",
     borderRadius: 10,
   },
   text: {

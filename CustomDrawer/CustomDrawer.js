@@ -12,8 +12,8 @@ const CustomDrawer = (props) => {
       <View style={{ flex: 1 }}>
         <DrawerContentScrollView {...props}>
           <Image
-            source={require("../assets/logo.jpg")}
-            style={{ width: "90%", height: 250 }}
+            source={require("../assets/logo1.png")}
+            style={{ width: "95%", height: 230, }}
           />
           <DrawerItemList {...props}></DrawerItemList>
         </DrawerContentScrollView>
