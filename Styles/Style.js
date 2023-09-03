@@ -12,14 +12,16 @@ const styles = StyleSheet.create({
     paddingLeft: 70,
     paddingRight: 70,
     marginTop: 50,
-    backgroundColor: "#FEC606",
+    // backgroundColor: "#FEC606",
+    borderWidth:1,
+    borderColor:"#FEC606",
     borderRadius: 10,
   },
   text: {
     textAlign: "center",
     fontSize: 18,
     fontWeight: "bold",
-    color: "white",
+    color: "black",
   },
 });
 export default styles;

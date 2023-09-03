@@ -17,19 +17,19 @@ const Navbar = ({ navigation }) => {
       id: 2,
       title: "Parts Of Speech",
       names: "PartsOfSpeech",
-      image: require("../../assets/logo.jpg"),
+      image: require("../../assets/partOfspeech.png"),
     },
     {
       id: 3,
       title: "Conversations",
       names: "Conversations",
-      image: require("../../assets/logo.jpg"),
+      image: require("../../assets/conversation.png"),
     },
     {
       id: 4,
       title: "Jokes",
       names: "Jokes",
-      image: require("../../assets/logo.jpg"),
+      image: require("../../assets/joke.png"),
     },
     {
       id: 5,

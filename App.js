@@ -34,7 +34,15 @@ export default function App() {
           <Drawer.Screen name="Home" component={Home} />
           <Drawer.Screen name="Dictionary"   options={{
             title: 'Dictionary',
-            headerTitleAlign: 'center' 
+            headerTitleAlign: 'center',
+            headerTitleStyle:{
+              color:'#004aad',
+              fontSize:20,
+              letterSpacing:3,
+              fontWeight:'bold'
+            }
+            ,headerTintColor:'#004aad',
+            
           }} component={Dictionary} />
           <Drawer.Screen name="Setting" component={Setting} />
         </Drawer.Navigator>
