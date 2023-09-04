@@ -91,7 +91,7 @@ const Videos = () => {
 
 const styles = StyleSheet.create({
   videoWrapper: {
-    marginTop: 180,
+    marginTop: 250,
   },
   titleContainer: {
     paddingTop: 30,

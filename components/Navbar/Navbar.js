@@ -80,7 +80,9 @@ const Navbar = ({ navigation }) => {
           />
         </View>
         {/* ---------Videos ---------- */}
-
+<Pressable onPress={() => navigation.navigate('WordOfTheDay')}>
+  <View style={styles.wordofday}><Text style={styles.wText}>Word Of the Day</Text></View>
+</Pressable>
         <Videos />
       </ScrollView>
     </>
@@ -88,6 +90,20 @@ const Navbar = ({ navigation }) => {
 };
 
 const styles = StyleSheet.create({
+  wordofday:{
+    width:'95%',
+    borderWidth:1,borderRadius:5,
+    borderColor:'#FEC606',
+     padding:15,
+    position:'absolute',top:200,left:10,
+    // justifyContent:'center',
+    alignItems:'center'
+  },
+  wText:{
+    color:"#004aad",
+    fontSize:24,
+    fontWeight:'bold'
+  },
   boxLayout: {
     width: 110,
     height: 150,
@@ -100,3 +116,4 @@ const styles = StyleSheet.create({
 });
 
 export default Navbar;
+5

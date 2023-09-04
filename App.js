@@ -21,7 +21,6 @@ export default function App() {
               elevation: 0,
               backgroundColor: "#FEC606",
               height: 100,
-              
             },
             
             
