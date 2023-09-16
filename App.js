@@ -10,6 +10,7 @@ import Setting from "./menueScreens/Setting";
 import CustomDrawer from "./CustomDrawer/CustomDrawer";
 import Quiz from "./components/Contents/QuizSection/Quiz";
 import TenseQuiz from "./components/Contents/QuizSection/TenseQuiz";
+import Quiz_Tense1 from "./components/Contents/QuizSection/Quiz_Tense1";
 
 // import { StatusBar } from "expo-status-bar";
 const Drawer = createDrawerNavigator();
@@ -21,7 +22,8 @@ export default function App() {
   // };
   return (
     <>
-    <StatusBar    / >
+    <StatusBar barStyle="light-content" backgroundColor="#FEC606" />
+  
       <NavigationContainer>
         <Drawer.Navigator
           screenOptions={{
@@ -69,6 +71,7 @@ export default function App() {
           <Drawer.Screen name="Setting" component={Setting} />
           <Drawer.Screen options={{ headerShown: false,title:'Test Your English' }} name="Quiz" component={Quiz} />
           <Drawer.Screen options={{ headerShown: false,  unmountOnBlur: true }}  name="TenseQuiz" component={TenseQuiz} />
+          <Drawer.Screen options={{ headerShown: false,  drawerLabel:''}}  name="Quiz_Tense1" component={Quiz_Tense1} />
         </Drawer.Navigator>
       </NavigationContainer>
     </>

@@ -2,8 +2,10 @@ import React from "react";
 import { View, Button, Text, Image, Pressable } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import styles from "../../../Styles/StartQuizStyle";
-const TenseQuiz = ({ navigation }) => {
+const TenseQuiz = ({ navigation ,route}) => {
   // const naviagation = useNavigation();
+  // console.log(route.params.title);
+  const Test=route.params.title;
   return (
     // ------wrapper-------
     <View style={styles.startWrapper}>
@@ -38,7 +40,7 @@ const TenseQuiz = ({ navigation }) => {
             Today's Quiz on
           </Text>
           <Text style={{ color: "#004aad", fontSize: 35, fontWeight: "bold" }}>
-            English Tenses
+     {Test}
           </Text>
           <Text style={{ color: "black", fontSize: 13 }}>
           There will be 10 Questions in Quiz
@@ -50,7 +52,7 @@ const TenseQuiz = ({ navigation }) => {
             source={require("../../../assets/startQuiz3.png")}
           />
         </View>
-        <Pressable>
+        <Pressable onPress={() => navigation.navigate("Quiz_Tense1")}>
           <View style={styles.playbtn}>
             <Text style={styles.btnText}>Play Quiz Now</Text>
           </View>
