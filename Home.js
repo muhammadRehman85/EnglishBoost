@@ -32,6 +32,8 @@ import AllEngGrammar from "./components/Contents/AllVideos/AllEngGrammar";
 import Books from "./components/Contents/Books/Books";
 import AllEngIdioms from "./components/Contents/AllVideos/AllEngIdioms";
 import WordOfTheDay from "./components/Contents/WordOfTheDay/WordOfTheDay";
+import Quiz from "./components/Contents/QuizSection/Quiz";
+import TenseQuiz from "./components/Contents/QuizSection/TenseQuiz";
 const Stack = createNativeStackNavigator();
 function Home() {
   return (
@@ -84,6 +86,8 @@ function Home() {
         <Stack.Screen name="AllEngGrammar" component={AllEngGrammar} />
         <Stack.Screen name="AllEngIdioms" component={AllEngIdioms} />
         <Stack.Screen name="WordOfTheDay" component={WordOfTheDay} />
+        <Stack.Screen name="TenseQuiz" component={TenseQuiz} />
+        <Stack.Screen name="Quiz" component={Quiz} />
       </Stack.Navigator>
     </>
   );

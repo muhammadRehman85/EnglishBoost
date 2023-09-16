@@ -11,8 +11,8 @@ import { ScrollView as GestureHandlerScrollView } from "react-native-gesture-han
 import YoutubePlayer from "react-native-youtube-iframe";
 import AllVideos from "./AllVideos";
 import { useNavigation } from "@react-navigation/native";
-const Videos = () => {
-  const navigation = useNavigation();
+const Videos = ({navigation}) => {
+  // const navigation = useNavigation();
   const DATA = [
     {
       key: 1,

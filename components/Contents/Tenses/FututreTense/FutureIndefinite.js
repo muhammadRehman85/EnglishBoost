@@ -6,7 +6,7 @@ import { createMaterialTopTabNavigator } from '@react-navigation/material-top-ta
 import FutureIndefiniteIntro from './FutureIndefiniteDefinition/FutureIndefiniteIntro';
 import FutureIndefiniteDesc from './FutureIndefiniteDefinition/FutureIndefiniteDesc';
 import FutureIndefiniteExamples from './FutureIndefiniteDefinition/FutureIndefiniteExamples';
-import FutureIndefiniteQuiz from './FutureIndefiniteDefinition/FutureIndefiniteQuiz';
+
 const Tab = createMaterialTopTabNavigator();
 const FutureIndefinite =(props) => {
   return (
@@ -22,7 +22,7 @@ const FutureIndefinite =(props) => {
     <Tab.Screen  options={{header:()=>null}}  name="Introduction" component={FutureIndefiniteIntro} />
       <Tab.Screen name="Description" component={FutureIndefiniteDesc} />
       <Tab.Screen name="Examples" component={FutureIndefiniteExamples} />
-      <Tab.Screen name="Quiz" component={FutureIndefiniteQuiz} />
+    
     </Tab.Navigator>
       </View>
   )

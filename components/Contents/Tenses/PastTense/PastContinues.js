@@ -5,8 +5,6 @@ import { createMaterialTopTabNavigator } from '@react-navigation/material-top-ta
 import PastConDes from './PastContinueDefinitions/PastConDes';
 import PastConItro from './PastContinueDefinitions/PastConItro';
 import PastConExample from './PastContinueDefinitions/PastConExample';
-import PastConQuiz from './PastContinueDefinitions/PastConQuiz';
-
 const Tab = createMaterialTopTabNavigator();
 const PastIndifinite= (props) => {
   return (
@@ -24,7 +22,6 @@ const PastIndifinite= (props) => {
     <Tab.Screen  options={{header:()=>null}}  name="Introduction" component={PastConItro} />
       <Tab.Screen name="Description" component={PastConDes} />
       <Tab.Screen name="Examples" component={PastConExample} />
-      <Tab.Screen name="Quiz" component={PastConQuiz} />
     </Tab.Navigator>
       </View>
   )

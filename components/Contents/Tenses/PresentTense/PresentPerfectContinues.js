@@ -5,7 +5,7 @@ import { createMaterialTopTabNavigator } from '@react-navigation/material-top-ta
 import PresentPerConIntro from './PresentPerfectConefinitions/PresentPerConIntro';
 import PresentPerConDesc from './PresentPerfectConefinitions/PresentPerConDesc';
 import PresentPerConExamples from './PresentPerfectConefinitions/PresentPerConExamples';
-import PresentPerConQuiz from './PresentPerfectConefinitions/PresentPerConQuiz';
+
 
 
 
@@ -24,7 +24,7 @@ const PresentPerfectContinues=(props) => {
     <Tab.Screen  options={{header:()=>null}}  name="Introduction" component={PresentPerConIntro} />
       <Tab.Screen name="Description" component={PresentPerConDesc} />
       <Tab.Screen name="Examples" component={PresentPerConExamples} />
-      <Tab.Screen name="Quiz" component={PresentPerConQuiz} />
+     
     </Tab.Navigator>
       </View>
   )

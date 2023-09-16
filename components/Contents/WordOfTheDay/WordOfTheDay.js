@@ -98,10 +98,11 @@ return fetch(url).then((data)=>{
    }
  //------------------------------------------------------
 //  ------------- Calling functions----------------------
+
    useEffect(() => {
     getRandomWord();
    dictionaryApi();
-   }, [wordOfDay]);
+   }, []);
   return (
     <View style={styles.Wrapper}>
       <View style={styles.header}><Text style={styles.wordTxt}>Word Of The Day</Text>

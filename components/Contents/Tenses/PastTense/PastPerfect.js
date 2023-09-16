@@ -2,10 +2,7 @@
 import React from 'react'
 import { Pressable ,View , Text, BackHandler} from 'react-native';
 import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs';
-import PastIndifiniteIntro from './PastIndifiniteDefinitions/PastIndifiniteIntro';
-import PastIndifiniteDesc from './PastIndifiniteDefinitions/PastIndifiniteDesc';
-import PastIndifiniteExamples from './PastIndifiniteDefinitions/PastIndifiniteExamples';
-import PastIndifiniteQuiz from './PastIndifiniteDefinitions/PastIndifiniteQuiz';
+
 import PastPerfectIntro from './PastPerfectDefinitions/PastPerfectIntro';
 import PastPerfectDesc from './PastPerfectDefinitions/PastPerfectDesc';
 import PastPerfectExamples from './PastPerfectDefinitions/PastPerfectExamples';

@@ -5,7 +5,7 @@ import { createMaterialTopTabNavigator } from '@react-navigation/material-top-ta
 import PresentPerfectIntro from './PresentPerfectDefinitions/PresentPerfectIntro';
 import PresentPerfectDesc from './PresentPerfectDefinitions/PresentPerfectDesc';
 import PresentPerfectExamples from './PresentPerfectDefinitions/PresentPerfectExamples';
-import PresentPerfectQuiz from './PresentPerfectDefinitions/PresentPerfectQuiz';
+
 
 const Tab = createMaterialTopTabNavigator();
 const PresentPerfect=(props) => {
@@ -22,7 +22,7 @@ const PresentPerfect=(props) => {
     <Tab.Screen  options={{header:()=>null}}  name="Introduction" component={PresentPerfectIntro} />
       <Tab.Screen name="Description" component={PresentPerfectDesc} />
       <Tab.Screen name="Examples" component={PresentPerfectExamples} />
-      <Tab.Screen name="Quiz" component={PresentPerfectQuiz} />
+    
     </Tab.Navigator>
       </View>
   )

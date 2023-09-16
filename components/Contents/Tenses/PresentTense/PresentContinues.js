@@ -5,7 +5,7 @@ import { createMaterialTopTabNavigator } from '@react-navigation/material-top-ta
 import PresentConIntro from './PresentContinuesDefinitions/PresentConIntro';
 import PresentConDesc from './PresentContinuesDefinitions/PresentConDesc';
 import PresentConExamples from './PresentContinuesDefinitions/PresentConExamples';
-import PresentConQuiz from './PresentContinuesDefinitions/PresentConQuiz';
+
 
 
 const Tab = createMaterialTopTabNavigator();
@@ -24,7 +24,7 @@ const PresentContinues
     <Tab.Screen  options={{header:()=>null}}  name="Introduction" component={PresentConIntro} />
       <Tab.Screen name="Description" component={PresentConDesc} />
       <Tab.Screen name="Examples" component={PresentConExamples} />
-      <Tab.Screen name="Quiz" component={PresentConQuiz} />
+    
     </Tab.Navigator>
       </View>
   )

@@ -43,6 +43,12 @@ const Navbar = ({ navigation }) => {
       names: "Books",
       image: require("../../assets/logo.jpg"),
     },
+    {
+      id: 7,
+      title: "Quiz",
+      names: "Quiz",
+      image: require("../../assets/logo.jpg"),
+    },
   ];
   return (
     <>
@@ -68,9 +74,10 @@ const Navbar = ({ navigation }) => {
                 />
                 <Text
                   style={{
-                    color: "black",
+                    color: "#004aad",
                     fontSize: 14,
                     marginTop: 10,
+                    fontWeight:"bold"
                   }}
                 >
                   {item.title}
@@ -79,10 +86,12 @@ const Navbar = ({ navigation }) => {
             )}
           />
         </View>
-        {/* ---------Videos ---------- */}
 <Pressable onPress={() => navigation.navigate('WordOfTheDay')}>
+  {/* ----------------word of the day----------------- */}
   <View style={styles.wordofday}><Text style={styles.wText}>Word Of the Day</Text></View>
 </Pressable>
+        {/* ---------Videos ---------- */}
+
         <Videos />
       </ScrollView>
     </>

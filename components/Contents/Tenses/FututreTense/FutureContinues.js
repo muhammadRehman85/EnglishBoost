@@ -7,7 +7,7 @@ import { createMaterialTopTabNavigator } from '@react-navigation/material-top-ta
 import FutureContinuesIntro from './FutureContinuesDefinitions/FutureContinuesIntro';
 import FutureContinuesDesc from './FutureContinuesDefinitions/FutureContinuesDesc';
 import FutureContinuesExamples from './FutureContinuesDefinitions/FutureContinuesExamples';
-import FutureContinuesQuiz from './FutureContinuesDefinitions/FutureContinuesQuiz';
+
 const Tab = createMaterialTopTabNavigator();
 const FutureContinues =(props) => {
   return (
@@ -15,15 +15,31 @@ const FutureContinues =(props) => {
 
  <Tab.Navigator 
    screenOptions={{
-    tabBarLabelStyle: {  },
+    tabBarLabelStyle: {  activeTintColor: '#FEC606', },
     tabBarItemStyle: { },
-    tabBarStyle: {  }
+    tabBarStyle: { activeTintColor: '#FEC606', 
+    inactiveTintColor: 'gray',  }
+    
+  }}
+  Options={{
+    activeTintColor: '#fec606', // Color of the active tab
+    inactiveTintColor: 'gray', // Color of inactive tabs
+    labelStyle: {
+      fontSize: 16,
+      fontWeight: 'bold',
+    },
+    style: {
+      backgroundColor: 'white',
+      borderTopWidth: 1,
+      elevation:0,
+      borderTopColor: 'lightgray',
+    },
   }}
 >      
     <Tab.Screen  options={{header:()=>null}}  name="Introduction" component={FutureContinuesIntro} />
       <Tab.Screen name="Description" component={FutureContinuesDesc} />
       <Tab.Screen name="Examples" component={FutureContinuesExamples} />
-      <Tab.Screen name="Quiz" component={FutureContinuesQuiz} />
+  
     </Tab.Navigator>
       </View>
   )

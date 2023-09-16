@@ -131,10 +131,6 @@ const getRandomJoke = () => {
   useEffect(() => {
     getRandomJoke();
   }, []);
-
-
-
-
   return (
     <View style={styles.Wrapper}>
       <Image style={styles.image}source={require('../../../assets/Jokes/joke.jpg')}/>
@@ -146,8 +142,7 @@ const getRandomJoke = () => {
       <Pressable style={styles.btn} onPress={getRandomJoke} >
         <Text style={styles.btnText} >Next</Text>
       </Pressable>
-   
-    
+      
     </View>
   )
 }
