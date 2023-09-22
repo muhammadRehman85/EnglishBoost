@@ -24,6 +24,7 @@ import FuturePerfectContinues from "./components/Contents/Tenses/FututreTense/Fu
 import Jokes from "./components/Contents/Jokes/Jokes";
 import Quotes from "./components/Contents/Quotes/Quotes";
 import AllVideos from "./components/Contents/AllVideos/AllVideos";
+
 import Videos from "./components/Contents/AllVideos/Videos";
 import AllEngMovies from "./components/Contents/AllVideos/AllEngMovies";
 import AllEngCartoons from "./components/Contents/AllVideos/AllEngCartoons";
@@ -33,8 +34,8 @@ import Books from "./components/Contents/Books/Books";
 import AllEngIdioms from "./components/Contents/AllVideos/AllEngIdioms";
 import WordOfTheDay from "./components/Contents/WordOfTheDay/WordOfTheDay";
 import Quiz from "./components/Contents/QuizSection/Quiz";
-import TenseQuiz from "./components/Contents/QuizSection/TenseQuiz";
-import Quiz_Tense1 from "./components/Contents/QuizSection/Quiz_Tense1";
+import Quiz_Questions from "./components/Contents/QuizSection/Quiz_Questions";
+import ReadyQuiz from "./components/Contents/QuizSection/ReadyQuiz";
 const Stack = createNativeStackNavigator();
 function Home() {
   return (
@@ -87,9 +88,9 @@ function Home() {
         <Stack.Screen name="AllEngGrammar" component={AllEngGrammar} />
         <Stack.Screen name="AllEngIdioms" component={AllEngIdioms} />
         <Stack.Screen name="WordOfTheDay" component={WordOfTheDay} />
-        <Stack.Screen name="TenseQuiz" component={TenseQuiz} />
+        <Stack.Screen name="ReadyQuiz" component={ReadyQuiz} />
         <Stack.Screen name="Quiz" component={Quiz} />
-        <Stack.Screen name="Quiz_Tense1" component={Quiz_Tense1} />
+        <Stack.Screen name="Quiz_Questions" component={Quiz_Questions} />
       </Stack.Navigator>
     </>
   );

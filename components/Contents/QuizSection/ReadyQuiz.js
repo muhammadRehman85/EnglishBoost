@@ -2,10 +2,12 @@ import React from "react";
 import { View, Button, Text, Image, Pressable } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import styles from "../../../Styles/StartQuizStyle";
-const TenseQuiz = ({ navigation ,route}) => {
+const ReadyQuiz = ({ navigation ,route}) => {
   // const naviagation = useNavigation();
   // console.log(route.params.title);
   const Test=route.params.title;
+  const englishTenseQuestions=route.params.questions;
+  console.log(englishTenseQuestions);
   return (
     // ------wrapper-------
     <View style={styles.startWrapper}>
@@ -52,7 +54,7 @@ const TenseQuiz = ({ navigation ,route}) => {
             source={require("../../../assets/startQuiz3.png")}
           />
         </View>
-        <Pressable onPress={() => navigation.navigate("Quiz_Tense1")}>
+        <Pressable onPress={() => navigation.navigate("Quiz_Questions",{title:Test,QuizQuesData:englishTenseQuestions})}>
           <View style={styles.playbtn}>
             <Text style={styles.btnText}>Play Quiz Now</Text>
           </View>
@@ -62,4 +64,4 @@ const TenseQuiz = ({ navigation ,route}) => {
     </View>
   );
 };
-export default TenseQuiz;
+export default ReadyQuiz;

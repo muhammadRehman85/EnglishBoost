@@ -9,8 +9,9 @@ import Dictionary from "./menueScreens/Dictionary";
 import Setting from "./menueScreens/Setting";
 import CustomDrawer from "./CustomDrawer/CustomDrawer";
 import Quiz from "./components/Contents/QuizSection/Quiz";
-import TenseQuiz from "./components/Contents/QuizSection/TenseQuiz";
-import Quiz_Tense1 from "./components/Contents/QuizSection/Quiz_Tense1";
+
+import Quiz_Questions from "./components/Contents/QuizSection/Quiz_Questions";
+import ReadyQuiz from "./components/Contents/QuizSection/ReadyQuiz";
 
 // import { StatusBar } from "expo-status-bar";
 const Drawer = createDrawerNavigator();
@@ -70,8 +71,8 @@ export default function App() {
           }} component={Dictionary} />
           <Drawer.Screen name="Setting" component={Setting} />
           <Drawer.Screen options={{ headerShown: false,title:'Test Your English' }} name="Quiz" component={Quiz} />
-          <Drawer.Screen options={{ headerShown: false,  unmountOnBlur: true }}  name="TenseQuiz" component={TenseQuiz} />
-          <Drawer.Screen options={{ headerShown: false,  drawerLabel:''}}  name="Quiz_Tense1" component={Quiz_Tense1} />
+          <Drawer.Screen options={{ headerShown: false,  unmountOnBlur: true }}  name="ReadyQuiz" component={ReadyQuiz} />
+          <Drawer.Screen options={{ headerShown: false,  drawerLabel:''}}  name="Quiz_Questions" component={Quiz_Questions} />
         </Drawer.Navigator>
       </NavigationContainer>
     </>
