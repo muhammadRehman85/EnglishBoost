@@ -29,7 +29,8 @@
     "react-native-tts": "^4.1.0",
     "react-native-vector-icons": "^10.0.0",
     "react-native-webview": "13.2.2",
-    "react-native-youtube-iframe": "^2.3.0"
+    "react-native-youtube-iframe": "^2.3.0",
+    "@expo/vector-icons": "^13.0.0"
   },
   "devDependencies": {
     "@babel/core": "^7.20.0"
