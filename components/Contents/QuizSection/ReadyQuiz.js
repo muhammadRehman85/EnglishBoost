@@ -3,9 +3,9 @@ import { View, Button, Text, Image, Pressable } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import styles from "../../../Styles/StartQuizStyle";
 const ReadyQuiz = ({ navigation ,route}) => {
-  // const naviagation = useNavigation();
-  // console.log(route.params.title);
+  // --------Test data-------
   const Test=route.params.title;
+  //-------- englishTenseQuestions-------
   const englishTenseQuestions=route.params.questions;
   console.log(englishTenseQuestions);
   return (
@@ -54,6 +54,7 @@ const ReadyQuiz = ({ navigation ,route}) => {
             source={require("../../../assets/startQuiz3.png")}
           />
         </View>
+        {/* ---------------------------------button------------------------------------ */}
         <Pressable onPress={() => navigation.navigate("Quiz_Questions",{title:Test,QuizQuesData:englishTenseQuestions})}>
           <View style={styles.playbtn}>
             <Text style={styles.btnText}>Play Quiz Now</Text>

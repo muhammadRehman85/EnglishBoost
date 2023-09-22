@@ -3,7 +3,7 @@ const styles = StyleSheet.create({
     // --------WRAPPER------------
   Wrapper: {
     flex: 1,
-    backgroundColor: "white",paddingTop:50
+    backgroundColor: "#FEC606",paddingTop:50
     ,paddingLeft:10,
     // paddingRight:10,
   },
@@ -23,19 +23,11 @@ choices:{
     width:'100%',
     height:'90%',padding:20,
     marginTop:30,
-    backgroundColor:'#FEC606',
+    backgroundColor:'white',
     borderTopLeftRadius:60,
     // borderTRadius:30
 },
-  options:{
-    width:'100%',
-    height:55,
-    backgroundColor:'white',
-    borderRadius:30,
-    paddingLeft:20,
-    justifyContent:'center', marginTop:20,
-position:"relative",
-  },
+
   nextbtn:{
     width:'100%',
     height:55,
