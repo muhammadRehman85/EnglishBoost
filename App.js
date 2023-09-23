@@ -13,18 +13,12 @@ import Quiz from "./components/Contents/QuizSection/Quiz";
 import Quiz_Questions from "./components/Contents/QuizSection/Quiz_Questions";
 import ReadyQuiz from "./components/Contents/QuizSection/ReadyQuiz";
 
-// import { StatusBar } from "expo-status-bar";
 const Drawer = createDrawerNavigator();
 export default function App() {
-
-  
-  // <Quiz></Quiz>.navigationOptions = {
-  //   headerShown: false, // Hide the header for this screen
-  // };
   return (
     <>
-    <StatusBar barStyle="light-content" backgroundColor="#FEC606" />
-  
+      <StatusBar barStyle="light-content" backgroundColor="#FEC606" />
+
       <NavigationContainer>
         <Drawer.Navigator
           screenOptions={{
@@ -33,48 +27,61 @@ export default function App() {
               elevation: 0,
               backgroundColor: "#FEC606",
               height: 100,
-            },          
-            
-            
-            
+            },
           }}
-         options={{
-          headerShown:'false'
-         }}
+          options={{
+            headerShown: "false",
+          }}
           // initialRouteName="Home"
           drawerContent={(props) => <CustomDrawer {...props} />}
         >
-          <Drawer.Screen name="EnglishBoost" 
-          options={{
-            headerTitleAlign: 'center',
-            headerTitleStyle:{
-              color:'#004aad',
-              fontSize:20,
-              letterSpacing:3,
-              fontWeight:'bold'
-            }
-            ,
-            headerTintColor:'#004aad',
-          }}
-          component={Home} />
-          <Drawer.Screen name="Dictionary"   options={{
-            title: 'Dictionary',
-            headerTitleAlign: 'center',
-            headerTitleStyle:{
-              color:'#004aad',
-              fontSize:20,
-              letterSpacing:3,
-              fontWeight:'bold'
-            }
-            ,headerTintColor:'#004aad',
-            
-          }} component={Dictionary} />
+          <Drawer.Screen
+            name="EnglishBoost"
+            options={{
+              headerTitleAlign: "center",
+              headerTitleStyle: {
+                color: "#004aad",
+                fontSize: 20,
+                letterSpacing: 3,
+                fontWeight: "bold",
+              },
+              headerTintColor: "#004aad",
+            }}
+            component={Home}
+          />
+          <Drawer.Screen
+            name="Dictionary"
+            options={{
+              title: "Dictionary",
+              headerTitleAlign: "center",
+              headerTitleStyle: {
+                color: "#004aad",
+                fontSize: 20,
+                letterSpacing: 3,
+                fontWeight: "bold",
+              },
+              headerTintColor: "#004aad",
+            }}
+            component={Dictionary}
+          />
           <Drawer.Screen name="Setting" component={Setting} />
-          <Drawer.Screen options={{ headerShown: false,title:'Test Your English' }} name="Quiz" component={Quiz} />
-          <Drawer.Screen options={{ headerShown: false,  unmountOnBlur: true }}  name="ReadyQuiz" component={ReadyQuiz} />
-          <Drawer.Screen options={{ headerShown: false,  drawerLabel:''}}  name="Quiz_Questions" component={Quiz_Questions} />
+          <Drawer.Screen
+            options={{ headerShown: false, title: "Test Your English" }}
+            name="Quiz"
+            component={Quiz}
+          />
+          <Drawer.Screen
+            options={{ headerShown: false, unmountOnBlur: true }}
+            name="ReadyQuiz"
+            component={ReadyQuiz}
+          />
+          <Drawer.Screen
+            options={{ headerShown: false, drawerLabel: "" }}
+            name="Quiz_Questions"
+            component={Quiz_Questions}
+          />
         </Drawer.Navigator>
       </NavigationContainer>
     </>
- )
+  );
 }

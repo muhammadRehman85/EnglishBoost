@@ -21,7 +21,7 @@ const Quiz_Questions = ({ navigation, route }) => {
   const [isDisabledOption, setisDisabledOption] = useState(false);
   const [score, setScore] = useState(0);
   const [showNextBtn, setshowNextBtn] = useState(false);
-  const [disabled, setdisabled] = useState(false);
+  const [disabled, setdisabled] = useState(1);
   // ----------validate Answer------------
 
   useEffect(() => {
@@ -44,8 +44,16 @@ const Quiz_Questions = ({ navigation, route }) => {
   // show next button
   const handleNext = () => {
     if (currentQuestionIndex === allQuestion.length - 1) {
-      setdisabled(true);
-      navigation.navigate("Quiz", { disabled: disabled });
+      setCurrentQuestionIndex(0);
+      setCorrectOption(null);
+      setCurrentSelectedOption(null);
+      setisDisabledOption(false);
+      setshowNextBtn(false);
+      setProgress(0);
+      const newDisabledValue = disabled + 1;
+setdisabled(newDisabledValue);
+navigation.navigate("Quiz", { disabled: disabled});
+// console.log(disabled)
     } else if (currentSelectedOption != correctOption) {
       setshowNextBtn(true);
     } else {

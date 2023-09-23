@@ -14,14 +14,15 @@ const PresentIndifinite =(props) => {
 
  <Tab.Navigator 
    screenOptions={{
+    headerShown:false,
     tabBarLabelStyle: {  },
     tabBarItemStyle: { },
-    tabBarStyle: {  }
+    tabBarStyle: { display:'none'}
   }}
 >      
-    <Tab.Screen  options={{header:()=>null}}  name="Introduction" component={PresentIndefiniteIntro} />
-      <Tab.Screen name="Description" component={PresentIndefiniteDesc} />
-      <Tab.Screen name="Examples" component={PresentIndefiniteExamples} />
+    <Tab.Screen  options={ {tabBarStyle:{display:"none"}} } name="Introduction" component={PresentIndefiniteIntro} />
+      <Tab.Screen name="Description" options={{ headerShown: false }} component={PresentIndefiniteDesc} />
+      <Tab.Screen name="Examples" options={{ headerShown: false }} component={PresentIndefiniteExamples} />
    
     </Tab.Navigator>
       </View>
