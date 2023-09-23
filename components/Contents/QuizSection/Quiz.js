@@ -1,25 +1,38 @@
 import { View, Text, Pressable, FlatList } from "react-native";
 import React from "react";
 import styles from "../../../Styles/QuizStyle";
-import TenseQuiz from "./TenseQuiz";
+// import TenseQuiz from "./TenseQuiz";
 import { useNavigation } from "@react-navigation/native";
+import englishTenseQuestions from "./QuestionsData/englishTenseQuestions";
+import englishPartOfSpeechQuestions from "./QuestionsData/englishPartOfSpeechQuestions";
+const Quiz = ({ navigation, route }) => {
+  // const [locks, setLocks] = useState(0);
+  // const { disabled}=route.params;
+  const { disabled } = route?.params || {};
+  console.log(disabled);
+  // const [locks, setLocks] = useState(disabled);
 
-const Quiz = ({ navigation }) => {
+  // const { disabled } = route.params;
+  // setLocks(disabled);
+  // console.log(locks)
   const Test_data = [
     {
       id: 1,
-      title: "Tense",
-      name: "TenseQuiz",
+      title: "Tenses Quiz",
+      name: "ReadyQuiz",
+      questions: englishTenseQuestions,
     },
     {
       id: 2,
-      title: "Part of speech",
-      name: "TenseQuiz",
+      title: "PartOfSpeech Quiz",
+      name: "ReadyQuiz",
+      questions: englishPartOfSpeechQuestions,
     },
     {
       id: 3,
-      title: "Vocabulary",
-      name: "TenseQuiz",
+      title: "PartOfSpeech Quiz",
+      name: "ReadyQuiz",
+      questions: englishPartOfSpeechQuestions,
     },
   ];
 
@@ -31,22 +44,32 @@ const Quiz = ({ navigation }) => {
             data={Test_data}
             keyExtractor={(item) => item.id}
             renderItem={({ item }) => (
-              <Pressable
-                style={{
-                  flex: 1,
-                  alignItems: "center",
-                  justifyContent: "center",
-                  borderRadius: 10,
-                  height: 60,
-                  backgroundColor: "blue",
-                  margin: 10,
-                }}
-                onPress={() =>
-                  navigation.navigate(item.name, { title: item.title })
-                }
-              >
-                <Text style={styles.text}>{item.title}</Text>
-              </Pressable>
+              <View>
+                <Pressable
+                  style={{
+                    // width: 200,
+                    // height: 50,
+                    // backgroundColor: item.id == disabled + 1 ? "green" : "grey",
+                    // margin: 10,
+                    flex: 1,
+                    alignItems: "center",
+                    justifyContent: "center",
+                    borderRadius: 10,
+                    height: 60,
+                    backgroundColor: "blue",
+                    margin: 10,
+                  }}
+                  onPress={() =>
+                    navigation.navigate(item.name, {
+                      title: item.title,
+                      questions: item.questions,
+                    })
+                  }
+                  // disabled={item.id==1 ?"":"disabled"}
+                >
+                  <Text style={styles.text}>{item.title}</Text>
+                </Pressable>
+              </View>
             )}
           />
         </View>
