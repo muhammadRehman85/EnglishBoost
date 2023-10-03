@@ -1,5 +1,12 @@
 import React from "react";
-import { View, Text, StyleSheet, ScrollView, Pressable,Image } from "react-native";
+import {
+  View,
+  Text,
+  StyleSheet,
+  ScrollView,
+  Pressable,
+  Image,
+} from "react-native";
 import { ScrollView as GestureHandlerScrollView } from "react-native-gesture-handler"; // Renamed to avoid confusion with your imported ScrollView
 import YoutubePlayer from "react-native-youtube-iframe";
 import AllEngMovies from "./AllEngMovies";
@@ -9,14 +16,44 @@ import EnglishWithCartoons from "./EnglishWithCartoons";
 import GrammarEnglish from "./GrammarEnglish";
 import EngIdioms from "./EngIdioms";
 const AllVideos = () => {
-  const navigation=useNavigation();
+  const navigation = useNavigation();
   const EMDATA = [
-    {key: 1,token: true,title: "Learn with Harry Porter|English With Movies",videoId: "joE-ANMPG5k",},
-    { key: 2, token: true, title: "Learn English with Tom Cruise — MISSION IMPOSSIBLE", videoId: "qbJmrCCJKjU" },
-    { key: 3, token: true, title: "Learn ENGLISH with Netflix Series|WEDNESDAY and Enid", videoId: "hgdwTELjrNI" },
-    { key: 4, token: true, title: "Learn English with Peaky Blinders ", videoId: "Fa4jyM-p8zI" },
-    { key: 5, token: true, title: "Learn English With Iron Man", videoId: "-hWE1DbQ43s" },
-    { key: 6, token: false, source:require('../../../assets/more.png'),name:'AllEngMovies' },
+    {
+      key: 1,
+      token: true,
+      title: "Learn with Harry Porter|English With Movies",
+      videoId: "joE-ANMPG5k",
+    },
+    {
+      key: 2,
+      token: true,
+      title: "Learn English with Tom Cruise — MISSION IMPOSSIBLE",
+      videoId: "qbJmrCCJKjU",
+    },
+    {
+      key: 3,
+      token: true,
+      title: "Learn ENGLISH with Netflix Series|WEDNESDAY and Enid",
+      videoId: "hgdwTELjrNI",
+    },
+    {
+      key: 4,
+      token: true,
+      title: "Learn English with Peaky Blinders ",
+      videoId: "Fa4jyM-p8zI",
+    },
+    {
+      key: 5,
+      token: true,
+      title: "Learn English With Iron Man",
+      videoId: "-hWE1DbQ43s",
+    },
+    {
+      key: 6,
+      token: false,
+      source: require("../../../assets/more.png"),
+      name: "AllEngMovies",
+    },
   ];
 
   return (
@@ -37,12 +74,16 @@ const AllVideos = () => {
                 modestbranding
               />
             ) : (
-             <Pressable   
-             onPress={() => navigation.navigate(item.name)}
-             ><View style={styles.otherComponent}>
-              
-              <View style={styles.more}><Image style={styles.image} source={item.source}/></View> 
-              </View></Pressable> 
+              <Pressable
+                style={{
+                  flex: 1,
+                  justifyContent: "center",
+                  alignItems: "center",
+                }}
+                onPress={() => navigation.navigate(item.name)}
+              >
+                <Image style={styles.image} source={item.source} />
+              </Pressable>
             )}
             <View style={styles.titleInfo}>
               <Text style={styles.text}>{item.title}</Text>
@@ -50,17 +91,19 @@ const AllVideos = () => {
           </View>
         ))}
         {/* ------------------- */}
-      
-     
       </ScrollView>
       <View>
-          <EnglishWithCartoons/>
-        </View>
-        <View>
-         <NativeEnglish/>
-        </View>
-        <View><GrammarEnglish/></View>
-        <View><EngIdioms/></View>
+        <EnglishWithCartoons />
+      </View>
+      <View>
+        <NativeEnglish />
+      </View>
+      <View>
+        <GrammarEnglish />
+      </View>
+      <View>
+        <EngIdioms />
+      </View>
     </GestureHandlerScrollView>
   );
 };
@@ -100,27 +143,29 @@ const styles = StyleSheet.create({
   },
   otherComponent: {
     flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
+    justifyContent: "center",
+    alignItems: "center",
   },
-  more:{width:250,
-    height:250,
+  more: {
+    width: 250,
+    height: 250,
     // borderRadius:200,
     // marginTop:'70%',
     // backgroundColor:'lightgrey',
     // justifyContent: 'center',
     // alignItems: 'center',
-    paddingTop:150
-    ,paddingLeft:50
+    paddingTop: 150,
+    paddingLeft: 50,
   },
-  textStyle:{
-    color:'grey',
-    fontSize:50,fontWeight:'bold'
+  textStyle: {
+    color: "grey",
+    fontSize: 50,
+    fontWeight: "bold",
   },
-  image:{
-    width:150,
-    height:150
-  }
+  image: {
+    width: 150,
+    height: 150,
+  },
 });
 
 export default AllVideos;

@@ -12,11 +12,14 @@ const PastIndifinite= (props) => {
 <View style={{ width:'100%', padding:5 ,height:'100%', }}>
 
  <Tab.Navigator 
-   screenOptions={{
-    tabBarLabelStyle: {  },
-    tabBarItemStyle: { },
-    tabBarStyle: {  }
-  }}
+      screenOptions={{
+        headerShown: false,
+        tabBarLabelStyle: {fontWeight:'bold',fontSize:12.5},
+        tabBarItemStyle: {backgroundColor:'#FEC606'},
+        tabBarStyle: {  marginBottom:20},
+        tabBarInactiveTintColor: '#fff', // Hide inactive text
+        tabBarActiveTintColor:'#004aad',
+      }}
 >
       
     <Tab.Screen  options={{header:()=>null}}  name="Introduction" component={PastIndifiniteIntro} />

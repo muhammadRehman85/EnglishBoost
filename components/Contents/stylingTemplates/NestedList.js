@@ -15,7 +15,7 @@ const NestedListItem = ({ number, text, subItems }) => {
             <NestedListItem
               key={index}
               number={`•`}
-              
+            
               text={subItem.text}
             //   subItems={subItem.subItems}
             />
@@ -36,7 +36,7 @@ const NestedList = ({ items }) => {
           key={index}
           number={`${index + 1}.`}
           text={item.text}
-          style={{color:'green'}}
+        
           subItems={item.subItems}
         />
       ))}
@@ -59,7 +59,8 @@ const styles = StyleSheet.create({
     marginRight: 5,
   },
   subList: {
-    marginLeft:30
+    marginLeft:30,
+   
     
   },
 });

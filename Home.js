@@ -36,6 +36,9 @@ import WordOfTheDay from "./components/Contents/WordOfTheDay/WordOfTheDay";
 import Quiz from "./components/Contents/QuizSection/Quiz";
 import Quiz_Questions from "./components/Contents/QuizSection/Quiz_Questions";
 import ReadyQuiz from "./components/Contents/QuizSection/ReadyQuiz";
+import AllConverations from "./components/Contents/Conversation/AllConversationScreen/AllConverations";
+// import converationScreen from "./components/Contents/Conversation/ConverationDesingModel/ConverationScreen";
+import ConverationScreen from "./components/Contents/Conversation/ConverationDesingModel/ConverationScreen";
 const Stack = createNativeStackNavigator();
 function Home() {
   return (
@@ -91,6 +94,10 @@ function Home() {
         <Stack.Screen name="ReadyQuiz" component={ReadyQuiz} />
         <Stack.Screen name="Quiz" component={Quiz} />
         <Stack.Screen name="Quiz_Questions" component={Quiz_Questions} />
+        <Stack.Screen name="AllConversations" component={AllConverations} />
+        <Stack.Screen name="ConversationScreen" component={ConverationScreen} />
+
+        
       </Stack.Navigator>
     </>
   );

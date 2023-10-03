@@ -1,4 +1,4 @@
-import { View, Text, Image } from "react-native";
+import { View, Text, Image ,ImageBackground} from "react-native";
 
 import { Ionicons } from "@expo/vector-icons";
 import React, { useState, useEffect } from "react";
@@ -66,6 +66,7 @@ navigation.navigate("Quiz", { disabled: disabled});
 
   return (
     <View style={styles.Wrapper}>
+   
       {/* -----------PROGRESS BAR---------- */}
       <View style={{ alignItems: "center", paddingBottom: 10 }}>
         <Text style={{ fontSize: 20, fontWeight: "bold", color: "#004aad" }}>
@@ -86,6 +87,11 @@ navigation.navigate("Quiz", { disabled: disabled});
         </Text>
       </View>
       {/* --------------QUESTION------------ */}
+ 
+      {/* Your content goes here */}
+    
+   
+
       <View style={styles.choices}>
         <View style={styles.questionsWrapper}>
           <Text style={styles.questiontext}>
@@ -93,7 +99,7 @@ navigation.navigate("Quiz", { disabled: disabled});
           </Text>
         </View>
         {/*------------ options ------------*/}
-        <View style={{ marginTop: 30 }}>
+        <View style={{ marginTop:5 }}>
           {allQuestion[currentQuestionIndex]?.options.map((option) => (
             <TouchableOpacity
               key={option}
@@ -101,7 +107,7 @@ navigation.navigate("Quiz", { disabled: disabled});
               style={{
                 width: "100%",
                 height: 55,
-                backgroundColor: "#FEC606",
+              
                 borderRadius: 20,
                 marginTop: 20,
                 flexDirection: "row",
@@ -126,7 +132,7 @@ navigation.navigate("Quiz", { disabled: disabled});
               onPress={() => validateAnswer(option)}
             >
               <Text
-                style={{ fontSize: 19, letterSpacing: 2, color: "#004aad" }}
+                style={{ fontSize: 16, letterSpacing: 2, color: "#004aad" }}
               >
                 {option}
               </Text>

@@ -6,7 +6,7 @@ const UnorderedList = ({ items }) => {
     <View style={styles.container}>
       {items.map((item, index) => (
         <View key={index} style={styles.listItem}>
-          <Text style={styles.bullet}>•</Text>
+          <Text style={styles.bullet}>• </Text>
           <Text style={styles.itemText}>{item}</Text>
         </View>
       ))}

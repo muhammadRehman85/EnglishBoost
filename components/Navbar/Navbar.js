@@ -21,8 +21,8 @@ const Navbar = ({ navigation }) => {
     },
     {
       id: 3,
-      title: "Conversations",
-      names: "Conversations",
+      title: "AllConversations",
+      names: "AllConversations",
       image: require("../../assets/conversation.png"),
     },
     {
@@ -35,7 +35,7 @@ const Navbar = ({ navigation }) => {
       id: 5,
       title: "Quotes",
       names: "Quotes",
-      image: require("../../assets/logo.jpg"),
+      image: require("../../assets/quote.png"),
     },
     {
       id: 6,
@@ -77,7 +77,7 @@ const Navbar = ({ navigation }) => {
                     color: "#004aad",
                     fontSize: 14,
                     marginTop: 10,
-                    fontWeight:"bold"
+                    fontWeight: "bold",
                   }}
                 >
                   {item.title}
@@ -86,10 +86,14 @@ const Navbar = ({ navigation }) => {
             )}
           />
         </View>
-<Pressable onPress={() => navigation.navigate('WordOfTheDay')}>
-  {/* ----------------word of the day----------------- */}
-  <View style={styles.wordofday}><Text style={styles.wText}>Word Of the Day</Text></View>
-</Pressable>
+        <Pressable
+          style={styles.wordofday}
+          onPress={() => navigation.navigate("WordOfTheDay")}
+        >
+          {/* ----------------word of the day----------------- */}
+
+          <Text style={styles.wText}>Word Of the Day</Text>
+        </Pressable>
         {/* ---------Videos ---------- */}
 
         <Videos />
@@ -99,19 +103,22 @@ const Navbar = ({ navigation }) => {
 };
 
 const styles = StyleSheet.create({
-  wordofday:{
-    width:'95%',
-    borderWidth:1,borderRadius:5,
-    borderColor:'#FEC606',
-     padding:15,
-    position:'absolute',top:200,left:10,
+  wordofday: {
+    width: "95%",
+    borderWidth: 1,
+    borderRadius: 5,
+    borderColor: "#FEC606",
+    padding: 15,
+    position: "absolute",
+    top: 200,
+    left: 10,
     // justifyContent:'center',
-    alignItems:'center'
+    alignItems: "center",
   },
-  wText:{
-    color:"#004aad",
-    fontSize:24,
-    fontWeight:'bold'
+  wText: {
+    color: "#004aad",
+    fontSize: 24,
+    fontWeight: "bold",
   },
   boxLayout: {
     width: 110,
@@ -125,4 +132,4 @@ const styles = StyleSheet.create({
 });
 
 export default Navbar;
-5
+5;

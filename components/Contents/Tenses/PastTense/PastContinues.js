@@ -8,18 +8,19 @@ import PastConExample from './PastContinueDefinitions/PastConExample';
 const Tab = createMaterialTopTabNavigator();
 const PastIndifinite= (props) => {
   return (
-<View style={{ width:'100%', padding:5 ,height:'100%',marginTop:40 }}>
+<View style={{ width:'100%' ,height:'100%',marginTop:40 }}>
 
  <Tab.Navigator 
-   screenOptions={
-    {
-    tabBarLabelStyle: {  },
-    tabBarItemStyle: { },
-    tabBarStyle: {  },
-    
-  }}
+     screenOptions={{
+      headerShown: false,
+      tabBarLabelStyle: {fontWeight:'bold',fontSize:12.5},
+      tabBarItemStyle: {backgroundColor:'#FEC606'},
+      // tabBarStyle: {  marginBottom:20},
+      tabBarInactiveTintColor: '#fff', // Hide inactive text
+      tabBarActiveTintColor:'#004aad',
+    }}
 >
-    <Tab.Screen  options={{header:()=>null}}  name="Introduction" component={PastConItro} />
+    <Tab.Screen   name="Introduction" component={PastConItro} />
       <Tab.Screen name="Description" component={PastConDes} />
       <Tab.Screen name="Examples" component={PastConExample} />
     </Tab.Navigator>

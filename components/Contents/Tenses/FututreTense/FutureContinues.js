@@ -14,27 +14,15 @@ const FutureContinues =(props) => {
 <View style={{ width:'100%', padding:5 ,height:'100%', }}>
 
  <Tab.Navigator 
-   screenOptions={{
-    tabBarLabelStyle: {  activeTintColor: '#FEC606', },
-    tabBarItemStyle: { },
-    tabBarStyle: { activeTintColor: '#FEC606', 
-    inactiveTintColor: 'gray',  }
-    
-  }}
-  Options={{
-    activeTintColor: '#fec606', // Color of the active tab
-    inactiveTintColor: 'gray', // Color of inactive tabs
-    labelStyle: {
-      fontSize: 16,
-      fontWeight: 'bold',
-    },
-    style: {
-      backgroundColor: 'white',
-      borderTopWidth: 1,
-      elevation:0,
-      borderTopColor: 'lightgray',
-    },
-  }}
+       screenOptions={{
+        headerShown: false,
+        tabBarLabelStyle: {fontWeight:'bold',fontSize:12.5},
+        tabBarItemStyle: {backgroundColor:'#FEC606'},
+        tabBarStyle: {  marginBottom:20},
+        tabBarInactiveTintColor: '#fff', // Hide inactive text
+        tabBarActiveTintColor:'#004aad',
+      }}
+  
 >      
     <Tab.Screen  options={{header:()=>null}}  name="Introduction" component={FutureContinuesIntro} />
       <Tab.Screen name="Description" component={FutureContinuesDesc} />

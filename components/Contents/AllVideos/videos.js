@@ -11,8 +11,8 @@ import { ScrollView as GestureHandlerScrollView } from "react-native-gesture-han
 import YoutubePlayer from "react-native-youtube-iframe";
 import AllVideos from "./AllVideos";
 import { useNavigation } from "@react-navigation/native";
-const Videos = ({navigation}) => {
-  // const navigation = useNavigation();
+const Videos = () => {
+  const navigation = useNavigation();
   const DATA = [
     {
       key: 1,
@@ -71,12 +71,17 @@ const Videos = ({navigation}) => {
                 modestbranding
               />
             ) : (
-              <Pressable onPress={() => navigation.navigate(item.name)}>
-                <View style={styles.otherComponent}>
-                  <View style={styles.more}>
-                    <Image style={styles.image} source={item.source} />
-                  </View>
-                </View>
+              <Pressable
+                onPress={() => navigation.navigate(item.name)}
+                style={{
+                  flex: 1,
+                  justifyContent: "center",
+                  alignItems: "center",
+                }}
+              >
+                
+                <Image style={styles.image} source={item.source} />
+             
               </Pressable>
             )}
             <View style={styles.titleInfo}>
@@ -100,7 +105,7 @@ const styles = StyleSheet.create({
   title: {
     fontWeight: "bold",
     fontSize: 22,
-    color: 'black',
+    color: "black",
     marginBottom: 20,
   },
   videoContainer: {
@@ -125,22 +130,7 @@ const styles = StyleSheet.create({
     fontSize: 18,
     fontWeight: "bold",
   },
-  otherComponent: {
-    flex: 1,
-    justifyContent: "center",
-    alignItems: "center",
-  },
-  more: {
-    width: 250,
-    height: 250,
-    // borderRadius:200,
-    // marginTop:'70%',
-    // backgroundColor:'lightgrey',
-    // justifyContent: 'center',
-    // alignItems: 'center',
-    paddingTop: 150,
-    paddingLeft: 50,
-  },
+
   textStyle: {
     color: "grey",
     fontSize: 50,

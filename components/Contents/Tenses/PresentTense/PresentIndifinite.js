@@ -10,19 +10,20 @@ import PresentIndefiniteExamples from './PresentIndefiniteDefinitions/PresentInd
 const Tab = createMaterialTopTabNavigator();
 const PresentIndifinite =(props) => {
   return (
-<View style={{ width:'100%', padding:5 ,height:'100%', }}>
+<View style={{ width:'100%',height:'100%', }}>
 
  <Tab.Navigator 
-   screenOptions={{
-    headerShown:false,
-    tabBarLabelStyle: {  },
-    tabBarItemStyle: { },
-    tabBarStyle: { display:'none'}
-  }}
+      screenOptions={{
+        tabBarLabelStyle: {fontWeight:'bold',fontSize:12.5},
+        tabBarItemStyle: {backgroundColor:'#FEC606'},
+        tabBarStyle: {  marginBottom:20},
+        tabBarInactiveTintColor: '#fff', // Hide inactive text
+        tabBarActiveTintColor:'#004aad',
+      }}
 >      
-    <Tab.Screen  options={ {tabBarStyle:{display:"none"}} } name="Introduction" component={PresentIndefiniteIntro} />
-      <Tab.Screen name="Description" options={{ headerShown: false }} component={PresentIndefiniteDesc} />
-      <Tab.Screen name="Examples" options={{ headerShown: false }} component={PresentIndefiniteExamples} />
+    <Tab.Screen   name="Introduction" component={PresentIndefiniteIntro} />
+      <Tab.Screen name="Description" component={PresentIndefiniteDesc} />
+      <Tab.Screen name="Examples" component={PresentIndefiniteExamples} />
    
     </Tab.Navigator>
       </View>
