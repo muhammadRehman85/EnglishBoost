@@ -1,18 +1,17 @@
-import { View, Text, Pressable, FlatList, Button } from "react-native";
-import React, { useState } from "react";
+import { View, Text, Pressable, FlatList } from "react-native";
+import React from "react";
 import styles from "../../../Styles/QuizStyle";
-import TenseQuiz from "./ReadyQuiz";
+// import TenseQuiz from "./TenseQuiz";
 import { useNavigation } from "@react-navigation/native";
 import englishTenseQuestions from "./QuestionsData/englishTenseQuestions";
 import englishPartOfSpeechQuestions from "./QuestionsData/englishPartOfSpeechQuestions";
-const Quiz = ({ navigation,route}) => {
-  
+const Quiz = ({ navigation, route }) => {
   // const [locks, setLocks] = useState(0);
   // const { disabled}=route.params;
   const { disabled } = route?.params || {};
   console.log(disabled);
   // const [locks, setLocks] = useState(disabled);
-  
+
   // const { disabled } = route.params;
   // setLocks(disabled);
   // console.log(locks)
@@ -22,26 +21,21 @@ const Quiz = ({ navigation,route}) => {
       title: "Tenses Quiz",
       name: "ReadyQuiz",
       questions: englishTenseQuestions,
-     
-     
     },
     {
       id: 2,
       title: "PartOfSpeech Quiz",
       name: "ReadyQuiz",
       questions: englishPartOfSpeechQuestions,
-     
-   
-    },  {
+    },
+    {
       id: 3,
       title: "PartOfSpeech Quiz",
       name: "ReadyQuiz",
       questions: englishPartOfSpeechQuestions,
-  
-    
     },
   ];
-  //  imran style this page properly
+
   return (
     <>
       <View style={styles.Wrapper}>
@@ -53,11 +47,17 @@ const Quiz = ({ navigation,route}) => {
               <View>
                 <Pressable
                   style={{
-                    width: 200,
-                    height: 50,
-                    backgroundColor:item.id==disabled+1? "green":'grey',
+                    // width: 200,
+                    // height: 50,
+                    // backgroundColor: item.id == disabled + 1 ? "green" : "grey",
+                    // margin: 10,
+                    flex: 1,
+                    alignItems: "center",
+                    justifyContent: "center",
+                    borderRadius: 10,
+                    height: 60,
+                    backgroundColor: "blue",
                     margin: 10,
-                    
                   }}
                   onPress={() =>
                     navigation.navigate(item.name, {
@@ -73,8 +73,6 @@ const Quiz = ({ navigation,route}) => {
             )}
           />
         </View>
-
-    
       </View>
     </>
   );

@@ -13,8 +13,8 @@ const styles = StyleSheet.create({
     paddingRight: 70,
     marginTop: 50,
     // backgroundColor: "#FEC606",
-    borderWidth:1,
-    borderColor:"#FEC606",
+    borderWidth: 1,
+    borderColor: "#FEC606",
     borderRadius: 10,
   },
   text: {

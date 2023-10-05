@@ -79,9 +79,17 @@ const Videos = () => {
                   alignItems: "center",
                 }}
               >
+<<<<<<< HEAD
                 
                 <Image style={styles.image} source={item.source} />
              
+=======
+                {/* <View style={styles.otherComponent}> */}
+                {/* <View style={styles.more}> */}
+                <Image style={styles.image} source={item.source} />
+                {/* </View> */}
+                {/* </View> */}
+>>>>>>> f0c5dabc3c86fec525387c8949d408d68129e65b
               </Pressable>
             )}
             <View style={styles.titleInfo}>
@@ -130,7 +138,30 @@ const styles = StyleSheet.create({
     fontSize: 18,
     fontWeight: "bold",
   },
+<<<<<<< HEAD
 
+=======
+  // otherComponent: {
+  //   flex: 1,
+  //   justifyContent: "center",
+  //   alignItems: "center",
+  // },
+  // more: {
+  //   width: 250,
+  //   height: 250,
+  //   borderRadius:200,
+  //   marginTop:'70%',
+  //   backgroundColor:'lightgrey',
+  //   justifyContent: 'center',
+  //   alignItems: 'center',
+  //   paddingTop: 150,
+  //   paddingLeft: 50,
+  //   flex: 1,
+  //   justifyContent: "center",
+  //   alignItems: "center",
+  //   backgroundColor: "red",
+  // },
+>>>>>>> f0c5dabc3c86fec525387c8949d408d68129e65b
   textStyle: {
     color: "grey",
     fontSize: 50,
