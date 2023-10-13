@@ -2,7 +2,7 @@ import { ScrollView } from "react-native-gesture-handler";
 import { View, Text } from "react-native";
 import React from "react";
 import styles from "../../../../../Styles/IntroductionStyle";
-import UnorderedList from "../../../stylingTemplates/unorderList";
+import UnorderedList from "../../../stylingTemplates/UnorderList";
 import NestedList from "../../../stylingTemplates/NestedList";
 import items from "../itemsData/PresentPerfectData/PresentPerfectItems";
 const PresentPerfectIntro = () => {

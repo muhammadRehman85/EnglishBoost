@@ -1,8 +1,13 @@
 import { View, Text, TouchableOpacity, ScrollView, Image } from "react-native";
-import React, { useState,useRef } from "react";
+import React, { useState, useRef } from "react";
 
 const ConverationScreen = () => {
-  const items = ["Hi ! Ali i am looking for you since morning where were you your mom was very sad for you", "Hi ! Ahmad", "How are you?", "I am fine and You"]; // Your list of items
+  const items = [
+    "Hi ! Ali i am looking for you since morning where were you your mom was very sad for you ",
+    "Hi ! Ahmad",
+    "How are you?",
+    "I am fine and You",
+  ]; // Your list of items
   const [selectedIndices, setSelectedIndices] = useState([]);
   const scrollViewRef = useRef();
   const renderItems = () => {
@@ -27,7 +32,7 @@ const ConverationScreen = () => {
         {index % 2 == 0 && (
           <View style={{ width: "15%" }}>
             <Image
-              style={{ width: 30, height: 30  ,marginLeft:7,marginTop:20}}
+              style={{ width: 30, height: 30, marginLeft: 7, marginTop: 20 }}
               source={require("./../../../../assets/personIcon.png")}
             />
           </View>
@@ -36,16 +41,14 @@ const ConverationScreen = () => {
           style={
             index % 2 == 0
               ? {
-                  
                   width: "80%",
                   borderTopLeftRadius: 15,
                   borderWidth: 0.3,
                   padding: 15,
-                  backgroundColor:'rgba(236, 240, 241,1.0)',
+                  backgroundColor: "rgba(236, 240, 241,1.0)",
                   borderColor: "#bdc3c7",
                   borderTopRightRadius: 10,
                   borderBottomRightRadius: 10,
-                  
                 }
               : {
                   backgroundColor: "#004aad",
@@ -56,17 +59,21 @@ const ConverationScreen = () => {
                   borderColor: "grey",
                   borderBottomRightRadius: 15,
                   padding: 15,
-                  marginLeft:35
-                
+                  marginLeft: 35,
                 }
           }
         >
-          <Text  style={{ color:index%2==0?"#004aad":"white"}}key={index}>{items[index]}</Text>
+          <Text
+            style={{ color: index % 2 == 0 ? "#004aad" : "white" }}
+            key={index}
+          >
+            {items[index]}
+          </Text>
         </View>
         {index % 2 != 0 && (
           <View style={{ width: "15%" }}>
             <Image
-              style={{ width: 30, height: 30 ,marginLeft:5,marginTop:-28}}
+              style={{ width: 30, height: 30, marginLeft: 5, marginTop: -28 }}
               source={require("./../../../../assets/personIcon2.png")}
             />
           </View>
@@ -103,9 +110,24 @@ const ConverationScreen = () => {
           // paddingLeft:10
         }}
       >
-        <View style={{width:'100%',height:50,alignItems:'center',justifyContent:'center',backgroundColor:'rgba(236, 240, 241,1.0)',  borderTopLeftRadius: 30,
-          borderTopRightRadius: 30,}}><Text style={{color:'#004aad',fontSize:16,fontWeight:'bold'}}>Doctor and patient</Text></View>
-        <ScrollView ref={scrollViewRef} style={{marginTop:10}}>{renderItems()}</ScrollView>
+        <View
+          style={{
+            width: "100%",
+            height: 50,
+            alignItems: "center",
+            justifyContent: "center",
+            backgroundColor: "rgba(236, 240, 241,1.0)",
+            borderTopLeftRadius: 30,
+            borderTopRightRadius: 30,
+          }}
+        >
+          <Text style={{ color: "#004aad", fontSize: 16, fontWeight: "bold" }}>
+            Doctor and patient
+          </Text>
+        </View>
+        <ScrollView ref={scrollViewRef} style={{ marginTop: 10 }}>
+          {renderItems()}
+        </ScrollView>
         <View style={{ alignItems: "center", margin: 20 }}>
           <TouchableOpacity
             style={{
@@ -115,11 +137,13 @@ const ConverationScreen = () => {
               borderRadius: 50,
               justifyContent: "center",
               alignItems: "center",
-              elevation:4,
+              elevation: 4,
             }}
             onPress={handleButtonClick}
           >
-            <Text style={{color:'white', fontSize:19,fontWeight:'bold'}}>Tap</Text>
+            <Text style={{ color: "white", fontSize: 19, fontWeight: "bold" }}>
+              Tap
+            </Text>
           </TouchableOpacity>
         </View>
       </View>

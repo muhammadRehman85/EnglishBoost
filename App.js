@@ -12,7 +12,7 @@ import Quiz from "./components/Contents/QuizSection/Quiz";
 
 import Quiz_Questions from "./components/Contents/QuizSection/Quiz_Questions";
 import ReadyQuiz from "./components/Contents/QuizSection/ReadyQuiz";
-import blockLayout from "./components/Contents/stylingTemplates/blockLayout";
+// import blockLayout from "./components/Contents/stylingTemplates/blockLayout";
 
 const Drawer = createDrawerNavigator();
 export default function App() {

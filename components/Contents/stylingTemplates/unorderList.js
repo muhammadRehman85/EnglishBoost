@@ -1,12 +1,12 @@
-import React from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import React from "react";
+import { View, Text, StyleSheet } from "react-native";
 
 const UnorderedList = ({ items }) => {
   return (
     <View style={styles.container}>
       {items.map((item, index) => (
         <View key={index} style={styles.listItem}>
-          <Text style={styles.bullet}>• </Text>
+          <Text style={styles.bullet}>•</Text>
           <Text style={styles.itemText}>{item}</Text>
         </View>
       ))}
@@ -19,8 +19,8 @@ const styles = StyleSheet.create({
     marginLeft: 20,
   },
   listItem: {
-    flexDirection: 'row',
-    alignItems: 'center',
+    flexDirection: "row",
+    alignItems: "center",
     marginBottom: 5,
   },
   bullet: {

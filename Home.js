@@ -39,6 +39,8 @@ import ReadyQuiz from "./components/Contents/QuizSection/ReadyQuiz";
 import AllConverations from "./components/Contents/Conversation/AllConversationScreen/AllConverations";
 // import converationScreen from "./components/Contents/Conversation/ConverationDesingModel/ConverationScreen";
 import ConverationScreen from "./components/Contents/Conversation/ConverationDesingModel/ConverationScreen";
+import VocabularyCategories from "./components/Contents/Vocabulary/VocabularyCategories";
+import VocabularyScreen from "./components/Contents/Vocabulary/VocabularyScreen";
 const Stack = createNativeStackNavigator();
 function Home() {
   return (
@@ -96,8 +98,11 @@ function Home() {
         <Stack.Screen name="Quiz_Questions" component={Quiz_Questions} />
         <Stack.Screen name="AllConversations" component={AllConverations} />
         <Stack.Screen name="ConversationScreen" component={ConverationScreen} />
-
-        
+        <Stack.Screen
+          name="VocabularyCategories"
+          component={VocabularyCategories}
+        />
+        <Stack.Screen name="VocabularyScreen" component={VocabularyScreen} />
       </Stack.Navigator>
     </>
   );

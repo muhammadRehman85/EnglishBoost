@@ -21,7 +21,7 @@ const Navbar = ({ navigation }) => {
     },
     {
       id: 3,
-      title: "AllConversations",
+      title: "Conversations",
       names: "AllConversations",
       image: require("../../assets/conversation.png"),
     },
@@ -48,6 +48,12 @@ const Navbar = ({ navigation }) => {
       title: "Quiz",
       names: "Quiz",
       image: require("../../assets/logo.jpg"),
+    },
+    {
+      id: 8,
+      title: "Vocabulary",
+      names: "VocabularyCategories",
+      image: require("../../assets/Vocabulary.png"),
     },
   ];
   return (
