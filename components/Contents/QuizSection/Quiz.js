@@ -5,11 +5,12 @@ import styles from "../../../Styles/QuizStyle";
 import { useNavigation } from "@react-navigation/native";
 import englishTenseQuestions from "./QuestionsData/englishTenseQuestions";
 import englishPartOfSpeechQuestions from "./QuestionsData/englishPartOfSpeechQuestions";
+import BlockList from "../../layouts/BlockList";
 const Quiz = ({ navigation, route }) => {
   // const [locks, setLocks] = useState(0);
   // const { disabled}=route.params;
   const { disabled } = route?.params || {};
-  console.log(disabled);
+  // console.log(disabled);
   // const [locks, setLocks] = useState(disabled);
 
   // const { disabled } = route.params;
@@ -40,7 +41,7 @@ const Quiz = ({ navigation, route }) => {
     <>
       <View style={styles.Wrapper}>
         <View style={styles.innerWrapper}>
-          <FlatList
+          {/* <FlatList
             data={Test_data}
             keyExtractor={(item) => item.id}
             renderItem={({ item }) => (
@@ -70,6 +71,22 @@ const Quiz = ({ navigation, route }) => {
                   <Text style={styles.text}>{item.title}</Text>
                 </Pressable>
               </View>
+            )}
+          /> */}
+          <FlatList
+            data={Test_data}
+            keyExtractor={(item) => item.id.toString()}
+            renderItem={({ item }) => (
+              <Pressable
+                onPress={() =>
+                  navigation.navigate(item.name, {
+                    title: item.title,
+                    questions: item.questions,
+                  })
+                }
+              >
+                <BlockList item={item} />
+              </Pressable>
             )}
           />
         </View>

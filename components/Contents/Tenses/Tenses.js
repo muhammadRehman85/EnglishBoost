@@ -27,7 +27,7 @@ const Tenses = (props) => {
         <FlatList
           data={Tenses_data}
           keyExtractor={(item) => item.id}
-          renderItem={({ item }) => ( 
+          renderItem={({ item }) => (
             <Pressable
               style={styles.container}
               onPress={() => props.navigation.navigate(item.name)}
