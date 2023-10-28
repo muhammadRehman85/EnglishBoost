@@ -5,6 +5,13 @@ import styles from "../../../Styles/QuizStyle";
 import { useNavigation } from "@react-navigation/native";
 import englishTenseQuestions from "./QuestionsData/englishTenseQuestions";
 import englishPartOfSpeechQuestions from "./QuestionsData/englishPartOfSpeechQuestions";
+import englishVocabularyQuestions from "./QuestionsData/englishVocabularyQuestions";
+import englishConversationQuestions from "./QuestionsData/englishConversationQuestions";
+import englishAcademicEnglishQuestions from "./QuestionsData/englishAcademicEnglishQuestions";
+import englishGrammerQuestions from "./QuestionsData/englishGrammerQuestions";
+import englishPronounciationQuestions from "./QuestionsData/englishPronounciationQuestions";
+import englishWritingQuestions from "./QuestionsData/englishWritingQuestions";
+import englishPhrasalVerbsQuestions from "./QuestionsData/englishPhrasalVerbsQuestions";
 import BlockList from "../../layouts/BlockList";
 const Quiz = ({ navigation, route }) => {
   // const [locks, setLocks] = useState(0);
@@ -25,15 +32,51 @@ const Quiz = ({ navigation, route }) => {
     },
     {
       id: 2,
-      title: "PartOfSpeech Quiz",
+      title: "Parts Of Speech Quiz",
       name: "ReadyQuiz",
       questions: englishPartOfSpeechQuestions,
     },
     {
       id: 3,
-      title: "PartOfSpeech Quiz",
+      title: "Vocabulary Quiz",
       name: "ReadyQuiz",
-      questions: englishPartOfSpeechQuestions,
+      questions: englishVocabularyQuestions,
+    },
+    {
+      id: 4,
+      title: "Conversation Quiz",
+      name: "ReadyQuiz",
+      questions: englishConversationQuestions,
+    },
+    {
+      id: 5,
+      title: "Academic English Quiz",
+      name: "ReadyQuiz",
+      questions: englishAcademicEnglishQuestions,
+    },
+    {
+      id: 6,
+      title: "Grammer Quiz",
+      name: "ReadyQuiz",
+      questions: englishGrammerQuestions,
+    },
+    {
+      id: 7,
+      title: "Pronounciation Quiz",
+      name: "ReadyQuiz",
+      questions: englishPronounciationQuestions,
+    },
+    {
+      id: 8,
+      title: "Writing Quiz",
+      name: "ReadyQuiz",
+      questions: englishWritingQuestions,
+    },
+    {
+      id: 9,
+      title: "Phrasal Verbs Quiz",
+      name: "ReadyQuiz",
+      questions: englishPhrasalVerbsQuestions,
     },
   ];
 
@@ -74,6 +117,7 @@ const Quiz = ({ navigation, route }) => {
             )}
           /> */}
           <FlatList
+            showsVerticalScrollIndicator={false}
             data={Test_data}
             keyExtractor={(item) => item.id.toString()}
             renderItem={({ item }) => (
