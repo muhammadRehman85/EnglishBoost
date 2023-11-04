@@ -25,7 +25,7 @@ const styles = StyleSheet.create({
   img: {
     width: "80%",
     height: "100%",
-    margin: 60,
+    margin: 40,
   },
 
   headingSection: { width: "100%", marginTop: 70, marginLeft: 30 },

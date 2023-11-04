@@ -30,9 +30,6 @@ export default function App() {
               height: 100,
             },
           }}
-          options={{
-            headerShown: "false",
-          }}
           // initialRouteName="Home"
           drawerContent={(props) => <CustomDrawer {...props} />}
         >
@@ -62,22 +59,25 @@ export default function App() {
                 fontWeight: "bold",
               },
               headerTintColor: "#004aad",
+              
             }}
             component={Dictionary}
           />
-          <Drawer.Screen name="Setting" component={Setting} />
+          <Drawer.Screen name="Setting"  
+       
+          component={Setting} />
           <Drawer.Screen
             options={{ headerShown: false, title: "Test Your English" }}
             name="Quiz"
             component={Quiz}
           />
           <Drawer.Screen
-            options={{ headerShown: false, unmountOnBlur: true }}
+              options={{headerShown:false}}
             name="ReadyQuiz"
             component={ReadyQuiz}
           />
           <Drawer.Screen
-            options={{ headerShown: false, drawerLabel: "" }}
+            options={{ headerShown: false,}}
             name="Quiz_Questions"
             component={Quiz_Questions}
           />

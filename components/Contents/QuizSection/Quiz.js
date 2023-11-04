@@ -91,10 +91,7 @@ const Quiz = ({ navigation, route }) => {
               <View>
                 <Pressable
                   style={{
-                    // width: 200,
-                    // height: 50,
-                    // backgroundColor: item.id == disabled + 1 ? "green" : "grey",
-                    // margin: 10,
+            
                     flex: 1,
                     alignItems: "center",
                     justifyContent: "center",

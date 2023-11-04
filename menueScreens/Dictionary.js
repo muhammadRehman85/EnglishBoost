@@ -2,10 +2,11 @@ import React from "react";
 import { useState } from "react";
 // import axios from "axios";
 import { useEffect } from "react";
-import { View, Text, StyleSheet, Pressable } from "react-native";
+import { View, Text, StyleSheet, Pressable, TouchableOpacity } from "react-native";
 import styles from "../Styles/DictionaryStlye";
 import { ScrollView, TextInput } from "react-native-gesture-handler";
 import { SafeAreaView } from "react-native-safe-area-context";
+import Tts from "react-native-tts";
 const Dictionary = () => {
   const [searchWord, setSearchWord] = useState("");
   const [definition, setdefinition] = useState("");
@@ -30,6 +31,15 @@ return fetch(url).then((data)=>{
    useEffect(() => {
    dictionaryApi();
    }, [searchWord]);
+   const Pronouce=()=>{
+    Tts.speak('Hello, world!', {
+      androidParams: {
+        KEY_PARAM_PAN: -1,
+        KEY_PARAM_VOLUME: 0.5,
+        KEY_PARAM_STREAM: 'STREAM_MUSIC',
+      },
+    });
+   }
   return (
     <View style={styles.Wrapper}>
         <View style={styles.SearchWrapper}>
@@ -42,6 +52,7 @@ return fetch(url).then((data)=>{
       </View>
       <View style={styles.searchWord}>
         <Text style={styles.searchText}>{searchWord}</Text>
+        <TouchableOpacity onPress={()=>Pronouce()}><Text>Pronounce</Text></TouchableOpacity>
       </View>
     {searchWord &&
        <SafeAreaView style={styles.defWrapper}>

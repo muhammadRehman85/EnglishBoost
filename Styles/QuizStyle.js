@@ -2,7 +2,7 @@ import { StyleSheet } from "react-native";
 const styles = StyleSheet.create({
   Wrapper: {
     flex: 1,
-    backgroundColor: "#FEC606",
+    backgroundColor: "white",
     padding: 50,
   },
   text: {

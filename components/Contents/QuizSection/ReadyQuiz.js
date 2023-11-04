@@ -7,7 +7,6 @@ const ReadyQuiz = ({ navigation ,route}) => {
   const Test=route.params.title;
   //-------- englishTenseQuestions-------
   const englishTenseQuestions=route.params.questions;
-  console.log(englishTenseQuestions);
   return (
     // ------wrapper-------
     <View style={styles.startWrapper}>

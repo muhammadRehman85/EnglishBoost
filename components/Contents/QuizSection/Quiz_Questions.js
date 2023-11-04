@@ -1,4 +1,4 @@
-import { View, Text, Image ,ImageBackground} from "react-native";
+import { View, Text, Image, ImageBackground } from "react-native";
 
 import { Ionicons } from "@expo/vector-icons";
 import React, { useState, useEffect } from "react";
@@ -21,7 +21,7 @@ const Quiz_Questions = ({ navigation, route }) => {
   const [isDisabledOption, setisDisabledOption] = useState(false);
   const [score, setScore] = useState(0);
   const [showNextBtn, setshowNextBtn] = useState(false);
-  const [disabled, setdisabled] = useState(1);
+  // const [disabled, setdisabled] = useState(1);
   // ----------validate Answer------------
 
   useEffect(() => {
@@ -29,17 +29,18 @@ const Quiz_Questions = ({ navigation, route }) => {
     if (currentSelectedOption !== null) {
       if (currentSelectedOption === correctOption) {
         setProgress(progress + 0.1);
+        // setisDisabledOption(true);
         setisDisabledOption(true);
       }
-
       setshowNextBtn(true);
     }
-  }, [correctOption, currentSelectedOption]);
+  }, [correctOption, currentSelectedOption, showNextBtn]);
 
   const validateAnswer = (selectedOption) => {
     const correct_option = allQuestion[currentQuestionIndex].correct_option;
     setCurrentSelectedOption(selectedOption);
     setCorrectOption(correct_option);
+    setisDisabledOption(false);
   };
   // show next button
   const handleNext = () => {
@@ -50,12 +51,13 @@ const Quiz_Questions = ({ navigation, route }) => {
       setisDisabledOption(false);
       setshowNextBtn(false);
       setProgress(0);
-      const newDisabledValue = disabled + 1;
-setdisabled(newDisabledValue);
-navigation.navigate("Quiz", { disabled: disabled});
-// console.log(disabled)
-    } else if (currentSelectedOption != correctOption) {
-      setshowNextBtn(true);
+      // const newDisabledValue = disabled + 1;
+      // setdisabled(newDisabledValue);ea
+      // setisDisabledOption(true);
+    } else if(selectedOption!==correctOption){
+      setCurrentQuestionIndex(currentQuestionIndex + 1);
+      setisDisabledOption(false);
+
     } else {
       setCurrentQuestionIndex(currentQuestionIndex + 1);
       setCorrectOption(null);
@@ -66,7 +68,6 @@ navigation.navigate("Quiz", { disabled: disabled});
 
   return (
     <View style={styles.Wrapper}>
-   
       {/* -----------PROGRESS BAR---------- */}
       <View style={{ alignItems: "center", paddingBottom: 10 }}>
         <Text style={{ fontSize: 20, fontWeight: "bold", color: "#004aad" }}>
@@ -87,10 +88,8 @@ navigation.navigate("Quiz", { disabled: disabled});
         </Text>
       </View>
       {/* --------------QUESTION------------ */}
- 
+
       {/* Your content goes here */}
-    
-   
 
       <View style={styles.choices}>
         <View style={styles.questionsWrapper}>
@@ -99,7 +98,7 @@ navigation.navigate("Quiz", { disabled: disabled});
           </Text>
         </View>
         {/*------------ options ------------*/}
-        <View style={{ marginTop:5 }}>
+        <View style={{ marginTop: 5 }}>
           {allQuestion[currentQuestionIndex]?.options.map((option) => (
             <TouchableOpacity
               key={option}
@@ -107,7 +106,7 @@ navigation.navigate("Quiz", { disabled: disabled});
               style={{
                 width: "100%",
                 height: 55,
-              
+
                 borderRadius: 20,
                 marginTop: 20,
                 flexDirection: "row",
