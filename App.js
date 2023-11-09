@@ -12,6 +12,8 @@ import Quiz from "./components/Contents/QuizSection/Quiz";
 
 import Quiz_Questions from "./components/Contents/QuizSection/Quiz_Questions";
 import ReadyQuiz from "./components/Contents/QuizSection/ReadyQuiz";
+import test from "./menueScreens/Test";
+import Test from "./menueScreens/Test";
 // import blockLayout from "./components/Contents/stylingTemplates/blockLayout";
 
 const Drawer = createDrawerNavigator();
@@ -80,6 +82,11 @@ export default function App() {
             options={{ headerShown: false,}}
             name="Quiz_Questions"
             component={Quiz_Questions}
+          />
+               <Drawer.Screen
+            options={{ headerShown: false,}}
+            name="Test"
+            component={Test}
           />
         </Drawer.Navigator>
       </NavigationContainer>

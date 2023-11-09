@@ -24,23 +24,28 @@ const Quiz_Questions = ({ navigation, route }) => {
   // const [disabled, setdisabled] = useState(1);
   // ----------validate Answer------------
 
-  useEffect(() => {
-    // This effect runs whenever correctOption changes
-    if (currentSelectedOption !== null) {
-      if (currentSelectedOption === correctOption) {
-        setProgress(progress + 0.1);
-        // setisDisabledOption(true);
-        setisDisabledOption(true);
-      }
-      setshowNextBtn(true);
-    }
-  }, [correctOption, currentSelectedOption, showNextBtn]);
+  // useEffect(() => {
+  //   // This effect runs whenever correctOption changes
+  //   if (currentSelectedOption !== null) {
+  //     if (currentSelectedOption === correctOption) {
+  //       setProgress(progress + 0.1);
+  //       // setisDisabledOption(true);
+  //       setisDisabledOption(true);
+  //     }
+  //     setshowNextBtn(true);
+  //   }
+  // }, [correctOption, currentSelectedOption, showNextBtn]);
 
   const validateAnswer = (selectedOption) => {
     const correct_option = allQuestion[currentQuestionIndex].correct_option;
     setCurrentSelectedOption(selectedOption);
     setCorrectOption(correct_option);
-    setisDisabledOption(false);
+    setisDisabledOption(true);
+    if(selectedOption==correct_option){
+      setScore(score+1);
+    }
+      setshowNextBtn(true);
+
   };
   // show next button
   const handleNext = () => {
@@ -52,13 +57,10 @@ const Quiz_Questions = ({ navigation, route }) => {
       setshowNextBtn(false);
       setProgress(0);
       // const newDisabledValue = disabled + 1;
-      // setdisabled(newDisabledValue);ea
+      // setdisabled(newDisabledValue);
       // setisDisabledOption(true);
-    } else if(selectedOption!==correctOption){
-      setCurrentQuestionIndex(currentQuestionIndex + 1);
-      setisDisabledOption(false);
-
-    } else {
+      navigation.navigate('Result',{score:score});
+    }  else {
       setCurrentQuestionIndex(currentQuestionIndex + 1);
       setCorrectOption(null);
       setshowNextBtn(false);
