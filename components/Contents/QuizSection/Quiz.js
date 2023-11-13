@@ -84,35 +84,7 @@ const Quiz = ({ navigation, route }) => {
     <>
       <View style={styles.Wrapper}>
         <View style={styles.innerWrapper}>
-          {/* <FlatList
-            data={Test_data}
-            keyExtractor={(item) => item.id}
-            renderItem={({ item }) => (
-              <View>
-                <Pressable
-                  style={{
-            
-                    flex: 1,
-                    alignItems: "center",
-                    justifyContent: "center",
-                    borderRadius: 10,
-                    height: 60,
-                    backgroundColor: "blue",
-                    margin: 10,
-                  }}
-                  onPress={() =>
-                    navigation.navigate(item.name, {
-                      title: item.title,
-                      questions: item.questions,
-                    })
-                  }
-                  // disabled={item.id==1 ?"":"disabled"}
-                >
-                  <Text style={styles.text}>{item.title}</Text>
-                </Pressable>
-              </View>
-            )}
-          /> */}
+
           <FlatList
             showsVerticalScrollIndicator={false}
             data={Test_data}
@@ -126,7 +98,7 @@ const Quiz = ({ navigation, route }) => {
                   })
                 }
               >
-                <BlockList item={item} />
+                <BlockList item={item} image={require('../../../assets/QuizImage.png')}/>
               </Pressable>
             )}
           />

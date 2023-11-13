@@ -7,6 +7,7 @@ import styles from "../Styles/DictionaryStlye";
 import { ScrollView, TextInput } from "react-native-gesture-handler";
 import { SafeAreaView } from "react-native-safe-area-context";
 import Tts from "react-native-tts";
+import { Ionicons } from "@expo/vector-icons";
 const Dictionary = () => {
   const [searchWord, setSearchWord] = useState("");
   const [definition, setdefinition] = useState("");
@@ -48,7 +49,9 @@ return fetch(url).then((data)=>{
           onChangeText={(text) => setSearchWord(text)}
           placeholder="Enter an English word"
         />
-        <Pressable style={{position:'absolute', top:63,right:18}} ><View style={{backgroundColor:'rgba(2, 4, 185, 0.09)',padding:5,borderRadius:1, borderWidth:0.1,boderColor:'grey'}}><Text>Eng - Urdu</Text></View></Pressable>
+          <Ionicons name="search" size={22} color="#8ed4ee" style={{position:'absolute',top:15,right:30}} />
+
+        {/* <Pressable style={{position:'absolute', top:63,right:18}} ><View style={{backgroundColor:'rgba(2, 4, 185, 0.09)',padding:5,borderRadius:1, borderWidth:0.1,boderColor:'grey'}}><Text>Eng - Urdu</Text></View></Pressable> */}
       </View>
       <View style={styles.searchWord}>
         <Text style={styles.searchText}>{searchWord}</Text>

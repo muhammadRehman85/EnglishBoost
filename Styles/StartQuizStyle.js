@@ -3,15 +3,15 @@ const styles = StyleSheet.create({
     // --------WRAPPER------------
   startWrapper: {
     flex: 1,
-    backgroundColor: "#FEC606",
+    backgroundColor: "#005eff",
   },
 //   ---------UPPER SECTION-------
   upperSection: {
-    height: "55%",
+    height: "53%",
   },
 // ----------LOWER SECTION--------
   lowerSection: {
-    height: "45%",
+    height: "48%",
     backgroundColor: "white",
     borderTopLeftRadius: 40,
     borderTopRightRadius: 40,
@@ -25,20 +25,20 @@ const styles = StyleSheet.create({
   img: {
     width: "80%",
     height: "100%",
-    margin: 40,
+    margin: 10
   },
 
-  headingSection: { width: "100%", marginTop: 70, marginLeft: 30 },
+  headingSection: { width: "100%",marginLeft: 30 },
 //   --------------PLAY BUTTON------------
   playbtn: {
     width: "100%",
     height: 55,
     borderRadius: 25,
-    backgroundColor: "#004aad",
-    background: "linear-gradient(to right, #004aad, #002a5d)",
+    backgroundColor: "#005eff",
+    // background: "linear-gradient(to right, #004aad, #002a5d)",
     justifyContent: "center",
     alignItems: "center",
-    marginTop: 20,
+    // marginTop: 20,
   },
   btnText: {
     fontSize: 20,
@@ -60,18 +60,19 @@ const styles = StyleSheet.create({
   backbtn: {
     width: 70,
     height: 30,
-    borderColor:'#004aad',
+    borderColor:'white',
     borderRadius:10,
-    marginTop: 40,
+    // marginTop: 40,
     marginLeft: 10,
     justifyContent: "center",
     alignItems: "center",
     borderWidth:2,
   },
   backtxt: {
-    color: "#004aad",
+    color: "white",
     fontSize: 13,
-    fontWeight:'bold'
+    fontWeight:'bold',
+    
   },
 });
 export default styles;

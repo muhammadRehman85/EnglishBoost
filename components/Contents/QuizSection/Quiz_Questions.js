@@ -13,7 +13,7 @@ const Quiz_Questions = ({ navigation, route }) => {
   // -------Quiz title------------
   const title = route.params.title;
   const [progress, setProgress] = useState(0); // Change this value to set the progress
-  const progressBarColor = "#004aad";
+  const progressBarColor = "#8ed4ee";
   const allQuestion = data;
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [correctOption, setCorrectOption] = useState(null);
@@ -41,6 +41,7 @@ const Quiz_Questions = ({ navigation, route }) => {
     setCurrentSelectedOption(selectedOption);
     setCorrectOption(correct_option);
     setisDisabledOption(true);
+    setProgress(progress+0.1)
     if(selectedOption==correct_option){
       setScore(score+1);
     }
@@ -72,7 +73,7 @@ const Quiz_Questions = ({ navigation, route }) => {
     <View style={styles.Wrapper}>
       {/* -----------PROGRESS BAR---------- */}
       <View style={{ alignItems: "center", paddingBottom: 10 }}>
-        <Text style={{ fontSize: 20, fontWeight: "bold", color: "#004aad" }}>
+        <Text style={{ fontSize: 20, fontWeight: "bold", color: "white" }}>
           {title}
         </Text>
       </View>
@@ -85,7 +86,7 @@ const Quiz_Questions = ({ navigation, route }) => {
       />
       {/* ----------COUNTER--------------- */}
       <View style={{ paddingTop: 10, paddingLeft: 5 }}>
-        <Text style={{ fontSize: 12 }}>
+        <Text style={{ fontSize: 12 ,color:'white'}}>
           {currentQuestionIndex + 1}/{allQuestion.length}
         </Text>
       </View>
@@ -122,7 +123,7 @@ const Quiz_Questions = ({ navigation, route }) => {
                     ? option === correctOption
                       ? "green"
                       : "red"
-                    : "#FEC606",
+                    : "#005eff",
                 backgroundColor:
                   option === currentSelectedOption
                     ? option === correctOption

@@ -36,14 +36,17 @@ import WordOfTheDay from "./components/Contents/WordOfTheDay/WordOfTheDay";
 import Quiz from "./components/Contents/QuizSection/Quiz";
 import Quiz_Questions from "./components/Contents/QuizSection/Quiz_Questions";
 import ReadyQuiz from "./components/Contents/QuizSection/ReadyQuiz";
-import AllConverations from "./components/Contents/Conversation/AllConversationScreen/AllConverations";
+// import AllConverations from "./components/Contents/Conversation/AllConversationScreen/AllConverations";
 // import converationScreen from "./components/Contents/Conversation/ConverationDesingModel/ConverationScreen";
-import ConverationScreen from "./components/Contents/Conversation/ConverationDesingModel/ConverationScreen";
+// import ConverationScreen from "./components/Contents/Conversation/ConverationDesingModel/ConversationScreen";
 import VocabularyCategories from "./components/Contents/Vocabulary/VocabularyCategories";
 import VocabularyScreen from "./components/Contents/Vocabulary/VocabularyScreen";
 import AllPos from "./components/Contents/POS/AllPos";
 import PosDefinition from "./components/Contents/POS/PosDefinition";
 import Result from "./components/Contents/QuizSection/Result";
+// import AllConversations from "./components/Contents/Conversation/AllConverationScreen/AllConversations";
+import ConversationScreen from "./components/Contents/Conversation/ConverationDesingModel/ConversationScreen";
+import AllConversataions from "./components/Contents/Conversation/AllConversationScreen/AllConversations";
 const Stack = createNativeStackNavigator();
 function Home() {
   return (
@@ -99,8 +102,8 @@ function Home() {
         <Stack.Screen name="ReadyQuiz" component={ReadyQuiz} />
         <Stack.Screen name="Quiz" component={Quiz} />
         <Stack.Screen name="Quiz_Questions" component={Quiz_Questions} />
-        <Stack.Screen name="AllConversations" component={AllConverations} />
-        <Stack.Screen name="ConversationScreen" component={ConverationScreen} />
+        <Stack.Screen name="AllConversations" component={AllConversataions} />
+        <Stack.Screen name="ConversationScreen" component={ConversationScreen} />
         <Stack.Screen name="VocabularyCategories"   component={VocabularyCategories}  />
         <Stack.Screen name="VocabularyScreen" component={VocabularyScreen} />
         <Stack.Screen name="AllPos" component={AllPos} />

@@ -3,6 +3,7 @@ import { View, Text, Pressable,StyleSheet } from "react-native";
 import { ScrollView } from "react-native";
 import styles from "../../../../Styles/Style";
 import React from "react";
+import BlockList from "../../../layouts/BlockList";
 const FutureTense= (props) => {
   const FutureTense_data = [
     {
@@ -33,8 +34,10 @@ const FutureTense= (props) => {
         data={FutureTense_data} 
         keyExtractor={(item) => item.id}
         renderItem={({ item }) => (
-               <Pressable style={styles.container}  onPress={()=>props.navigation.navigate(item.name)}>
-            <Text style={styles.text}>{item.title}</Text>
+               <Pressable
+               onPress={()=>props.navigation.navigate(item.name)}>
+                <BlockList item={item} image={require('../../../../assets/Tenses3.png')}/>
+            {/* <Text style={styles.text}>{item.title}</Text> */}
             </Pressable>
 
               )}

@@ -11,7 +11,7 @@ const Test = () => {
         autoPlay
         // ref={animation}
         style={{
-          width: 200,
+          width: 500,
           height: 200,
           backgroundColor: '#eee',
         }}

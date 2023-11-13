@@ -17,6 +17,7 @@ const styles = StyleSheet.create({
     videoContainer: {
       marginTop: 20,
       marginLeft: 15,
+      // marginBottom:30,
       elevation: 0.8,
       width: 330,
       height: 250,

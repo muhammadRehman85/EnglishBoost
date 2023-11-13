@@ -10,9 +10,9 @@ import Setting from "./menueScreens/Setting";
 import CustomDrawer from "./CustomDrawer/CustomDrawer";
 import Quiz from "./components/Contents/QuizSection/Quiz";
 
+
 import Quiz_Questions from "./components/Contents/QuizSection/Quiz_Questions";
 import ReadyQuiz from "./components/Contents/QuizSection/ReadyQuiz";
-import test from "./menueScreens/Test";
 import Test from "./menueScreens/Test";
 // import blockLayout from "./components/Contents/stylingTemplates/blockLayout";
 
@@ -20,7 +20,7 @@ const Drawer = createDrawerNavigator();
 export default function App() {
   return (
     <>
-      <StatusBar barStyle="light-content" backgroundColor="#FEC606" />
+      <StatusBar barStyle="light-content" backgroundColor="#005eff" />
 
       <NavigationContainer>
         <Drawer.Navigator
@@ -28,9 +28,10 @@ export default function App() {
             headerStyle: {
               shadowOpacity: 0,
               elevation: 0,
-              backgroundColor: "#FEC606",
+              backgroundColor: "#005eff",
               height: 100,
             },
+        
           }}
           // initialRouteName="Home"
           drawerContent={(props) => <CustomDrawer {...props} />}
@@ -45,7 +46,7 @@ export default function App() {
                 letterSpacing: 3,
                 fontWeight: "bold",
               },
-              headerTintColor: "#004aad",
+              headerTintColor: "white",
             }}
             component={Home}
           />
@@ -55,12 +56,12 @@ export default function App() {
               title: "Dictionary",
               headerTitleAlign: "center",
               headerTitleStyle: {
-                color: "#004aad",
+                color: "white",
                 fontSize: 20,
                 letterSpacing: 3,
                 fontWeight: "bold",
               },
-              headerTintColor: "#004aad",
+              headerTintColor: "white",
               
             }}
             component={Dictionary}
@@ -68,21 +69,21 @@ export default function App() {
           <Drawer.Screen name="Setting"  
        
           component={Setting} />
-          <Drawer.Screen
+          {/* <Drawer.Screen
             options={{ headerShown: false, title: "Test Your English" }}
             name="Quiz"
             component={Quiz}
-          />
-          <Drawer.Screen
+          /> */}
+          {/* <Drawer.Screen
               options={{headerShown:false}}
             name="ReadyQuiz"
             component={ReadyQuiz}
-          />
-          <Drawer.Screen
+          /> */}
+          {/* <Drawer.Screen
             options={{ headerShown: false,}}
             name="Quiz_Questions"
             component={Quiz_Questions}
-          />
+          /> */}
                <Drawer.Screen
             options={{ headerShown: false,}}
             name="Test"

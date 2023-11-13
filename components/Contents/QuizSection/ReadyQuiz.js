@@ -40,7 +40,7 @@ const ReadyQuiz = ({ navigation ,route}) => {
           <Text style={{ color: "black", fontSize: 15, fontWeight: "bold" }}>
             Today's Quiz on
           </Text>
-          <Text style={{ color: "#004aad", fontSize: 35, fontWeight: "bold" }}>
+          <Text style={{ color: "#004aad", fontSize: 30, fontWeight: "bold" }}>
      {Test}
           </Text>
           <Text style={{ color: "black", fontSize: 13 }}>

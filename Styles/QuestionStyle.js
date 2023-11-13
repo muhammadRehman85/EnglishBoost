@@ -3,9 +3,9 @@ const styles = StyleSheet.create({
     // --------WRAPPER------------
   Wrapper: {
     flex: 1,
-    backgroundColor: "#FEC606",
-    paddingTop:50
-    ,paddingLeft:10,
+    backgroundColor: "#005eff",
+    // paddingTop:50
+    paddingLeft:10,
     paddingRight:10,
   },
   questionsWrapper:{
@@ -17,7 +17,7 @@ marginTop:15,
 borderRadius:30
   },
   questiontext:{
-fontSize:18,
+fontSize:15,
 fontWeight:'bold'
   },
   
@@ -39,7 +39,7 @@ choices:{
     backgroundColor:'white',
     borderRadius:30,
     
-    backgroundColor:'#004aad',
+    backgroundColor:'#005eff',
     justifyContent:'center', marginTop:20,
     alignItems:'center',
   },

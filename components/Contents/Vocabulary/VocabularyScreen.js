@@ -4,8 +4,9 @@ import { FlatList } from "react-native-gesture-handler";
 // import apron from "../../../assets/Vocabulary/apron.png"
 
 const VocabularyScreen = ({route}) => {
-  const{title,data}=route.params;
-  console.log(data);
+  // const{title,data}=route.params;
+  // console.log(route.params.ImagesData);
+  const data=route.params.ImagesData;
   // const bookData = [
   //   {
   //     id: 1,

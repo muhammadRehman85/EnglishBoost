@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import { View, Text, Image, TouchableOpacity } from "react-native";
 
-const BlockList = ({ item }) => {
+const BlockList = ({ item ,image}) => {
+  // console.log(image)
   // const [isContentVisible, setContentVisible] = useState(false);
   // const [isSubContentVisible, setSubContentVisible] = useState(false);
 
@@ -9,8 +10,8 @@ const BlockList = ({ item }) => {
     <View style={{ marginBottom: 10 }}>
       <View
         style={{
-          paddingTop: 18,
-          paddingBottom: 18,
+          paddingTop: 10,
+          paddingBottom: 10,
           paddingLeft: 13,
           paddingRight: 13,
           flexDirection: "row",
@@ -19,10 +20,10 @@ const BlockList = ({ item }) => {
         // onPress={() => setContentVisible(!isContentVisible)}
       >
         <Image
-          source={require("../../assets/book.png")}
-          style={{ width: 40, height: 40, marginRight: 10 }}
+          source={image}
+          style={{ marginRight: 10 }}
         />
-        <Text style={{ fontSize: 15, fontWeight: "bold" }}>{item.title}</Text>
+        <Text style={{ fontSize: 17, fontWeight: "bold", color:'#004fd7' }}>{item.title}</Text>
       </View>
 
       {/* {sContentVisible && (

@@ -127,6 +127,7 @@ const styles = StyleSheet.create({
     marginRight: 10,
     elevation: 0.8,
     width: 300,
+    marginBottom:10,
     height: 230,
     borderRadius: 10,
     position: "relative",

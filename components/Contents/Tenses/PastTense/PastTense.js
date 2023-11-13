@@ -3,6 +3,7 @@ import { View, Text, Pressable,StyleSheet } from "react-native";
 import { ScrollView } from "react-native";
 import styles from "../../../../Styles/Style";
 import React from "react";
+import BlockList from "../../../layouts/BlockList";
 
 
 const PastTense= (props) => {
@@ -35,8 +36,8 @@ const PastTense= (props) => {
         data={PastTense_data} 
         keyExtractor={(item) => item.id}
         renderItem={({ item }) => (
-               <Pressable style={styles.container}  onPress={()=>props.navigation.navigate(item.name)} >
-            <Text style={styles.text}>{item.title}</Text>
+               <Pressable   onPress={()=>props.navigation.navigate(item.name)} >
+            <BlockList item={item} image={require('../../../../assets/Tenses2.png')}/>
             </Pressable>
 
               )}

@@ -17,18 +17,19 @@ textDecorationColor:'blue'
 // ------------- next button ----------------
 btn:{
     width:100,
-    height:45,
-    borderRadius:7,
-    backgroundColor:'#FEC606',
+    height:100,
+    borderRadius:50,
+    backgroundColor:'#005eff',
     alignItems:'center',
     justifyContent:'center',
-    
+    elevation:10,
     position:'absolute',
     bottom:40,
     left:'38%'
 },
 btnText:{
-  color:'white'
+  color:'white',
+  fontWeight:"bold"
 }
 ,
 image:{
@@ -40,7 +41,7 @@ image:{
 },
 // ----------joke text -----------
 text:{
-  color:'#8870FF',
+  color:'#005eff',
   fontSize:18,
   lineHeight:30,
   fontWeight:'bold'

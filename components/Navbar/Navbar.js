@@ -17,7 +17,7 @@ const Navbar = ({ navigation }) => {
       id: 2,
       title: "Parts Of Speech",
       names: "AllPos",
-      image: require("../../assets/partOfspeech.png"),
+      image: require("../../assets/partOfSpeech.png"),
     },
     {
       id: 3,
@@ -37,17 +37,17 @@ const Navbar = ({ navigation }) => {
       names: "Quotes",
       image: require("../../assets/quote.png"),
     },
-    {
-      id: 6,
-      title: "Books",
-      names: "Books",
-      image: require("../../assets/logo.jpg"),
-    },
+    // {
+    //   id: 6,
+    //   title: "Books",
+    //   names: "Books",
+    //   image: require("../../assets/Quiz.png"),
+    // },
     {
       id: 7,
       title: "Quiz",
       names: "Quiz",
-      image: require("../../assets/logo.jpg"),
+      image: require("../../assets/Quiz.png"),
     },
     {
       id: 8,
@@ -114,7 +114,7 @@ const styles = StyleSheet.create({
     width: "95%",
     borderWidth: 1,
     borderRadius: 5,
-    borderColor: "#FEC606",
+    borderColor: "#0079FF",
     padding: 15,
     position: "absolute",
     top: 200,
@@ -130,7 +130,7 @@ const styles = StyleSheet.create({
   boxLayout: {
     width: 110,
     height: 150,
-    backgroundColor: "rgba(254, 198, 6, 0.167)",
+    backgroundColor: "#D1F1FF",
     margin: 15,
     borderRadius: 10,
     alignItems: "center",

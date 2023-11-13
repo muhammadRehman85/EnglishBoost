@@ -5,7 +5,7 @@ const styles = StyleSheet.create({
      },
   SearchWrapper: {
     height: 100,
-    backgroundColor: "#FEC606",
+    backgroundColor: "#005eff",
   },
   input: {
     width: "90%",
@@ -15,6 +15,7 @@ const styles = StyleSheet.create({
     marginLeft: 20,
     padding: 15,
     fontSize: 16,
+    color:'#8ed4ee'
   },
   searchWord: {
     width: "95%",

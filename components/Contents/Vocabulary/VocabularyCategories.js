@@ -3,6 +3,8 @@ import React from "react";
 import { FlatList, TouchableOpacity } from "react-native-gesture-handler";
 // import apron from "../../../assets/Vocabulary/apron.png"
 import ImagesData from "./VocabularyData/kitchen/Data"
+import Fruits from "./VocabularyData/Fruits";
+import Vegitables from "./VocabularyData/Vegitables";
 const VocabularyScreen = ({ navigation }) => {
   console.log(ImagesData);
   const Data = [
@@ -16,13 +18,13 @@ const VocabularyScreen = ({ navigation }) => {
       id: 2,
       title: "Fruits",
       image: require("../../../assets/Vocabulary/fruites.png"),
-      ImagesData: ImagesData,
+      ImagesData:Fruits,
     },
     {
       id: 3,
       title: "Sports",
       image: require("../../../assets/Vocabulary/sports.png"),
-      ImagesData: ImagesData,
+      ImagesData: Vegitables
     },
     {
       id: 4,
