@@ -5,6 +5,12 @@ import { FlatList, TouchableOpacity } from "react-native-gesture-handler";
 import ImagesData from "./VocabularyData/kitchen/Data"
 import Fruits from "./VocabularyData/Fruits";
 import Vegitables from "./VocabularyData/Vegitables";
+import Cosmatics from "./VocabularyData/Cosmatics";
+import Tools from "./VocabularyData/Tools";
+import Sports from "./VocabularyData/Sports";
+import Instruments from "./VocabularyData/Instruments";
+import Birds from "./VocabularyData/Birds";
+import Insects from "./VocabularyData/Insects";
 const VocabularyScreen = ({ navigation }) => {
   console.log(ImagesData);
   const Data = [
@@ -22,22 +28,28 @@ const VocabularyScreen = ({ navigation }) => {
     },
     {
       id: 3,
-      title: "Sports",
-      image: require("../../../assets/Vocabulary/sports.png"),
+      title: "Vegitables",
+      image: require("../../../assets/Vocabulary/vegitables.png"),
       ImagesData: Vegitables
     },
     {
       id: 4,
-      title: "Instruments",
-      image: require("../../../assets/Vocabulary/instruments.png"),
-      ImagesData: ImagesData,
+      title: "Sports",
+      image: require("../../../assets/Vocabulary/sports.png"),
+      ImagesData:Sports
     },
     {
       id: 5,
-      title: "Nature",
-      image: require("../../../assets/Vocabulary/nature.png"),
-      ImagesData: ImagesData,
+      title: "Instruments",
+      image: require("../../../assets/Vocabulary/instruments.png"),
+      ImagesData: Instruments,
     },
+    // {
+    //   id: 5,
+    //   title: "Nature",
+    //   image: require("../../../assets/Vocabulary/nature.png"),
+    //   ImagesData: ImagesData,
+    // },
     {
       id: 6,
       title: "Clothing",
@@ -48,37 +60,32 @@ const VocabularyScreen = ({ navigation }) => {
       id: 7,
       title: "Makeup",
       image: require("../../../assets/Vocabulary/makeup.png"),
-      ImagesData: ImagesData,
+      ImagesData: Cosmatics
     },
+  
     {
       id: 8,
-      title: "Vegitables",
-      image: require("../../../assets/Vocabulary/vegitables.png"),
-      ImagesData: ImagesData,
+      title: "Tools",
+      image: require("../../../assets/Vocabulary/weather.png"),
+      ImagesData: Tools,
     },
     {
       id: 9,
-      title: "Weather",
-      image: require("../../../assets/Vocabulary/weather.png"),
-      ImagesData: ImagesData,
-    },
-    {
-      id: 10,
       title: "Occupations",
       image: require("../../../assets/Vocabulary/occupations.png"),
       ImagesData: ImagesData,
     },
     {
-      id: 11,
+      id: 10,
       title: "Insects",
       image: require("../../../assets/Vocabulary/insects.png"),
-      ImagesData: ImagesData,
+      ImagesData:Insects
     },
     {
-      id: 12,
+      id: 11,
       title: "Birds",
       image: require("../../../assets/Vocabulary/birds.png"),
-      ImagesData: ImagesData,
+      ImagesData: Birds
     },
   ];
 
@@ -122,7 +129,7 @@ const VocabularyScreen = ({ navigation }) => {
                   justifyContent: "center",
                   alignItems: "center",
                 }}
-                onPress={() => navigation.navigate("VocabularyScreen",{
+                onPress={() => navigation.navigate("VocabularyScreen",{id:item.id,
                   title: item.title,
                   ImagesData:item.ImagesData})}
               >

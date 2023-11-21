@@ -84,7 +84,7 @@ const VocabularyScreen = ({route}) => {
             }}
             data={data}
             numColumns={2}
-            keyExtractor={(item) => item.id}
+            keyExtractor={(item) => item.title}
             renderItem={({ item }) => (
               <View
                 style={{

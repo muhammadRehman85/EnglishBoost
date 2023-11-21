@@ -5,15 +5,16 @@ import items from "../Tenses/PastTense/itemsData/PastIndiniteItemsData/ItroItems
 const PosDefinition = ({ route }) => {
   // console.log(route.params.def.uses)
   const uses = route.params.def.uses;
-  const types= route.params.def.types;
+  const types = route.params.def.types;
   const examples = route.params.def.example;
   const formatedExamples = examples.split(".").join("\n");
 
   return (
     <View style={{ flex: 1, backgroundColor: "white" }}>
       {/* ----------header Text */}
-      <Text style={styles.headerText}>what is {route.params.title} ?</Text>
+      <Text style={styles.headerText}>What is {route.params.title} ?</Text>
       {/* ---------------wrapper1 for definition */}
+      <ScrollView>
       <View style={styles.wrapper1}>
         <Text style={{ color: "white", fontWeight: "bold", fontSize: 20 }}>
           Definition :
@@ -22,17 +23,12 @@ const PosDefinition = ({ route }) => {
           {route.params.def.definition}
         </Text>
       </View>
-      <ScrollView >
         {/* -------------------wrapper for examples and uses---------------- */}
         <View style={styles.wrapper}>
           <Text style={styles.heading}>Examples:</Text>
           <Text style={styles.txt}>{formatedExamples}</Text>
         </View>
-        <Text
-          style={styles.subheading}
-        >
-          Uses Of {route.params.title}
-        </Text>
+        <Text style={styles.subheading}>Uses Of {route.params.title}</Text>
         <FlatList
           data={uses}
           horizontal
@@ -47,11 +43,7 @@ const PosDefinition = ({ route }) => {
           )}
         />
         {/* -----------------------types of noun------------ */}
-        <Text
-          style={styles.subheading}
-        >
-          Types of {route.params.title}
-        </Text>
+        <Text style={styles.subheading}>Types of {route.params.title}</Text>
         <FlatList
           data={types}
           horizontal
@@ -65,7 +57,7 @@ const PosDefinition = ({ route }) => {
             </View>
           )}
         />
-        <View style={{height:60}}></View>
+        <View style={{ height: 60 }}></View>
       </ScrollView>
     </View>
   );
@@ -79,7 +71,7 @@ const styles = StyleSheet.create({
     minHeightheight: 180,
     marginTop: 30,
     marginLeft: 10,
-  marginBottom:10,
+    marginBottom: 10,
     padding: 20,
     backgroundColor: "#D1F1FF",
     borderWidth: 2,
@@ -92,7 +84,8 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
     color: "#004aad",
     marginLeft: "25%",
-    marginTop: 10,
+    marginTop: 20,
+    marginBottom: 20,
   },
   wrapper1: {
     width: "95%",
@@ -106,14 +99,9 @@ const styles = StyleSheet.create({
     borderRadius: 20,
     elevation: 4,
   },
-  txt: { fontSize: 14, 
-    color: "black", 
-    lineHeight: 22 },
-  heading: { fontSize: 16,
-     color: "#004aad",
-      fontWeight: "bold" 
-    },
-  subheading:{
+  txt: { fontSize: 14, color: "black", lineHeight: 22 },
+  heading: { fontSize: 16, color: "#004aad", fontWeight: "bold" },
+  subheading: {
     fontSize: 20,
     fontWeight: "bold",
     marginTop: 25,

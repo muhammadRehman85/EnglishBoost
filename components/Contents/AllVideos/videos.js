@@ -79,7 +79,10 @@ const Videos = () => {
                   alignItems: "center",
                 }}
               >
+                <View>
                 <Image style={styles.image} source={item.source} />
+                <Text>See All</Text>
+                </View>
               </Pressable>
             )}
             <View style={styles.titleInfo}>
