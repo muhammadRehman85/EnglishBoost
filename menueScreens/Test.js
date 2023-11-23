@@ -23,16 +23,20 @@
 // }
 
 // export default Test
-import React from 'react';
-import { View, Text } from 'react-native';
-import LottieView from 'lottie-react-native';
+import React from "react";
+import { View, Text } from "react-native";
+import LottieView from "lottie-react-native";
 
 const Result = ({ route }) => {
   console.log(route.params);
   return (
-    <View>
-      <Text>{route.params.score}</Text>
-      <LottieView source={require('../assets/LottieAnimation/done.json')} autoPlay/>
+    <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
+      {/* <Text>{route.params.score}</Text> */}
+      <LottieView
+        // style={{ backgroundColor: "red" }}
+        source={require("../assets/LottieAnimation/passed.json")}
+        autoPlay
+      />
     </View>
   );
 };

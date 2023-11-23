@@ -10,11 +10,9 @@
       "image": "./assets/splash2.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff",
-      "video":"./assets/video.mp4"
+      "video": "./assets/video.mp4"
     },
-    "assetBundlePatterns": [
-      "**/*"
-    ],
+    "assetBundlePatterns": ["**/*"],
     "ios": {
       "supportsTablet": true
     },
@@ -27,11 +25,6 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    },
-    "extra": {
-      "eas": {
-        "projectId": "eeac221c-6c23-4b4c-9923-f8577d4c2ddf"
-      }
     }
   }
 }

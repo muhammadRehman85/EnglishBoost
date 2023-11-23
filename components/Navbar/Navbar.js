@@ -17,7 +17,7 @@ const Navbar = ({ navigation }) => {
       id: 2,
       title: "Parts Of Speech",
       names: "AllPos",
-      image: require("../../assets/partOfSpeech.png"),
+      image: require("../../assets/partOfspeech.png"),
     },
     {
       id: 3,
@@ -55,7 +55,6 @@ const Navbar = ({ navigation }) => {
       names: "VocabularyCategories",
       image: require("../../assets/Vocabulary.png"),
     },
- 
   ];
   return (
     <>

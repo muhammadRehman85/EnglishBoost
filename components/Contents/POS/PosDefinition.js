@@ -15,16 +15,16 @@ const PosDefinition = ({ route }) => {
       <Text style={styles.headerText}>What is {route.params.title} ?</Text>
       {/* ---------------wrapper1 for definition */}
       <ScrollView>
-      <View style={styles.wrapper1}>
-        <Text style={{ color: "white", fontWeight: "bold", fontSize: 20 }}>
-          Definition :
-        </Text>
-        <Text style={{ color: "white", fontWeight: "bold" }}>
-          {route.params.def.definition}
-        </Text>
-      </View>
+        <View style={styles.wrapper1}>
+          <Text style={{ color: "white", fontWeight: "bold", fontSize: 20 }}>
+            Definition :
+          </Text>
+          <Text style={{ color: "white", fontWeight: "bold" }}>
+            {route.params.def.definition}
+          </Text>
+        </View>
         {/* -------------------wrapper for examples and uses---------------- */}
-        <View style={styles.wrapper}>
+        <View style={styles.exWrapper}>
           <Text style={styles.heading}>Examples:</Text>
           <Text style={styles.txt}>{formatedExamples}</Text>
         </View>
@@ -79,11 +79,25 @@ const styles = StyleSheet.create({
     borderRadius: 20,
     elevation: 4,
   },
+  // examples style
+  exWrapper: {
+    minHeightheight: 180,
+    marginTop: 30,
+    marginLeft: 10,
+    marginRight: 10,
+    marginBottom: 10,
+    padding: 20,
+    backgroundColor: "#D1F1FF",
+    borderWidth: 2,
+    borderColor: "#D1F1FF",
+    borderRadius: 20,
+    elevation: 4,
+  },
   headerText: {
     fontSize: 20,
     fontWeight: "bold",
     color: "#004aad",
-    marginLeft: "25%",
+    marginLeft: 20,
     marginTop: 20,
     marginBottom: 20,
   },
@@ -105,7 +119,7 @@ const styles = StyleSheet.create({
     fontSize: 20,
     fontWeight: "bold",
     marginTop: 25,
-    marginLeft: 10,
+    marginLeft: 20,
     color: "#004aad",
   },
   nounStyle: {
