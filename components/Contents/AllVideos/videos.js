@@ -80,8 +80,8 @@ const Videos = () => {
                 }}
               >
                 <View>
-                <Image style={styles.image} source={item.source} />
-                <Text>See All</Text>
+                  <Image style={styles.image} source={item.source} />
+                  <Text>See All</Text>
                 </View>
               </Pressable>
             )}

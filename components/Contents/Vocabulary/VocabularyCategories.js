@@ -2,9 +2,9 @@ import { View, Text, Pressable, Image } from "react-native";
 import React from "react";
 import { FlatList, TouchableOpacity } from "react-native-gesture-handler";
 // import apron from "../../../assets/Vocabulary/apron.png"
-import ImagesData from "./VocabularyData/kitchen/Data"
+import ImagesData from "./VocabularyData/kitchen/Data";
 import Fruits from "./VocabularyData/Fruits";
-import Vegitables from "./VocabularyData/Vegitables";
+import Vegetables from "./VocabularyData/Vegetables";
 import Cosmatics from "./VocabularyData/Cosmatics";
 import Tools from "./VocabularyData/Tools";
 import Sports from "./VocabularyData/Sports";
@@ -25,19 +25,19 @@ const VocabularyScreen = ({ navigation }) => {
       id: 2,
       title: "Fruits",
       image: require("../../../assets/Vocabulary/fruites.png"),
-      ImagesData:Fruits,
+      ImagesData: Fruits,
     },
     {
       id: 3,
-      title: "Vegitables",
+      title: "Vegetables",
       image: require("../../../assets/Vocabulary/vegitables.png"),
-      ImagesData: Vegitables
+      ImagesData: Vegetables,
     },
     {
       id: 4,
       title: "Sports",
       image: require("../../../assets/Vocabulary/sports.png"),
-      ImagesData:Sports
+      ImagesData: Sports,
     },
     {
       id: 5,
@@ -61,9 +61,9 @@ const VocabularyScreen = ({ navigation }) => {
       id: 7,
       title: "Makeup",
       image: require("../../../assets/Vocabulary/makeup.png"),
-      ImagesData: Cosmatics
+      ImagesData: Cosmatics,
     },
-  
+
     {
       id: 8,
       title: "Tools",
@@ -80,13 +80,17 @@ const VocabularyScreen = ({ navigation }) => {
       id: 10,
       title: "Insects",
       image: require("../../../assets/Vocabulary/insects.png"),
-      ImagesData:Insects
+      ImagesData: Insects,
     },
     {
       id: 11,
       title: "Birds",
       image: require("../../../assets/Vocabulary/birds.png"),
+<<<<<<< HEAD
       ImagesData:Birds
+=======
+      ImagesData: Birds,
+>>>>>>> 7d69f57f9e846f9c05aa4f317a67e04a8b4b7108
     },
   ];
 
@@ -120,7 +124,7 @@ const VocabularyScreen = ({ navigation }) => {
                 style={{
                   width: 165,
                   height: 165,
-             
+
                   margin: 5,
                   marginTop: 10,
                   backgroundColor: "white",
@@ -130,9 +134,13 @@ const VocabularyScreen = ({ navigation }) => {
                   justifyContent: "center",
                   alignItems: "center",
                 }}
-                onPress={() => navigation.navigate("VocabularyScreen",{id:item.id,
-                  title: item.title,
-                  ImagesData:item.ImagesData})}
+                onPress={() =>
+                  navigation.navigate("VocabularyScreen", {
+                    id: item.id,
+                    title: item.title,
+                    ImagesData: item.ImagesData,
+                  })
+                }
               >
                 <Image
                   style={{
@@ -140,7 +148,6 @@ const VocabularyScreen = ({ navigation }) => {
                     height: 130,
                   }}
                   source={item.image}
-                  
                 />
                 <Text style={{ fontWeight: "bold" }}>{item.title}</Text>
               </TouchableOpacity>
