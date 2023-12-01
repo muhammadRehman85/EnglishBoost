@@ -9,7 +9,7 @@ const Navbar = ({ navigation }) => {
     {
       id: 1,
       title: "Tenses",
-      names: "Tenses",
+      names: "AllTenses",
       image: require("../../assets/tense.png"),
     },
 
@@ -17,6 +17,12 @@ const Navbar = ({ navigation }) => {
       id: 2,
       title: "Parts Of Speech",
       names: "AllPos",
+      image: require("../../assets/partOfSpeech.png"),
+    },
+    {
+      id: 12,
+      title: "Voices",
+      names: "Voices",
       image: require("../../assets/partOfSpeech.png"),
     },
     {

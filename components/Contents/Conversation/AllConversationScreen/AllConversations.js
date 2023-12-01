@@ -109,7 +109,7 @@ const AllConversataions= ({ navigation, route }) => {
                   }>
                   {/* <Text style={styles.text}>{item.title}</Text> */}
                   
-                <BlockList item={item}  image={require('../../../../assets/conversation2.png')}/>
+                <BlockList item={item}  image={require('../../../../assets/conversation.png')}/>
                 </Pressable>
               </View>
             )}

@@ -70,7 +70,7 @@ const VocabularyScreen = ({route}) => {
       </View> */}
       <View style={{ flex: 1, justifyContent: "center",paddingTop:10, alignItems: "center", backgroundColor:'white'}}>
        
-      <View style={{justifyContent:'flex-end'}} ><Text style={{fontSize:18}}>{route.params.title}</Text></View>
+      <View style={{paddingTop:30}} ><Text style={{fontSize:20,fontWeight:'700',color:'blue'}}>{route.params.title}</Text></View>
         <View
           style={{
             // backgroundColor: "red",
@@ -108,7 +108,7 @@ const VocabularyScreen = ({route}) => {
                   }}
                   source={item.image}
                 />
-                <Text style={{ marginTop: 10, fontWeight: "bold" }}>
+                <Text style={{ marginTop: 10, fontWeight: "bold", color:'blue' }}>
                   {item.title}
                 </Text>
               </View>

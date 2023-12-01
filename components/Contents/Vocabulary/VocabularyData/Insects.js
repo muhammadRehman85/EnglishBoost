@@ -37,7 +37,7 @@ const Insects= [
     },
     {
       title: "Grosshopper",
-      image: require("../../../../assets/Vocabulary/insects/Grosshopper.png"),
+      image: require("../../../../assets/Vocabulary/insects/Grasshopper.png"),
     },
     {
         title: "Ladybug",
@@ -51,7 +51,7 @@ const Insects= [
       },
       {
         title: "PrayMantis",
-        image: require("../../../../assets/Vocabulary/insects/PrayMantis.png"),
+        image: require("../../../../assets/Vocabulary/insects/PrayingMantis.png"),
       }, {
         title: "Wasp",
         image: require("../../../../assets/Vocabulary/insects/Wasp.png"),

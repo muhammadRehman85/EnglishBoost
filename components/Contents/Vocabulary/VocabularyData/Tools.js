@@ -42,10 +42,10 @@ const Tools= [
     },
     {
         title: "Pliers",
-        image: require("../../../../assets/Vocabulary/tools/Plier.png"),
+        image: require("../../../../assets/Vocabulary/tools/Pliers.png"),
       }, {
         title: "Power Screw Driver",
-        image: require("../../../../assets/Vocabulary/tools/PowerScrewDriver.png"),
+        image: require("../../../../assets/Vocabulary/tools/PowerScrewdriver.png"),
       }, {
         title: "Rake",
         image: require("../../../../assets/Vocabulary/tools/Rake.png"),
@@ -58,15 +58,23 @@ const Tools= [
         image: require("../../../../assets/Vocabulary/tools/Shovel.png"),
       }, {
         title: "Screw Driver",
-        image: require("../../../../assets/Vocabulary/tools/ScrewDriver.png"),
+        image: require("../../../../assets/Vocabulary/tools/Screwdriver.png"),
       },
       {
         title: "Tape Measures",
-        image: require("../../../../assets/Vocabulary/tools/TapMeasures.png"),
+        image: require("../../../../assets/Vocabulary/tools/TapeMeasure.png"),
       },
       {
         title: "Wrench",
         image: require("../../../../assets/Vocabulary/tools/Wrench.png"),
+      },
+      {
+        title: "Trowel",
+        image: require("../../../../assets/Vocabulary/tools/Trowel.png"),
+      },
+      {
+        title: "Utility Knife",
+        image: require("../../../../assets/Vocabulary/tools/UtilityKnife.png"),
       },
   ];
   export default Tools;
