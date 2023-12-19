@@ -21,7 +21,7 @@ const BlockList = ({ item ,image}) => {
       >
         <Image
           source={image}
-          style={{ marginRight: 10 }}
+          style={{ marginRight: 10,width:60,height:60 }}
         />
         <Text style={{ fontSize: 17, fontWeight: "bold", color:'#004fd7' }}>{item.title}</Text>
       </View>

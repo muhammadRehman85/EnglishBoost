@@ -11,6 +11,7 @@ import Sports from "./VocabularyData/Sports";
 import Instruments from "./VocabularyData/Instruments";
 import Birds from "./VocabularyData/Birds";
 import Insects from "./VocabularyData/Insects";
+import Occupations from "./VocabularyData/Occupations";
 const VocabularyScreen = ({ navigation }) => {
   // console.log(ImagesData);
   const Data = [
@@ -50,12 +51,12 @@ const VocabularyScreen = ({ navigation }) => {
     //   image: require("../../../assets/Vocabulary/nature.png"),
     //   ImagesData: ImagesData,
     // },
-    {
-      id: 6,
-      title: "Clothing",
-      image: require("../../../assets/Vocabulary/clothing.png"),
-      ImagesData: ImagesData,
-    },
+    // {
+    //   id: 6,
+    //   title: "Clothing",
+    //   image: require("../../../assets/Vocabulary/clothing.png"),
+    //   ImagesData: ImagesData,
+    // },
     {
       id: 7,
       title: "Makeup",
@@ -73,7 +74,7 @@ const VocabularyScreen = ({ navigation }) => {
       id: 9,
       title: "Occupations",
       image: require("../../../assets/Vocabulary/occupations.png"),
-      ImagesData: ImagesData,
+      ImagesData:Occupations
     },
     {
       id: 10,
@@ -85,7 +86,11 @@ const VocabularyScreen = ({ navigation }) => {
       id: 11,
       title: "Birds",
       image: require("../../../assets/Vocabulary/birds.png"),
+<<<<<<< HEAD
+      ImagesData:Birds
+=======
       ImagesData: Birds,
+>>>>>>> 7d69f57f9e846f9c05aa4f317a67e04a8b4b7108
     },
   ];
 

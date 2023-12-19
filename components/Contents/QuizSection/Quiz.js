@@ -98,7 +98,7 @@ const Quiz = ({ navigation, route }) => {
                   })
                 }
               >
-                <BlockList item={item} image={require('../../../assets/QuizImage.png')}/>
+                <BlockList item={item} image={require('../../../assets/Quiz.png')}/>
               </Pressable>
             )}
           />

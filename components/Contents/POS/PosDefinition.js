@@ -1,62 +1,121 @@
 import { View, Text, StyleSheet, ScrollView, FlatList } from "react-native";
 import React from "react";
-import UnorderedList from "../stylingTemplates/UnorderList";
-import items from "../Tenses/PastTense/itemsData/PastIndiniteItemsData/ItroItems";
+
 const PosDefinition = ({ route }) => {
-  // console.log(route.params.def.uses)
   const uses = route.params.def.uses;
   const types = route.params.def.types;
   const examples = route.params.def.example;
+  const rules = route.params.def.rules;
+  const structures = route.params.def.structures;
   const formatedExamples = examples.split(".").join("\n");
 
   return (
     <View style={{ flex: 1, backgroundColor: "white" }}>
-      {/* ----------header Text */}
       <Text style={styles.headerText}>What is {route.params.title} ?</Text>
-      {/* ---------------wrapper1 for definition */}
+
       <ScrollView>
+<<<<<<< HEAD
+        {/* ---------------wrapper1 for definition */}
+        <View style={styles.wrapper1}>
+          <Text style={{ color: "white", fontWeight: "bold", fontSize: 20 }}>
+            Definition:
+=======
         <View style={styles.wrapper1}>
           <Text style={{ color: "white", fontWeight: "bold", fontSize: 20 }}>
             Definition :
+>>>>>>> 7d69f57f9e846f9c05aa4f317a67e04a8b4b7108
           </Text>
           <Text style={{ color: "white", fontWeight: "bold" }}>
             {route.params.def.definition}
           </Text>
         </View>
+<<<<<<< HEAD
+
+=======
+>>>>>>> 7d69f57f9e846f9c05aa4f317a67e04a8b4b7108
         {/* -------------------wrapper for examples and uses---------------- */}
         <View style={styles.exWrapper}>
           <Text style={styles.heading}>Examples:</Text>
           <Text style={styles.txt}>{formatedExamples}</Text>
         </View>
-        <Text style={styles.subheading}>Uses Of {route.params.title}</Text>
-        <FlatList
-          data={uses}
-          horizontal
-          keyExtractor={(item) => item.category}
-          renderItem={({ item }) => (
-            <View style={styles.wrapper}>
-              <View styles={{ margin: 10 }}>
-                <Text style={styles.heading}>{item.category}</Text>
-                <Text>{item.examples.split(".").join("\n")}</Text>
-              </View>
-            </View>
-          )}
-        />
-        {/* -----------------------types of noun------------ */}
-        <Text style={styles.subheading}>Types of {route.params.title}</Text>
-        <FlatList
-          data={types}
-          horizontal
-          keyExtractor={(item) => item.category}
-          renderItem={({ item }) => (
-            <View style={styles.wrapper}>
-              <View styles={{ margin: 10 }}>
-                <Text style={styles.heading}>{item.category}</Text>
-                <Text>{item.examples.split(".").join("\n")}</Text>
-              </View>
-            </View>
-          )}
-        />
+
+        {uses && (
+          <>
+            <Text style={styles.subheading}>Uses Of {route.params.title}</Text>
+            <FlatList
+              data={uses}
+              horizontal
+              keyExtractor={(item) => item.category}
+              renderItem={({ item }) => (
+                <View style={styles.wrapper}>
+                  <View style={{ margin: 10 }}>
+                    <Text style={styles.heading}>{item.category}</Text>
+                    <Text>{item.examples.split(".").join("\n")}</Text>
+                  </View>
+                </View>
+              )}
+            />
+          </>
+        )}
+
+        {types && (
+          <View>
+            <Text style={styles.subheading}>Types of {route.params.title}</Text>
+            <FlatList
+              data={types}
+              horizontal
+              keyExtractor={(item) => item.category}
+              renderItem={({ item }) => (
+                <View style={styles.wrapper}>
+                  <View style={{ margin: 10 }}>
+                    <Text style={styles.heading}>{item.category}</Text>
+                    <Text>{item.examples.split(".").join("\n")}</Text>
+                  </View>
+                </View>
+              )}
+            />
+          </View>
+        )}
+
+        {rules && (
+          <View>
+            <Text style={styles.subheading}>Rules of {route.params.title}</Text>
+            <FlatList
+              data={rules}
+              horizontal
+              keyExtractor={(item) => item.rule}
+              renderItem={({ item }) => (
+                <View style={styles.wrapper}>
+                  <View style={{ margin: 10 }}>
+                    <Text style={styles.heading}>{item.rule}</Text>
+                    <Text>{item.example.split(".").join("\n")}</Text>
+                  </View>
+                </View>
+              )}
+            />
+          </View>
+        )}
+                {structures && (
+          <View>
+            <Text style={styles.subheading}>structure of {route.params.title}</Text>
+            <FlatList
+              data={rules}
+              horizontal
+              keyExtractor={(item) => item.rule}
+              renderItem={({ item }) => (
+                <View style={styles.wrapper}>
+                  <View style={{ margin: 10 }}>
+                    <Text style={styles.heading}>{item.rule}</Text>
+                    <Text>{item.example.split(".").join("\n")}</Text>
+                  </View>
+                </View>
+              )}
+            />
+          </View>
+        )}
+        
+        
+
         <View style={{ height: 60 }}></View>
       </ScrollView>
     </View>
@@ -68,7 +127,7 @@ export default PosDefinition;
 const styles = StyleSheet.create({
   wrapper: {
     width: 340,
-    minHeightheight: 180,
+    minHeight: 180,
     marginTop: 30,
     marginLeft: 10,
     marginBottom: 10,
@@ -103,7 +162,7 @@ const styles = StyleSheet.create({
   },
   wrapper1: {
     width: "95%",
-    minHeightheight: 180,
+    minHeight: 180,
     marginTop: 30,
     marginLeft: 10,
     padding: 20,
@@ -121,10 +180,5 @@ const styles = StyleSheet.create({
     marginTop: 25,
     marginLeft: 20,
     color: "#004aad",
-  },
-  nounStyle: {
-    fontWeight: "bold",
-    fontSize: 29,
-    color: "red",
   },
 });
