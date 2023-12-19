@@ -33,7 +33,7 @@ const Result = ({ route }) => {
     <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
       {/* <Text>{route.params.score}</Text> */}
       <LottieView
-        // style={{ backgroundColor: "red" }}
+        style={{ height: 350, width: 350 }}
         source={require("../assets/LottieAnimation/passed.json")}
         autoPlay
       />

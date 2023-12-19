@@ -1,8 +1,11 @@
 import React from "react";
-import { View, Text, Image } from "react-native";
+
+import { View, Text } from "react-native";
 import LottieView from "lottie-react-native";
 const Result = ({ route }) => {
   console.log(route.params);
+  const score = route.params.score;
+  const passThreshold = 5;
   return (
     <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
       <View
@@ -15,7 +18,7 @@ const Result = ({ route }) => {
       >
         <Text
           style={{
-            color: "#004aad",
+            // color: "#004aad",
             zIndex: 100,
             fontSize: 25,
           }}
@@ -32,11 +35,27 @@ const Result = ({ route }) => {
         >
           {route.params.score}
         </Text>
+        {score > passThreshold ? (
+          <Text style={{ color: "green", fontSize: 30, fontWeight: "bold" }}>
+            Passed
+          </Text>
+        ) : (
+          <Text style={{ color: "red", fontSize: 30, fontWeight: "bold" }}>
+            Failed
+          </Text>
+        )}
       </View>
-      <LottieView
-        source={require("../../../assets/LottieAnimation/passed.json")}
-        autoPlay
-      />
+      {score > passThreshold ? (
+        <LottieView
+          source={require("../../../assets/LottieAnimation/passed.json")}
+          autoPlay
+        />
+      ) : (
+        <LottieView
+          source={require("../../../assets/LottieAnimation/failed.json")}
+          autoPlay
+        />
+      )}
     </View>
   );
 };
