@@ -3,7 +3,7 @@ import React from "react";
 import styles from "../../../Styles/QuizStyle";
 import ActiveVoice from "./data/activeVoice";
 import BlockList from "../../layouts/BlockList";
-import PassiveVoice from "./data/PassiveVoice"
+import PassiveVoice from "./data/PassiveVoice";
 const Voices = ({ navigation, route }) => {
   // const [locks, setLocks] = useState(0);
   // const { disabled}=route.params;
@@ -19,9 +19,8 @@ const Voices = ({ navigation, route }) => {
       id: 2,
       title: "Pasive Voice",
       name: "PosDefinition",
-      definition:PassiveVoice,
+      definition: PassiveVoice,
     },
-    
   ];
 
   return (
@@ -59,7 +58,7 @@ const Voices = ({ navigation, route }) => {
 
                   <BlockList
                     item={item}
-                    image={require("../../../assets/partOfSpeech.png")}
+                    image={require("../../../assets/partOfspeech.png")}
                   />
                 </Pressable>
               </View>

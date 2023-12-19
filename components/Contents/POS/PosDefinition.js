@@ -14,25 +14,15 @@ const PosDefinition = ({ route }) => {
       <Text style={styles.headerText}>What is {route.params.title} ?</Text>
 
       <ScrollView>
-<<<<<<< HEAD
-        {/* ---------------wrapper1 for definition */}
         <View style={styles.wrapper1}>
-          <Text style={{ color: "white", fontWeight: "bold", fontSize: 20 }}>
-            Definition:
-=======
-        <View style={styles.wrapper1}>
+          20 |{" "}
           <Text style={{ color: "white", fontWeight: "bold", fontSize: 20 }}>
             Definition :
->>>>>>> 7d69f57f9e846f9c05aa4f317a67e04a8b4b7108
           </Text>
           <Text style={{ color: "white", fontWeight: "bold" }}>
             {route.params.def.definition}
           </Text>
         </View>
-<<<<<<< HEAD
-
-=======
->>>>>>> 7d69f57f9e846f9c05aa4f317a67e04a8b4b7108
         {/* -------------------wrapper for examples and uses---------------- */}
         <View style={styles.exWrapper}>
           <Text style={styles.heading}>Examples:</Text>
@@ -95,9 +85,11 @@ const PosDefinition = ({ route }) => {
             />
           </View>
         )}
-                {structures && (
+        {structures && (
           <View>
-            <Text style={styles.subheading}>structure of {route.params.title}</Text>
+            <Text style={styles.subheading}>
+              structure of {route.params.title}
+            </Text>
             <FlatList
               data={rules}
               horizontal
@@ -113,8 +105,6 @@ const PosDefinition = ({ route }) => {
             />
           </View>
         )}
-        
-        
 
         <View style={{ height: 60 }}></View>
       </ScrollView>

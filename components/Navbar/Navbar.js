@@ -19,12 +19,12 @@ const Navbar = ({ navigation }) => {
       names: "AllPos",
       image: require("../../assets/partOfspeech.png"),
     },
-    {
-      id: 12,
-      title: "Voices",
-      names: "Voices",
-      image: require("../../assets/partOfSpeech.png"),
-    },
+    // {
+    //   id: 12,
+    //   title: "Voices",
+    //   names: "Voices",
+    //   image: require("../../assets/partOfSpeech.png"),
+    // },
     {
       id: 3,
       title: "Conversations",

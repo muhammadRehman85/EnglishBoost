@@ -74,7 +74,7 @@ const VocabularyScreen = ({ navigation }) => {
       id: 9,
       title: "Occupations",
       image: require("../../../assets/Vocabulary/occupations.png"),
-      ImagesData:Occupations
+      ImagesData: Occupations,
     },
     {
       id: 10,
@@ -86,11 +86,7 @@ const VocabularyScreen = ({ navigation }) => {
       id: 11,
       title: "Birds",
       image: require("../../../assets/Vocabulary/birds.png"),
-<<<<<<< HEAD
-      ImagesData:Birds
-=======
       ImagesData: Birds,
->>>>>>> 7d69f57f9e846f9c05aa4f317a67e04a8b4b7108
     },
   ];
 

@@ -109,7 +109,7 @@ const AllPos = ({ navigation, route }) => {
 
                   <BlockList
                     item={item}
-                    image={require("../../../assets/partOfSpeech.png")}
+                    image={require("../../../assets/partOfspeech.png")}
                   />
                 </Pressable>
               </View>
