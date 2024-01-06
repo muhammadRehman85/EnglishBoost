@@ -9,21 +9,26 @@ const Tense = ({ route }) => {
   const formatedExamples = examples.split(".").join("\n");
 
   return (
-    <View style={{ flex: 1, backgroundColor: "white" }}>
+    <View
+      style={{
+        flex: 1,
+        backgroundColor: "white",
+      }}
+    >
       {/* ----------header Text */}
       <Text style={styles.headerText}>What is {route.params.title} ?</Text>
       {/* ---------------wrapper1 for definition */}
       <ScrollView>
-      <View style={styles.wrapper1}>
-        <Text style={{ color: "white", fontWeight: "bold", fontSize: 20 }}>
-          Definition :
-        </Text>
-        <Text style={{ color: "white", fontWeight: "bold" }}>
-          {route.params.def.definition}
-        </Text>
-      </View>
+        <View style={styles.wrapper1}>
+          <Text style={{ color: "white", fontWeight: "bold", fontSize: 20 }}>
+            Definition :
+          </Text>
+          <Text style={{ color: "white", fontWeight: "bold" }}>
+            {route.params.def.definition}
+          </Text>
+        </View>
         {/* -------------------wrapper for examples and uses---------------- */}
-        <View style={styles.wrapper}>
+        <View style={styles.exWrapper}>
           <Text style={styles.heading}>Examples:</Text>
           <Text style={styles.txt}>{formatedExamples}</Text>
         </View>
@@ -36,7 +41,9 @@ const Tense = ({ route }) => {
             <View style={styles.wrapper}>
               <View styles={{ margin: 10 }}>
                 <Text style={styles.heading}>{item.category}</Text>
-                <Text style={{marginTop:5,marginBottom:5}}>{item.examples.split(".").join("\n")}</Text>
+                <Text style={{ marginTop: 5, marginBottom: 5 }}>
+                  {item.examples.split(".").join("\n")}
+                </Text>
               </View>
             </View>
           )}
@@ -79,13 +86,27 @@ const styles = StyleSheet.create({
     borderRadius: 20,
     elevation: 4,
   },
+  // examples wrapper
+  exWrapper: {
+    minHeightheight: 180,
+    marginTop: 30,
+    marginLeft: 10,
+    marginRight: 10,
+    marginBottom: 10,
+    padding: 20,
+    backgroundColor: "#D1F1FF",
+    borderWidth: 2,
+    borderColor: "#D1F1FF",
+    borderRadius: 20,
+    elevation: 4,
+  },
   headerText: {
     fontSize: 20,
     fontWeight: "bold",
     color: "#004aad",
-    marginLeft: "25%",
+    marginLeft: 10,
     marginTop: 20,
-    marginBottom: 20,
+    // marginBottom: 20,
   },
   wrapper1: {
     width: "95%",
@@ -113,5 +134,5 @@ const styles = StyleSheet.create({
     fontSize: 29,
     color: "red",
   },
-  struc:{color:'grey',marginTop:5,marginBottom:5}
+  struc: { color: "grey", marginTop: 5, marginBottom: 5 },
 });

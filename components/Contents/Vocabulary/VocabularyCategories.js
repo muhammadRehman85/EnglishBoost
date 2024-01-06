@@ -97,6 +97,7 @@ const VocabularyScreen = ({ navigation }) => {
           flex: 1,
           justifyContent: "center",
           paddingTop: 10,
+          paddingBottom: 10,
           alignItems: "center",
           backgroundColor: "white",
         }}
@@ -120,15 +121,14 @@ const VocabularyScreen = ({ navigation }) => {
                 style={{
                   width: 165,
                   height: 165,
-
                   margin: 5,
                   marginTop: 10,
                   backgroundColor: "white",
+                  backgroundColor: "#D1F1FF",
                   elevation: 2,
-                  borderWidth: 0.2,
-                  borderColor: "blue",
                   justifyContent: "center",
                   alignItems: "center",
+                  borderRadius: 10,
                 }}
                 onPress={() =>
                   navigation.navigate("VocabularyScreen", {
@@ -142,6 +142,7 @@ const VocabularyScreen = ({ navigation }) => {
                   style={{
                     width: 130,
                     height: 130,
+                    borderRadius: 20,
                   }}
                   source={item.image}
                 />

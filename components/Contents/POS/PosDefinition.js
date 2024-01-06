@@ -15,7 +15,6 @@ const PosDefinition = ({ route }) => {
 
       <ScrollView>
         <View style={styles.wrapper1}>
-          20 |{" "}
           <Text style={{ color: "white", fontWeight: "bold", fontSize: 20 }}>
             Definition :
           </Text>

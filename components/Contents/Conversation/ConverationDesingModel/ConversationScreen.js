@@ -153,7 +153,6 @@ import { View, Text, TouchableOpacity, ScrollView, Image } from "react-native";
 import React, { useState, useRef } from "react";
 
 const ConversationScreen = ({ route }) => {
-  console.log(route.params?.Greeting);
   const items = route.params?.Greeting || [];
   const [selectedIndices, setSelectedIndices] = useState([]);
   const scrollViewRef = useRef();
