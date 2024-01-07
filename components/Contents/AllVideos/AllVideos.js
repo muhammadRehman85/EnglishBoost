@@ -58,7 +58,7 @@ const AllVideos = () => {
 
   return (
     <GestureHandlerScrollView style={styles.videoWrapper}>
-      <View style={styles.titleContainer}>
+      <View>
         <Text style={styles.title}>English With Movies </Text>
       </View>
       <ScrollView horizontal showsHorizontalScrollIndicator={false}>
@@ -82,7 +82,10 @@ const AllVideos = () => {
                 }}
                 onPress={() => navigation.navigate(item.name)}
               >
-                <Image style={styles.image} source={item.source} />
+                <View style={styles.moreContainer}>
+                  <Image style={styles.image} source={item.source} />
+                  <Text style={styles.text}>See All</Text>
+                </View>
               </Pressable>
             )}
             <View style={styles.titleInfo}>
@@ -110,36 +113,36 @@ const AllVideos = () => {
 
 const styles = StyleSheet.create({
   videoWrapper: {
-    // marginTop: 180,
+    margin: 15,
   },
-  titleContainer: {
-    paddingTop: 30,
-    paddingLeft: 10,
-  },
+  // titleContainer: {
+  //   paddingTop: 30,
+  //   paddingLeft: 10,
+  // },
   title: {
     fontWeight: "bold",
     fontSize: 22,
-    color: "#8870FF",
-    marginBottom: 20,
+    color: "black",
+    marginBottom: 15,
+    marginTop: 20,
   },
   videoContainer: {
-    marginLeft: 10,
-    marginRight: 10,
-    elevation: 0.8,
+    flex: 1,
+    backgroundColor: "#D1F1FF",
+    marginRight: 15,
     width: 300,
-    marginBottom:10,
-    height: 230,
     borderRadius: 10,
-    position: "relative",
-    padding: 6,
+    overflow: "hidden",
+    // elevation: 9,
+    padding: 10,
+    borderWidth: 0.8,
+    borderColor: "#9fe0fc",
   },
   titleInfo: {
-    position: "absolute",
-    bottom: 10,
-    left: 20,
+    marginTop: "-45%",
   },
   text: {
-    fontSize: 18,
+    fontSize: 15,
     fontWeight: "bold",
   },
   otherComponent: {
@@ -147,16 +150,12 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
   },
-  more: {
-    width: 250,
-    height: 250,
-    // borderRadius:200,
-    // marginTop:'70%',
-    // backgroundColor:'lightgrey',
-    // justifyContent: 'center',
-    // alignItems: 'center',
-    paddingTop: 150,
-    paddingLeft: 50,
+  moreContainer: {
+    flex: 1,
+    width: "100%",
+    justifyContent: "center",
+    alignItems: "center",
+    marginBottom: 70,
   },
   textStyle: {
     color: "grey",
@@ -164,8 +163,8 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
   },
   image: {
-    width: 150,
-    height: 150,
+    width: "60%",
+    objectFit: "contain",
   },
 });
 

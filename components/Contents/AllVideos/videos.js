@@ -54,10 +54,8 @@ const Videos = () => {
   ];
 
   return (
-    <ScrollView style={styles.videoWrapper}>
-      <View style={styles.titleContainer}>
-        <Text style={styles.title}>Recommended Videos</Text>
-      </View>
+    <View style={styles.videoWrapper}>
+      <Text style={styles.title}>Recommended Videos</Text>
       <ScrollView horizontal showsHorizontalScrollIndicator={false}>
         {DATA.map((item) => (
           <View key={item.key} style={styles.videoContainer}>
@@ -79,9 +77,9 @@ const Videos = () => {
                   alignItems: "center",
                 }}
               >
-                <View>
+                <View style={styles.moreContainer}>
                   <Image style={styles.image} source={item.source} />
-                  <Text>See All</Text>
+                  <Text style={styles.text}>See All</Text>
                 </View>
               </Pressable>
             )}
@@ -91,76 +89,53 @@ const Videos = () => {
           </View>
         ))}
       </ScrollView>
-    </ScrollView>
+    </View>
   );
 };
 
 const styles = StyleSheet.create({
   videoWrapper: {
-    marginTop: 250,
-  },
-  titleContainer: {
-    paddingTop: 30,
-    paddingLeft: 10,
+    flex: 1,
+    margin: 15,
   },
   title: {
     fontWeight: "bold",
     fontSize: 22,
     color: "black",
-    marginBottom: 20,
+    marginBottom: 15,
   },
   videoContainer: {
-    marginLeft: 10,
-    marginRight: 10,
-    // elevation: 0.8,
-    borderWidth: 1,
-    borderColor: "lightgrey",
-    // backgroundColor: "rgba(136,112,255,0.1)",
+    flex: 1,
+    backgroundColor: "#D1F1FF",
+    marginRight: 15,
     width: 300,
-    height: 230,
     borderRadius: 10,
-    position: "relative",
-    padding: 6,
+    overflow: "hidden",
+    // elevation: 3,
+    padding: 10,
+    borderWidth: 0.8,
+    borderColor: "#9fe0fc",
+  },
+  moreContainer: {
+    flex: 1,
+    width: "100%",
+    justifyContent: "center",
+    alignItems: "center",
+    marginBottom: 70,
   },
   titleInfo: {
-    position: "absolute",
-    bottom: 10,
-    left: 20,
+    marginTop: "-45%",
   },
   text: {
-    fontSize: 18,
+    fontSize: 15,
     fontWeight: "bold",
   },
-
-  // otherComponent: {
-  //   flex: 1,
-  //   justifyContent: "center",
-  //   alignItems: "center",
-  // },
-  // more: {
-  //   width: 250,
-  //   height: 250,
-  //   borderRadius:200,
-  //   marginTop:'70%',
-  //   backgroundColor:'lightgrey',
-  //   justifyContent: 'center',
-  //   alignItems: 'center',
-  //   paddingTop: 150,
-  //   paddingLeft: 50,
-  //   flex: 1,
-  //   justifyContent: "center",
-  //   alignItems: "center",
-  //   backgroundColor: "red",
-  // },
-  textStyle: {
-    color: "grey",
-    fontSize: 50,
-    fontWeight: "bold",
+  youtube: {
+    borderRadius: 10,
   },
   image: {
-    width: 150,
-    height: 150,
+    width: "70%",
+    objectFit: "contain",
   },
 });
-
 export default Videos;

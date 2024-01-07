@@ -1,23 +1,60 @@
 import React from "react";
-import { View, Text, StyleSheet, ScrollView, Pressable,Image } from "react-native";
+import {
+  View,
+  Text,
+  StyleSheet,
+  ScrollView,
+  Pressable,
+  Image,
+} from "react-native";
 import { ScrollView as GestureHandlerScrollView } from "react-native-gesture-handler"; // Renamed to avoid confusion with your imported ScrollView
 import YoutubePlayer from "react-native-youtube-iframe";
 
 import { useNavigation } from "@react-navigation/native";
 const EngIdioms = () => {
-  const navigation=useNavigation();
+  const navigation = useNavigation();
   const DATA = [
-    {key: 1,token: true,title: "Learn 15 Common English Idioms (With Examples)",videoId: "HclqADvf35Y",},
-    {key: 2,token: true,title: "30 Must-Know Idioms for Fluent English Conversation",videoId: "IexEuK-zkwY",},
-    { key: 3, token: true, title: "Useful IDIOMS for Any Topic in IELTS Speaking", videoId: "6zoe5WQ1c8E" },
-    { key: 4, token: true, title: " English Conversation Practice with idioms", videoId: "RuCvG4PsI8g" },
-    { key: 5, token: true, title: "111 Advanced English Idioms in Context", videoId: "81IED6Vl6GI" },
-    { key: 6, token: false, source:require('../../../assets/more.png'),name:'AllEngIdioms' },
+    {
+      key: 1,
+      token: true,
+      title: "Learn 15 Common English Idioms (With Examples)",
+      videoId: "HclqADvf35Y",
+    },
+    {
+      key: 2,
+      token: true,
+      title: "30 Must-Know Idioms for Fluent English Conversation",
+      videoId: "IexEuK-zkwY",
+    },
+    {
+      key: 3,
+      token: true,
+      title: "Useful IDIOMS for Any Topic in IELTS Speaking",
+      videoId: "6zoe5WQ1c8E",
+    },
+    {
+      key: 4,
+      token: true,
+      title: " English Conversation Practice with idioms",
+      videoId: "RuCvG4PsI8g",
+    },
+    {
+      key: 5,
+      token: true,
+      title: "111 Advanced English Idioms in Context",
+      videoId: "81IED6Vl6GI",
+    },
+    {
+      key: 6,
+      token: false,
+      source: require("../../../assets/more.png"),
+      name: "AllEngIdioms",
+    },
   ];
 
   return (
-   <ScrollView>
-      <View style={styles.titleContainer}>
+    <ScrollView style={styles.videoWrapper}>
+      <View>
         <Text style={styles.title}> English Idioms </Text>
       </View>
       <ScrollView horizontal showsHorizontalScrollIndicator={false}>
@@ -33,12 +70,14 @@ const EngIdioms = () => {
                 modestbranding
               />
             ) : (
-             <Pressable   
-             onPress={() => navigation.navigate(item.name)}
-             ><View style={styles.otherComponent}>
-              
-              <View style={styles.more}><Image style={styles.image} source={item.source}/></View> 
-              </View></Pressable> 
+              <Pressable onPress={() => navigation.navigate(item.name)}>
+                <View style={styles.otherComponent}>
+                  <View style={styles.moreContainer}>
+                    <Image style={styles.image} source={item.source} />
+                    <Text style={styles.text}>See All</Text>
+                  </View>
+                </View>
+              </Pressable>
             )}
             <View style={styles.titleInfo}>
               <Text style={styles.text}>{item.title}</Text>
@@ -46,66 +85,65 @@ const EngIdioms = () => {
           </View>
         ))}
       </ScrollView>
-      </ScrollView>
+    </ScrollView>
   );
 };
 
 const styles = StyleSheet.create({
   videoWrapper: {
-    // marginTop: 180,
+    // margin: 15,
   },
-  titleContainer: {
-    paddingTop: 30,
-    paddingLeft: 10,
-  },
+  // titleContainer: {
+  //   paddingTop: 30,
+  //   paddingLeft: 10,
+  // },
   title: {
     fontWeight: "bold",
     fontSize: 22,
-    color: "#8870FF",
-    marginBottom: 20,
+    color: "black",
+    marginBottom: 15,
+    marginTop: 30,
   },
   videoContainer: {
-    marginLeft: 10,
-    marginRight: 10,
-    elevation: 0.8,
+    flex: 1,
+    backgroundColor: "#D1F1FF",
+    marginRight: 15,
     width: 300,
-    height: 230,
     borderRadius: 10,
-    position: "relative",
-    padding: 6,
+    overflow: "hidden",
+    // elevation: 9,
+    padding: 10,
+    borderWidth: 0.8,
+    borderColor: "#9fe0fc",
   },
   titleInfo: {
-    position: "absolute",
-    bottom: 10,
-    left: 20,
+    marginTop: "-45%",
   },
   text: {
-    fontSize: 18,
+    fontSize: 15,
     fontWeight: "bold",
   },
   otherComponent: {
     flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
+    justifyContent: "center",
+    alignItems: "center",
   },
-  more:{width:250,
-    height:250,
-    // borderRadius:200,
-    // marginTop:'70%',
-    // backgroundColor:'lightgrey',
-    // justifyContent: 'center',
-    // alignItems: 'center',
-    paddingTop:150
-    ,paddingLeft:50
+  moreContainer: {
+    flex: 1,
+    width: "100%",
+    justifyContent: "center",
+    alignItems: "center",
+    marginTop: 60,
   },
-  textStyle:{
-    color:'grey',
-    fontSize:50,fontWeight:'bold'
+  textStyle: {
+    color: "grey",
+    fontSize: 50,
+    fontWeight: "bold",
   },
-  image:{
-    width:150,
-    height:150
-  }
+  image: {
+    width: "60%",
+    objectFit: "contain",
+  },
 });
 
 export default EngIdioms;

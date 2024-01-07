@@ -65,7 +65,7 @@ const Navbar = ({ navigation }) => {
   return (
     <>
       <ScrollView>
-        <View style={{ position: "absolute" }}>
+        <View style={{ flex: 1 }}>
           <FlatList
             horizontal
             showsHorizontalScrollIndicator={false}
@@ -98,17 +98,28 @@ const Navbar = ({ navigation }) => {
             )}
           />
         </View>
-        <Pressable
-          style={styles.wordofday}
-          onPress={() => navigation.navigate("WordOfTheDay")}
+        {/* WOTD section */}
+        <View
+          style={{
+            justifyContent: "center",
+            alignItems: "center",
+            paddingTop: 10,
+            padding: 10,
+          }}
         >
-          {/* ----------------word of the day----------------- */}
+          <Pressable
+            style={styles.wordofday}
+            onPress={() => navigation.navigate("WordOfTheDay")}
+          >
+            {/* ----------------word of the day----------------- */}
 
-          <Text style={styles.wText}>Word Of the Day</Text>
-        </Pressable>
+            <Text style={styles.wText}>Word Of the Day</Text>
+          </Pressable>
+        </View>
         {/* ---------Videos ---------- */}
-
-        <Videos />
+        <View style={{ flex: 1 }}>
+          <Videos />
+        </View>
       </ScrollView>
     </>
   );
@@ -116,19 +127,15 @@ const Navbar = ({ navigation }) => {
 
 const styles = StyleSheet.create({
   wordofday: {
-    width: "95%",
-    borderWidth: 1,
-    borderRadius: 5,
-    borderColor: "#0079FF",
+    width: "96%",
+    // borderWidth: 1,
+    borderRadius: 10,
+    backgroundColor: "#0079FF",
     padding: 15,
-    position: "absolute",
-    top: 200,
-    left: 10,
-    // justifyContent:'center',
     alignItems: "center",
   },
   wText: {
-    color: "#004aad",
+    color: "#D1F1FF",
     fontSize: 24,
     fontWeight: "bold",
   },
