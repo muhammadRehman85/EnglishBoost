@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import {
   View,
   Text,
@@ -7,92 +7,100 @@ import {
   Pressable,
   Image,
 } from "react-native";
-import { ScrollView as GestureHandlerScrollView } from "react-native-gesture-handler"; // Renamed to avoid confusion with your imported ScrollView
+
 import YoutubePlayer from "react-native-youtube-iframe";
-import AllVideos from "./AllVideos";
 import { useNavigation } from "@react-navigation/native";
+import { firebase } from "../../../firebase/config";
+import Loader from "../../layouts/Loader";
 const Videos = () => {
+  const [youtubeVideos, setYoutubeVideos] = useState([]);
+  const youtubeRef = firebase.firestore().collection("youtube");
+  const [loading, setLoading] = useState(true); //for loader
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const querySnapshot = await youtubeRef.get();
+        const videos = querySnapshot.docs.map((doc) => {
+          const { key, token, title, videoId } = doc.data();
+          return {
+            id: doc.id,
+            key,
+            token,
+            title,
+            videoId,
+          };
+        });
+
+        // Sort the videos array based on the key property
+        const sortedVideos = videos.sort((a, b) => a.key - b.key);
+
+        // Add a non-database item (button) to the end of the array
+        const videosWithButton = [
+          ...sortedVideos,
+          {
+            key: 6,
+            token: false,
+            source: require("../../../assets/more.png"),
+            name: "AllVideos",
+          },
+        ];
+
+        // setYoutubeVideos(sortedVideos);
+        setYoutubeVideos(videosWithButton);
+        setLoading(false); // when data is fetched set loading to false
+      } catch (error) {
+        console.error("Error fetching data: ", error);
+      }
+    };
+
+    fetchData();
+  }, []);
+
   const navigation = useNavigation();
-  const DATA = [
-    {
-      key: 1,
-      token: true,
-      title: "You Can Speak Like a Native English Speaker",
-      videoId: "HV6h7MRrRNA",
-    },
-
-    {
-      key: 2,
-      token: true,
-      title: "Learn with Harry Porter|English With Movies",
-      videoId: "joE-ANMPG5k",
-    },
-    {
-      key: 3,
-      token: true,
-      title: "Improve Your English with Disney Movies | Frozen 2",
-      videoId: "PL7niJMDu5w",
-    },
-    {
-      key: 4,
-      token: true,
-      title: "Improve your English Grammar in One Hour",
-      videoId: "QXVzmzhxWWc",
-    },
-    {
-      key: 5,
-      token: true,
-      title: "Excellent ENGLISH with Slow Practice",
-      videoId: "AgWs56i4GPk",
-    },
-    {
-      key: 6,
-      token: false,
-      source: require("../../../assets/more.png"),
-      name: "AllVideos",
-    },
-  ];
-
   return (
     <View style={styles.videoWrapper}>
       <Text style={styles.title}>Recommended Videos</Text>
-      <ScrollView horizontal showsHorizontalScrollIndicator={false}>
-        {DATA.map((item) => (
-          <View key={item.key} style={styles.videoContainer}>
-            {item.token ? ( // Conditional rendering based on the token value
-              <YoutubePlayer
-                height={300}
-                videoId={item.videoId}
-                play={false}
-                style={styles.youtube}
-                showinfo={false}
-                modestbranding
-              />
-            ) : (
-              <Pressable
-                onPress={() => navigation.navigate(item.name)}
-                style={{
-                  flex: 1,
-                  justifyContent: "center",
-                  alignItems: "center",
-                }}
-              >
-                <View style={styles.moreContainer}>
-                  <Image style={styles.image} source={item.source} />
-                  <Text style={styles.text}>See All</Text>
-                </View>
-              </Pressable>
-            )}
-            <View style={styles.titleInfo}>
-              <Text style={styles.text}>{item.title}</Text>
+      {loading ? (
+        <Loader loadingText="Loading Videos..." />
+      ) : (
+        <ScrollView horizontal showsHorizontalScrollIndicator={false}>
+          {youtubeVideos.map((item) => (
+            <View key={item.key} style={styles.videoContainer}>
+              {item.token ? ( // Conditional rendering based on the token value
+                <YoutubePlayer
+                  height={300}
+                  videoId={item.videoId}
+                  play={false}
+                  style={styles.youtube}
+                  showinfo={false}
+                  modestbranding
+                />
+              ) : (
+                <Pressable
+                  onPress={() => navigation.navigate(item.name)}
+                  style={{
+                    flex: 1,
+                    justifyContent: "center",
+                    alignItems: "center",
+                  }}
+                >
+                  <View style={styles.moreContainer}>
+                    <Image style={styles.image} source={item.source} />
+                    <Text style={styles.text}>See All</Text>
+                  </View>
+                </Pressable>
+              )}
+              <View style={styles.titleInfo}>
+                <Text style={styles.text}>{item.title}</Text>
+              </View>
             </View>
-          </View>
-        ))}
-      </ScrollView>
+          ))}
+        </ScrollView>
+      )}
     </View>
   );
 };
-
 const styles = StyleSheet.create({
   videoWrapper: {
     flex: 1,
@@ -109,6 +117,7 @@ const styles = StyleSheet.create({
     backgroundColor: "#D1F1FF",
     marginRight: 15,
     width: 300,
+    height: "auto",
     borderRadius: 10,
     overflow: "hidden",
     // elevation: 3,
@@ -134,7 +143,7 @@ const styles = StyleSheet.create({
     borderRadius: 10,
   },
   image: {
-    width: "70%",
+    width: "50%",
     objectFit: "contain",
   },
 });
